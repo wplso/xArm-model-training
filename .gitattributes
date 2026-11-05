@@ -1,3 +1,5 @@
 * text=auto eol=lf
 original/** -text whitespace=cr-at-eol
 config/FEATURE_DEFINITIONS.json -text whitespace=cr-at-eol
+"원본 수집 데이터/**" -text whitespace=cr-at-eol
+"원본 수집 데이터/**/*.csv" filter=lfs diff=lfs merge=lfs -text

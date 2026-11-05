@@ -1,17 +1,49 @@
-# xArm V3 정상 기반 이상 탐지 학습 코드
+# xArm V3 · V3.1 정상 기반 이상 탐지 학습 코드
 
-Hiwonder xArm 실측 데이터로 개발한 **V3** 학습 코드를 공유하는 저장소입니다. Statistical Anomaly Score, Isolation Forest, PCA 재구성 오차를 비교합니다. V3.1은 포함하지 않습니다.
+이 `v3.1` 브랜치는 Hiwonder xArm 실측 데이터의 **V3와 V3.1** 학습 코드 및 원본 수집 데이터를 포함합니다. `main`은 앞서 공유한 V3 코드 상태를 유지합니다. V3.1은 개발 후보이며 V3를 대체한 확정 모델이 아닙니다.
+
+## 데이터 받기와 바로 학습
+
+CSV는 Git LFS로 저장합니다. Git LFS가 설치된 환경에서 다음처럼 받습니다. GitHub ZIP 다운로드에 LFS 포인터만 들어 있을 수 있으므로 Git+LFS 사용을 권장합니다.
+
+```powershell
+git lfs install
+git clone --branch v3.1 https://github.com/wplso/xArm-model-training.git
+cd xArm-model-training
+git lfs pull
+```
+
+`원본 수집 데이터/`는 사용자가 지정한 공유 폴더의 복사본입니다. 기존 파일은 수정하지 않았고, 실제 모델 입력에 필요했으나 빠져 있던 18개 원시 세션과 `모델_학습_자료/`를 원래 공유 폴더에도 추가했습니다. 파일별 크기·SHA256과 보완 이력은 `docs/SHARED_DATA_INVENTORY.json`에 있습니다.
+
+환경 설치 후, 바로 학습하려면 아래 특징 CSV를 사용합니다. `cycle_scores`는 필요하지 않습니다.
+
+```powershell
+python train_v3.py --features "원본 수집 데이터/모델_학습_자료/V3_CYCLE_FEATURES.csv" --output results/v3
+python train_v31.py --features "원본 수집 데이터/모델_학습_자료/V31_CYCLE_FEATURES.csv" --output results/v31
+```
+
+원시 데이터부터 재현하는 명령은 다음과 같습니다. 공유 폴더의 평면 배치에서는 각 세션의 `cycles.csv`로 실제 session_id를 확인하므로 별도 `manifest.json`이 필요하지 않습니다.
+
+```powershell
+python build_features.py --manifest "원본 수집 데이터/모델_학습_자료/V3_CYCLE_MANIFEST.csv" --output data/v3_features.csv
+python build_features.py --version V3.1 --manifest "원본 수집 데이터/모델_학습_자료/V31_CYCLE_MANIFEST.csv" --output data/v31_features.csv
+```
+
+V3는 668회, V3.1은 788회에서 평가했으며 학습 정상250회·검증 정상100회는 동일합니다. V3.1에서 추가된 120회는 새 학습 데이터가 아니라 평가 자료입니다. 공유 폴더의 11/01 정상450회와 실제 학습에 사용한 고정 베이스 정상450회를 혼동하지 말고 버전별 manifest를 따르세요.
 
 ## 먼저 볼 파일
 
 | 파일 | 용도 |
 |---|---|
 | `train_v3.py` | 특징 CSV에서 V3 모델을 학습하는 독립 실행 진입점 |
+| `train_v31.py` | 특징 CSV에서 V3.1의 18구성×3알고리즘=54개 모델을 학습하는 진입점 |
 | `v3/detectors.py` | 원래 학습에 사용한 모델·전처리·점수·임계값 구현 |
 | `build_features.py` | 저장된 원시 시계열과 사이클 목록에서 특징 계산 |
 | `config/V3_TRAINING_CONFIG.json` | 11개 입력 구성, seed, 원래 데이터 분할과 설정 |
+| `config/V31_TRAINING_CONFIG.json` | V3.1 입력 구성과 동일한 정상 학습·검증 규칙 |
 | `config/FEATURE_DEFINITIONS.json` | 구간 경계·샘플 수·결측 처리 규칙 |
 | `original/train_xarm_v3.py` | 실제 V3 개발 때 실행한 원본 학습·평가 코드 |
+| `original/train_xarm_v31.py` | 실제 V3.1 개발 때 실행한 원본 코드 |
 | `original/plot_xarm_v3.py` | 원본 결과 그래프 코드 |
 | `original/normal_models.py` | 원래 사용한 공통 모델 모듈 전체 |
 | `docs/SOURCE_PROVENANCE.json` | 원본 파일 위치와 SHA256, 함수 추출 이력 |
@@ -19,7 +51,7 @@ Hiwonder xArm 실측 데이터로 개발한 **V3** 학습 코드를 공유하는
 
 `original/`은 코드 검토·추적용 원본입니다. 원본 진입점은 기존 전체 프로젝트의 이전 분석 결과·모델·원시 파일 트리가 필요합니다. 이 저장소만으로 실행할 때는 아래의 `train_v3.py`를 사용합니다. 이 진입점은 원본과 같은 `Detector`·특징 순서·정규화·임계값 규칙을 사용합니다. 원본의 이전 버전 모델 비교와 전체 보고서 생성까지 독립 실행기로 옮긴 것은 아닙니다.
 
-원시 데이터·특징 CSV·학습된 모델은 이 공개 저장소에 포함하지 않습니다. 팀 내에서 별도로 공유받은 파일을 사용하세요. `.gitignore`에 데이터와 모델을 제외했습니다.
+사용자가 공개 업로드를 요청한 원시 데이터와 재현용 특징 CSV를 이 브랜치에 포함합니다. 학습된 모델과 새 실행 산출물은 포함하지 않습니다. 원래 V3 모델 파일이나 임계값을 수정한 것이 아니며, 이 브랜치의 원본 코드·설정으로 재학습할 수 있도록 공유했습니다.
 
 ## 환경과 실행
 

@@ -1,0 +1,18 @@
+{
+  "version": "V3.1",
+  "unit_tests": 5,
+  "models": 54,
+  "cycles": 788,
+  "score_pairs": 42552,
+  "score_max_abs_error": 2.7284841053187847e-12,
+  "threshold_max_abs_error": 7.593925488436071e-14,
+  "all_flags_identical": true,
+  "shared_flat_raw_cycles": 788,
+  "shared_raw_feature_count": 32,
+  "shared_raw_max_abs_error": 2.842170943040401e-14,
+  "train": 250,
+  "validation": 100,
+  "original_models_modified": false,
+  "V3_replaced": false,
+  "hardware_access": 0
+}

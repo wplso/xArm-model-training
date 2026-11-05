@@ -48,5 +48,23 @@
     "published": "config/FEATURE_DEFINITIONS.json",
     "sha256": "69307db3f29f662d99815d7443ee00445348c0bd773b4eca7d19b0b0d24fd21a",
     "mode": "byte-identical source snapshot"
+  },
+  {
+    "source": "hardware/xarm_model_versions/v3_1_load_features/analysis_code/train_xarm_v31.py",
+    "published": "original/train_xarm_v31.py",
+    "sha256": "806c19d21a2c032c9592c0dbadc2b1a020a54fcd52fddcf0408c5769fe97890b",
+    "mode": "byte-identical source snapshot"
+  },
+  {
+    "source": "hardware/xarm_model_versions/v3_1_load_features/analysis_code/summarize_xarm_v31.py",
+    "published": "original/summarize_xarm_v31.py",
+    "sha256": "30a2d4c9dc9f62d02e40a95a92d5f30a6c2de50f4f5fbffb843f30685e52c5a1",
+    "mode": "byte-identical source snapshot"
+  },
+  {
+    "source": "hardware/xarm_model_versions/v3_1_load_features/analysis_code/verify_xarm_v31.py",
+    "published": "original/verify_xarm_v31.py",
+    "sha256": "b76d643b87e5f8940a7cbefe8159b2f761a39397aee51a7da56ddec587742c14",
+    "mode": "byte-identical source snapshot"
   }
 ]

@@ -66,7 +66,7 @@ def train(data, config, output):
             np.testing.assert_allclose(detector.imputer.statistics_, np.nanmedian(matrix[training], axis=0))
             np.testing.assert_allclose(detector.scaler.mean_, detector.imputer.transform(matrix[training]).mean(axis=0))
             bundle = dict(detector=detector, features=names, threshold=cut, seed=config["seed"],
-                          version="V3", configuration=group,
+                          version=config.get("version", "V3"), configuration=group,
                           training_cycle_ids=data.loc[training, "cycle_id"].tolist(),
                           validation_cycle_ids=data.loc[validation, "cycle_id"].tolist(),
                           evaluation_cycle_ids=data.loc[~(training | validation), "cycle_id"].tolist())
@@ -76,7 +76,7 @@ def train(data, config, output):
             np.testing.assert_array_equal(values, reopened["detector"].score(matrix))
             np.testing.assert_array_equal(values > cut, reopened["detector"].score(matrix) > reopened["threshold"])
             rank = int(detector.model.n_components_) if algorithm == "PCA" else None
-            indices.append(dict(model_id=model_id, config_id=group, algorithm=algorithm,
+            indices.append(dict(version=config.get("version", "V3"), model_id=model_id, config_id=group, algorithm=algorithm,
                 features=";".join(names), threshold=cut, train_n=int(training.sum()),
                 validation_n=int(validation.sum()), PCA_rank=rank, invalid_PCA=rank == len(names),
                 fit_s=fit_s, sha256=sha(path), path=str(path.relative_to(output))))

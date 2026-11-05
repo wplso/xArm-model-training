@@ -13,3 +13,4 @@ results/
 *.log
 *.key
 *.pem
+!/원본 수집 데이터/**
