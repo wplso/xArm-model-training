@@ -1,0 +1,3 @@
+* text=auto eol=lf
+original/** -text whitespace=cr-at-eol
+config/FEATURE_DEFINITIONS.json -text whitespace=cr-at-eol

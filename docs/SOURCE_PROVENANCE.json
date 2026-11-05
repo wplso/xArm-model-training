@@ -1,0 +1,52 @@
+[
+  {
+    "source": "hardware/xarm_model_versions/v3_phase_features/analysis_code/train_xarm_v3.py",
+    "published": "original/train_xarm_v3.py",
+    "sha256": "366fda021d86fde92129d53eb679b9a2c130101ea10692eb5584514ab4f05ef0",
+    "mode": "byte-identical source snapshot"
+  },
+  {
+    "source": "hardware/xarm_model_versions/v3_phase_features/analysis_code/plot_xarm_v3.py",
+    "published": "original/plot_xarm_v3.py",
+    "sha256": "7c22d26838594eeddcef818c459eb4deaffe190dc1839d52390566298ef43774",
+    "mode": "byte-identical source snapshot"
+  },
+  {
+    "source": "hardware/No3_41g_main_20261101/analysis_code/baselines_v1/normal_models.py",
+    "published": "original/normal_models.py",
+    "sha256": "c9e66cef195fca1234279610df484a92e6696205b62224a704d48edaf496c284",
+    "mode": "byte-identical source snapshot"
+  },
+  {
+    "source": "hardware/No3_41g_main_20261101/analysis_code/baselines_v1/normal_models.py",
+    "sha256": "c9e66cef195fca1234279610df484a92e6696205b62224a704d48edaf496c284",
+    "mode": "exact AST source segments",
+    "symbols": [
+      "Detector",
+      "threshold"
+    ]
+  },
+  {
+    "source": "hardware/normal_main_recheck_v2_20261031/pc/pilot_analysis.py",
+    "sha256": "2ce0e79961f41355acdebc52f364db1c07cde5d4a02cfb9e7d577d5bbb010939",
+    "mode": "exact AST source segments",
+    "symbols": [
+      "describe"
+    ]
+  },
+  {
+    "source": "hardware/No3_waveform_comparison_20261103/analysis_code/compare_no3_waveforms.py",
+    "sha256": "a37de80a4d328f83941b87ce8dd00809a8a8478da69e8ea7fdf8409d5acda376",
+    "mode": "exact AST source segments",
+    "symbols": [
+      "window",
+      "current_fall"
+    ]
+  },
+  {
+    "source": "hardware/xarm_model_versions/v3_phase_features/FEATURE_DEFINITIONS.json",
+    "published": "config/FEATURE_DEFINITIONS.json",
+    "sha256": "69307db3f29f662d99815d7443ee00445348c0bd773b4eca7d19b0b0d24fd21a",
+    "mode": "byte-identical source snapshot"
+  }
+]

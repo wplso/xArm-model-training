@@ -1,0 +1,19 @@
+{
+  "unit_tests": 4,
+  "passed": true,
+  "reference_version": "V3",
+  "models": 33,
+  "cycles": 668,
+  "score_pairs_verified": 22044,
+  "max_absolute_score_error": 2.7284841053187847e-12,
+  "max_absolute_threshold_error": 1.461053500406706e-13,
+  "all_flags_identical": true,
+  "reference_models_modified": false,
+  "hardware_access": 0,
+  "raw_data_published": false,
+  "trained_models_published": false,
+  "raw_feature_cycles": 668,
+  "raw_model_feature_columns": 29,
+  "raw_feature_max_abs_error": 2.842170943040401e-14,
+  "raw_feature_builder_matches_original": true
+}
