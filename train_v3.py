@@ -35,7 +35,8 @@ def train(data, config, output):
     if training.sum() < 2 or validation.sum() < 1:
         raise ValueError("Need separate normal train and validation cycles")
     if "classification" in data:
-        if not data.loc[training | validation, "classification"].eq("confirmed_normal").all():
+        if not data.loc[training | validation, "classification"].isin(
+                ["confirmed_normal", "confirmed_normal_41g"]).all():
             raise ValueError("Training and validation must be confirmed normal")
     for names in config["configurations"].values():
         if FORBIDDEN.intersection(names) or len(names) != len(set(names)):

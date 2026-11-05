@@ -1,5 +1,5 @@
 {
-  "unit_tests": 4,
+  "unit_tests": 5,
   "passed": true,
   "reference_version": "V3",
   "models": 33,
@@ -15,5 +15,8 @@
   "raw_feature_cycles": 668,
   "raw_model_feature_columns": 29,
   "raw_feature_max_abs_error": 2.842170943040401e-14,
-  "raw_feature_builder_matches_original": true
+  "raw_feature_builder_matches_original": true,
+  "raw_to_training_integration_passed": true,
+  "raw_to_training_score_pairs": 22044,
+  "raw_to_training_flags_identical": true
 }

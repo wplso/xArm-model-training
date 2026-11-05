@@ -39,6 +39,8 @@ python -m venv .venv
 
 `cycle_id`, `cohort`와 설정에 나열된 특징 컬럼이 필요합니다. 원래 특징 CSV에 포함된 `cohort`를 그대로 사용하세요. 임의 행 무작위 분할로 바꾸지 않습니다.
 
+선택적인 `classification` 컬럼이 있으면 train/validation의 라벨은 `confirmed_normal` 또는 기존 실측 데이터의 `confirmed_normal_41g`여야 합니다. 이상 라벨이 학습·검증에 들어오면 중단합니다.
+
 - `cohort=train` 정상 250회로 결측 중앙값과 StandardScaler 및 모델을 적합합니다.
 - `cohort=validation` 정상 100회 점수의 95% 분위수(`method="higher"`)로 임계값을 결정합니다.
 - `holdout` 정상 100회, 별도 정상 20회, A~F 이상 179회 및 상부 232g 조건 19회는 평가에만 사용합니다. 원래 V3 전체는 668회입니다.

@@ -50,6 +50,15 @@ class TrainingTests(unittest.TestCase):
             with self.assertRaises(FileExistsError):
                 train(self.data,self.config,temporary)
 
+    def test_original_41g_normal_label_is_accepted_and_anomaly_rejected(self):
+        data = self.data.assign(classification="confirmed_normal_41g")
+        config = dict(self.config, algorithms=["Statistical"])
+        with tempfile.TemporaryDirectory() as temporary:
+            train(data,config,Path(temporary)/"valid")
+            data.loc[0,"classification"] = "confirmed_anomaly"
+            with self.assertRaises(ValueError):
+                train(data,config,Path(temporary)/"invalid")
+
     def test_original_quantile_and_population_statistics(self):
         self.assertEqual(threshold(np.array([1.,2.,3.,4.])),4.)
         values = describe([1.,2.,3.],"signal")
