@@ -1,0 +1,50 @@
+{
+  "models": [
+    {
+      "model_id": "V4_PCA",
+      "path": "models/v4/models/V4_PCA.joblib",
+      "sha256": "86d85e072d656fe8dd4df47b096c5d80565bf44ccd48dbc94175d75c359f7f3e",
+      "feature_count": 24,
+      "features": [
+        "current_A_mean",
+        "current_A_rms",
+        "current_A_std",
+        "current_A_abs_p95_nearest_rank",
+        "voltage_V_mean",
+        "voltage_V_std",
+        "x_g_std",
+        "y_g_std",
+        "z_g_std",
+        "mean_removed_vector_g_rms",
+        "mean_removed_vector_g_abs_peak",
+        "position_ID1_raw_range",
+        "position_ID1_raw_std",
+        "position_ID2_raw_range",
+        "position_ID2_raw_std",
+        "position_ID3_raw_range",
+        "position_ID3_raw_std",
+        "position_ID4_raw_range",
+        "position_ID4_raw_std",
+        "position_ID5_raw_range",
+        "position_ID5_raw_std",
+        "position_ID6_raw_range",
+        "position_ID6_raw_std",
+        "ID1_3_5s_IQR"
+      ],
+      "threshold": 0.07929062136548198,
+      "PCA_components": 13,
+      "explained_variance": 0.962349596135957,
+      "fit_ms": 18.540099961683154,
+      "reloaded_exact": true
+    }
+  ],
+  "scope": "normal bolt-mount development candidates, four frozen PCA models; no final winner",
+  "train_n": 200,
+  "validation_n": 100,
+  "test_n": 99,
+  "feature_definitions_sha256": "8771d0ed2313307a5f704a856af7ebda70403cb5903fbb7da499e5622f5f9383",
+  "split_manifest_sha256": "bdf4c57fcdba827df0d62e85a0635537001086662a43ba6bbca9462d951f0997",
+  "independent_dates": false,
+  "anomaly_TPR_verified": false,
+  "frozen_utc": "2026-11-05T18:42:48.629356+00:00"
+}

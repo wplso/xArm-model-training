@@ -1,0 +1,146 @@
+{
+  "version": "V1-베이스고정",
+  "seed": 20261031,
+  "blocks": {
+    "train": [
+      "b01",
+      "b02",
+      "b03",
+      "b04",
+      "b05"
+    ],
+    "validation": [
+      "b06",
+      "b07"
+    ],
+    "holdout": [
+      "b08",
+      "b09"
+    ]
+  },
+  "configurations": {
+    "A2": [
+      "current_A_mean",
+      "current_A_rms",
+      "current_A_std",
+      "current_A_abs_p95_nearest_rank",
+      "voltage_V_mean",
+      "voltage_V_std"
+    ],
+    "A7": [
+      "current_A_mean",
+      "current_A_rms",
+      "current_A_std",
+      "current_A_abs_p95_nearest_rank",
+      "voltage_V_mean",
+      "voltage_V_std",
+      "x_g_std",
+      "y_g_std",
+      "z_g_std",
+      "mean_removed_vector_g_rms",
+      "mean_removed_vector_g_abs_peak",
+      "position_ID1_raw_range",
+      "position_ID1_raw_std",
+      "position_ID2_raw_range",
+      "position_ID2_raw_std",
+      "position_ID3_raw_range",
+      "position_ID3_raw_std",
+      "position_ID4_raw_range",
+      "position_ID4_raw_std",
+      "position_ID5_raw_range",
+      "position_ID5_raw_std",
+      "position_ID6_raw_range",
+      "position_ID6_raw_std"
+    ],
+    "B3": [
+      "current_A_mean",
+      "current_A_rms",
+      "current_A_std",
+      "current_A_abs_p95_nearest_rank",
+      "voltage_V_mean",
+      "voltage_V_std",
+      "x_g_std",
+      "y_g_std",
+      "z_g_std",
+      "mean_removed_vector_g_rms",
+      "mean_removed_vector_g_abs_peak",
+      "position_ID1_raw_std",
+      "position_ID2_raw_range",
+      "position_ID2_raw_std",
+      "position_ID3_raw_range",
+      "position_ID3_raw_std",
+      "position_ID4_raw_range",
+      "position_ID4_raw_std",
+      "position_ID5_raw_range",
+      "position_ID5_raw_std",
+      "position_ID6_raw_range",
+      "position_ID6_raw_std"
+    ],
+    "B5": [
+      "current_A_mean",
+      "current_A_rms",
+      "current_A_std",
+      "current_A_abs_p95_nearest_rank",
+      "voltage_V_mean",
+      "voltage_V_std",
+      "x_g_std",
+      "y_g_std",
+      "z_g_std",
+      "mean_removed_vector_g_rms",
+      "mean_removed_vector_g_abs_peak",
+      "position_ID2_raw_range",
+      "position_ID2_raw_std",
+      "position_ID3_raw_range",
+      "position_ID3_raw_std",
+      "position_ID4_raw_range",
+      "position_ID4_raw_std",
+      "position_ID5_raw_range",
+      "position_ID5_raw_std",
+      "position_ID6_raw_range",
+      "position_ID6_raw_std"
+    ],
+    "B7": [
+      "position_ID2_raw_range",
+      "position_ID2_raw_std",
+      "position_ID3_raw_range",
+      "position_ID3_raw_std",
+      "position_ID4_raw_range",
+      "position_ID4_raw_std",
+      "position_ID5_raw_range",
+      "position_ID5_raw_std",
+      "position_ID6_raw_range",
+      "position_ID6_raw_std"
+    ],
+    "C8": [
+      "current_A_mean",
+      "current_A_rms",
+      "current_A_std",
+      "current_A_abs_p95_nearest_rank",
+      "voltage_V_mean"
+    ],
+    "C9": [
+      "current_A_mean",
+      "current_A_rms",
+      "current_A_abs_p95_nearest_rank",
+      "voltage_V_mean",
+      "voltage_V_std"
+    ]
+  },
+  "thresholds": "validation quantile(.95, method=higher), score > threshold",
+  "IF_n_estimators": 200,
+  "PCA_explained_variance": 0.95,
+  "input_sha256": {
+    "project-source/hardware/No3_41g_fixed_base_main450_20261104/derived/cycle_features.csv": "0c68add35f78198d3f88ba32752870369f6915d7fdd7c473fe056505832952b0",
+    "project-source/hardware/No3_41g_fixed_base_main450_20261104/derived/reviewed_normal_cycle_manifest.csv": "b75c11ee3a48343d55e078e5e6a4f894f95cea07ad15359b42995f43fbabb42d",
+    "project-source/hardware/xarm_anomaly_evaluation_v21/20261104_confirmed_outcomes/REBUILT_CYCLE_FEATURES.csv": "bf98a32cf2777307b6f0f4e9b23f153834da19017589121e837167e79abf0f16",
+    "project-source/hardware/xarm_anomaly_evaluation_v21/20261104_confirmed_outcomes/CYCLE_LABEL_REVIEW.csv": "98ac7db39c588bc9956d5dab6843de8c186046d9145de8642d4d773953ecbb8e",
+    "project-source/hardware/xarm_model_versions/v2_1_confirmed450/MODEL_INDEX.csv": "def91297e022a4bb1a73c6107d0ac6a998c8f408de1a59dbb5a0f1a51798f960",
+    "project-source/hardware/No3_41g_fixed_base_main450_20261104/analysis_v21_frozen/CYCLE_SCORES.csv": "2b3690f2de5ef902041809e2222425c994b1c38ab5afef4a5648585a570a54ea",
+    "project-source/hardware/xarm_anomaly_evaluation_v21/20261104_confirmed_outcomes/MODEL_EVALUATION_ALL.csv": "9cf72996be263d5b50cd0717acf105528be2f0876f85de29942692d3f853c754",
+    "project-source/hardware/No3_41g_main_20261101/analysis_code/baselines_v1/normal_models.py": "c9e66cef195fca1234279610df484a92e6696205b62224a704d48edaf496c284",
+    "project-source/hardware/xarm_model_versions/v2_1_confirmed450/TRAINING_CONFIG.json": "139740c13a69399b7f9fe2b2c72352543815071dd862ef2fdd748b56bf77aebf",
+    "project-source/hardware/xarm_model_versions/v2_1_confirmed450/DATA_SPLIT_MANIFEST.csv": "3e0068628195b0f75843080ba4ae527659a8c2558f0a8fa20b663a9c5d09387d"
+  },
+  "script_sha256": "35d42a805b0c057a1ba6f80746e3b5f4135da010b64623747bb5e0457cf511dc",
+  "test_scope": "same continuous campaign block holdout; historical inspected anomaly cohorts"
+}

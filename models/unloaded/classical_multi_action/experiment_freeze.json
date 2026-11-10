@@ -1,0 +1,208 @@
+{
+  "config": {
+    "seed": 20261031,
+    "target_normal_FPR": 0.05,
+    "algorithms": [
+      "Statistical",
+      "IsolationForest",
+      "PCA"
+    ],
+    "threshold": "normal_validation_quantile_higher_0.95",
+    "outlier_rule": "score > threshold",
+    "scaler": "training_median_imputation_then_training_StandardScaler",
+    "feature_sets": {
+      "external": [
+        "current_A_mean",
+        "current_A_rms",
+        "current_A_std",
+        "current_A_abs_p95_nearest_rank",
+        "voltage_V_mean",
+        "voltage_V_std"
+      ],
+      "multisensor": [
+        "current_A_mean",
+        "current_A_rms",
+        "current_A_std",
+        "current_A_abs_p95_nearest_rank",
+        "voltage_V_mean",
+        "voltage_V_std",
+        "x_g_std",
+        "y_g_std",
+        "z_g_std",
+        "mean_removed_vector_g_rms",
+        "mean_removed_vector_g_abs_peak",
+        "position_ID1_raw_range",
+        "position_ID1_raw_std",
+        "position_ID2_raw_range",
+        "position_ID2_raw_std",
+        "position_ID3_raw_range",
+        "position_ID3_raw_std",
+        "position_ID4_raw_range",
+        "position_ID4_raw_std",
+        "position_ID5_raw_range",
+        "position_ID5_raw_std",
+        "position_ID6_raw_range",
+        "position_ID6_raw_std"
+      ]
+    },
+    "feature_policy": "fixed before data collection; no metadata as predictors; no actual target-tracking error",
+    "learning_curve_train_counts": [
+      50,
+      100,
+      200
+    ],
+    "unavailable_counts": [
+      300,
+      500
+    ],
+    "PCA_variance_fraction": 0.95,
+    "IsolationForest_n_estimators": 200,
+    "independent_new_date_evaluation_required": true,
+    "require_operator_review_before_training": true,
+    "strategies": [
+      "independent_per_group",
+      "pooled_without_group",
+      "conditional_train_only_group_standardization"
+    ],
+    "new_group_pilot_roles": {
+      "probe": 1,
+      "train": 10,
+      "validation": 10,
+      "evaluation": 10
+    },
+    "No3_roles": {
+      "train": 250,
+      "validation": 100,
+      "evaluation": 150
+    },
+    "threshold_policy": "Independent uses own-group validation; pooled and conditional use pooled validation; macro and weighted group FPR both reported",
+    "minimum_normal_per_group_role": 5,
+    "unknown_conditional_group_policy": "reject; never fit evaluation normalization",
+    "evaluation_status": "exploratory same-date, new groups evaluation n10/coarse10% FPR; No3 reference reused",
+    "feature_selection_on_evaluation": false
+  },
+  "config_sha256": "84455f4cc1dcf994adb68d1b54c7f51b26c7d229aa277ed2e5da47f1765bf3b5",
+  "source_sha256": "732c03eb73b6b0fe00f10947968bee808488e20b316039d121f8cb87d778b397",
+  "review_sha256": "dbd2c991ef76bdabb0f7151151b178dd1bbdab942327be777f724be91096d518",
+  "No3_freeze": {
+    "config": {
+      "seed": 20261031,
+      "target_normal_FPR": 0.05,
+      "algorithms": [
+        "Statistical",
+        "IsolationForest",
+        "PCA"
+      ],
+      "threshold": "normal_validation_quantile_higher_0.95",
+      "outlier_rule": "score > threshold",
+      "scaler": "training_median_imputation_then_training_StandardScaler",
+      "feature_sets": {
+        "external": [
+          "current_A_mean",
+          "current_A_rms",
+          "current_A_std",
+          "current_A_abs_p95_nearest_rank",
+          "voltage_V_mean",
+          "voltage_V_std"
+        ],
+        "multisensor": [
+          "current_A_mean",
+          "current_A_rms",
+          "current_A_std",
+          "current_A_abs_p95_nearest_rank",
+          "voltage_V_mean",
+          "voltage_V_std",
+          "x_g_std",
+          "y_g_std",
+          "z_g_std",
+          "mean_removed_vector_g_rms",
+          "mean_removed_vector_g_abs_peak",
+          "position_ID1_raw_range",
+          "position_ID1_raw_std",
+          "position_ID2_raw_range",
+          "position_ID2_raw_std",
+          "position_ID3_raw_range",
+          "position_ID3_raw_std",
+          "position_ID4_raw_range",
+          "position_ID4_raw_std",
+          "position_ID5_raw_range",
+          "position_ID5_raw_std",
+          "position_ID6_raw_range",
+          "position_ID6_raw_std"
+        ]
+      },
+      "feature_policy": "fixed before data collection; no metadata as predictors; no actual target-tracking error",
+      "learning_curve_train_counts": [
+        50,
+        100,
+        200
+      ],
+      "unavailable_counts": [
+        300,
+        500
+      ],
+      "PCA_variance_fraction": 0.95,
+      "IsolationForest_n_estimators": 200,
+      "independent_new_date_evaluation_required": true,
+      "require_operator_review_before_training": true
+    },
+    "counts": {
+      "train": 250,
+      "validation": 100,
+      "evaluation": 150
+    },
+    "config_sha256": "b28e79a6c5009911b651f3e40941a2e7604e6714f15a2961da2dbfa051f98f9a",
+    "source_sha256": "c9e66cef195fca1234279610df484a92e6696205b62224a704d48edaf496c284",
+    "review_sha256": "bf50eaf53b43fe815da16e2e559407e817ae7798ed26185040114b4b61e2ae0b",
+    "model_selection_on_test": false,
+    "evaluation_scope": "same-date held-out sessions; independent new-date FPR pending"
+  },
+  "evaluation_tuned": false,
+  "actual_counts": [
+    {
+      "action_group_id": 3,
+      "dataset_role": "evaluation",
+      "n": 150
+    },
+    {
+      "action_group_id": 3,
+      "dataset_role": "train",
+      "n": 250
+    },
+    {
+      "action_group_id": 3,
+      "dataset_role": "validation",
+      "n": 100
+    },
+    {
+      "action_group_id": 4,
+      "dataset_role": "evaluation",
+      "n": 10
+    },
+    {
+      "action_group_id": 4,
+      "dataset_role": "train",
+      "n": 10
+    },
+    {
+      "action_group_id": 4,
+      "dataset_role": "validation",
+      "n": 10
+    },
+    {
+      "action_group_id": 5,
+      "dataset_role": "evaluation",
+      "n": 10
+    },
+    {
+      "action_group_id": 5,
+      "dataset_role": "train",
+      "n": 10
+    },
+    {
+      "action_group_id": 5,
+      "dataset_role": "validation",
+      "n": 10
+    }
+  ]
+}

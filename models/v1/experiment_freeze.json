@@ -1,0 +1,122 @@
+{
+  "seed": 20261031,
+  "algorithms": [
+    "Statistical",
+    "IsolationForest",
+    "PCA"
+  ],
+  "feature_sets": {
+    "external": [
+      "current_A_mean",
+      "current_A_rms",
+      "current_A_std",
+      "current_A_abs_p95_nearest_rank",
+      "voltage_V_mean",
+      "voltage_V_std"
+    ],
+    "multisensor": [
+      "current_A_mean",
+      "current_A_rms",
+      "current_A_std",
+      "current_A_abs_p95_nearest_rank",
+      "voltage_V_mean",
+      "voltage_V_std",
+      "x_g_std",
+      "y_g_std",
+      "z_g_std",
+      "mean_removed_vector_g_rms",
+      "mean_removed_vector_g_abs_peak",
+      "position_ID1_raw_range",
+      "position_ID1_raw_std",
+      "position_ID2_raw_range",
+      "position_ID2_raw_std",
+      "position_ID3_raw_range",
+      "position_ID3_raw_std",
+      "position_ID4_raw_range",
+      "position_ID4_raw_std",
+      "position_ID5_raw_range",
+      "position_ID5_raw_std",
+      "position_ID6_raw_range",
+      "position_ID6_raw_std"
+    ]
+  },
+  "target_normal_FPR": 0.05,
+  "threshold": "validation quantile0.95 higher; strict score>threshold",
+  "split_counts": {
+    "train": 250,
+    "validation": 100,
+    "evaluation_same_date": 150
+  },
+  "model_config_reference": {
+    "seed": 20261031,
+    "target_normal_FPR": 0.05,
+    "algorithms": [
+      "Statistical",
+      "IsolationForest",
+      "PCA"
+    ],
+    "threshold": "normal_validation_quantile_higher_0.95",
+    "outlier_rule": "score > threshold",
+    "scaler": "training_median_imputation_then_training_StandardScaler",
+    "feature_sets": {
+      "external": [
+        "current_A_mean",
+        "current_A_rms",
+        "current_A_std",
+        "current_A_abs_p95_nearest_rank",
+        "voltage_V_mean",
+        "voltage_V_std"
+      ],
+      "multisensor": [
+        "current_A_mean",
+        "current_A_rms",
+        "current_A_std",
+        "current_A_abs_p95_nearest_rank",
+        "voltage_V_mean",
+        "voltage_V_std",
+        "x_g_std",
+        "y_g_std",
+        "z_g_std",
+        "mean_removed_vector_g_rms",
+        "mean_removed_vector_g_abs_peak",
+        "position_ID1_raw_range",
+        "position_ID1_raw_std",
+        "position_ID2_raw_range",
+        "position_ID2_raw_std",
+        "position_ID3_raw_range",
+        "position_ID3_raw_std",
+        "position_ID4_raw_range",
+        "position_ID4_raw_std",
+        "position_ID5_raw_range",
+        "position_ID5_raw_std",
+        "position_ID6_raw_range",
+        "position_ID6_raw_std"
+      ]
+    },
+    "feature_policy": "fixed before data collection; no metadata as predictors; no actual target-tracking error",
+    "learning_curve_train_counts": [
+      50,
+      100,
+      200
+    ],
+    "unavailable_counts": [
+      300,
+      500
+    ],
+    "PCA_variance_fraction": 0.95,
+    "IsolationForest_n_estimators": 200,
+    "independent_new_date_evaluation_required": true,
+    "require_operator_review_before_training": true
+  },
+  "source_detector_sha256": "c9e66cef195fca1234279610df484a92e6696205b62224a704d48edaf496c284",
+  "training_script_sha256": "9a5f98c1f48613ab904a421831628eb0dc7a7619c55461145f2341ef6573314f",
+  "feature_table_sha256": "7f75965ee9adc1f0357e28ae041b129077c9fc9f06394c88086a41146552c7c3",
+  "operator_review_sha256": "919d656c8e749804436ecde73d91ccad666772b8c867e78ccf9c28ea152389fa",
+  "condition": "No3 transported41g plus separate restoration; features use No3 only",
+  "primary_reference_model": "multisensor_IsolationForest",
+  "primary_selection_reason": "Retain previous baseline algorithm family before future anomaly evaluation; not selected by current test FPR",
+  "evaluation_status": "same-date held-out acquisition sessions; not independent date validation",
+  "hyperparameter_search": false,
+  "feature_selection_on_evaluation": false,
+  "anomaly_data_used": false
+}

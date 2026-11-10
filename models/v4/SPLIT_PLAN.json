@@ -1,0 +1,13 @@
+{
+  "saved_before_feature_extraction": true,
+  "source_plan_sha256": "ed1cdcb3051bb6ff6187baccd93463977a165eea0b49661bf82d22506e0776f6",
+  "policy": "preserve precollection roles; exclude incomplete400; no reassignment based on features or scores",
+  "counts": {
+    "train": 200,
+    "validation": 100,
+    "test": 99
+  },
+  "independent_dates": false,
+  "continuous_campaigns": 1,
+  "acquisition_session_ids": 8
+}

@@ -1,0 +1,420 @@
+{
+  "validation": "Loaded archived models and replayed saved results on local data; no fitting",
+  "all_recorded_alarm_flags_reproduced": true,
+  "classical_thresholds_reproduced_from_original_calibration": true,
+  "autoencoders_loaded_with_weights_only": true,
+  "counts": {
+    "classical_no3": 24,
+    "classical_multi_action": 18,
+    "autoencoders": 36,
+    "onnx": 12
+  },
+  "classical_no3": [
+    {
+      "name": "external_IsolationForest_train100.joblib",
+      "checked_cycles": 500,
+      "maximum_abs_score_error": 0.0
+    },
+    {
+      "name": "external_IsolationForest_train200.joblib",
+      "checked_cycles": 500,
+      "maximum_abs_score_error": 0.0
+    },
+    {
+      "name": "external_IsolationForest_train250.joblib",
+      "checked_cycles": 500,
+      "maximum_abs_score_error": 0.0
+    },
+    {
+      "name": "external_IsolationForest_train50.joblib",
+      "checked_cycles": 500,
+      "maximum_abs_score_error": 0.0
+    },
+    {
+      "name": "external_PCA_train100.joblib",
+      "checked_cycles": 500,
+      "maximum_abs_score_error": 0.0
+    },
+    {
+      "name": "external_PCA_train200.joblib",
+      "checked_cycles": 500,
+      "maximum_abs_score_error": 0.0
+    },
+    {
+      "name": "external_PCA_train250.joblib",
+      "checked_cycles": 500,
+      "maximum_abs_score_error": 0.0
+    },
+    {
+      "name": "external_PCA_train50.joblib",
+      "checked_cycles": 500,
+      "maximum_abs_score_error": 0.0
+    },
+    {
+      "name": "external_Statistical_train100.joblib",
+      "checked_cycles": 500,
+      "maximum_abs_score_error": 0.0
+    },
+    {
+      "name": "external_Statistical_train200.joblib",
+      "checked_cycles": 500,
+      "maximum_abs_score_error": 0.0
+    },
+    {
+      "name": "external_Statistical_train250.joblib",
+      "checked_cycles": 500,
+      "maximum_abs_score_error": 0.0
+    },
+    {
+      "name": "external_Statistical_train50.joblib",
+      "checked_cycles": 500,
+      "maximum_abs_score_error": 0.0
+    },
+    {
+      "name": "multisensor_IsolationForest_train100.joblib",
+      "checked_cycles": 500,
+      "maximum_abs_score_error": 0.0
+    },
+    {
+      "name": "multisensor_IsolationForest_train200.joblib",
+      "checked_cycles": 500,
+      "maximum_abs_score_error": 0.0
+    },
+    {
+      "name": "multisensor_IsolationForest_train250.joblib",
+      "checked_cycles": 500,
+      "maximum_abs_score_error": 0.0
+    },
+    {
+      "name": "multisensor_IsolationForest_train50.joblib",
+      "checked_cycles": 500,
+      "maximum_abs_score_error": 0.0
+    },
+    {
+      "name": "multisensor_PCA_train100.joblib",
+      "checked_cycles": 500,
+      "maximum_abs_score_error": 0.0
+    },
+    {
+      "name": "multisensor_PCA_train200.joblib",
+      "checked_cycles": 500,
+      "maximum_abs_score_error": 0.0
+    },
+    {
+      "name": "multisensor_PCA_train250.joblib",
+      "checked_cycles": 500,
+      "maximum_abs_score_error": 0.0
+    },
+    {
+      "name": "multisensor_PCA_train50.joblib",
+      "checked_cycles": 500,
+      "maximum_abs_score_error": 0.0
+    },
+    {
+      "name": "multisensor_Statistical_train100.joblib",
+      "checked_cycles": 500,
+      "maximum_abs_score_error": 0.0
+    },
+    {
+      "name": "multisensor_Statistical_train200.joblib",
+      "checked_cycles": 500,
+      "maximum_abs_score_error": 0.0
+    },
+    {
+      "name": "multisensor_Statistical_train250.joblib",
+      "checked_cycles": 500,
+      "maximum_abs_score_error": 0.0
+    },
+    {
+      "name": "multisensor_Statistical_train50.joblib",
+      "checked_cycles": 500,
+      "maximum_abs_score_error": 0.0
+    }
+  ],
+  "classical_multi_action": [
+    {
+      "name": "external_conditional_train_only_group_standardization_IsolationForest.joblib",
+      "checked_cycles": 560,
+      "maximum_abs_score_error": 0.0
+    },
+    {
+      "name": "external_conditional_train_only_group_standardization_PCA.joblib",
+      "checked_cycles": 560,
+      "maximum_abs_score_error": 0.0
+    },
+    {
+      "name": "external_conditional_train_only_group_standardization_Statistical.joblib",
+      "checked_cycles": 560,
+      "maximum_abs_score_error": 0.0
+    },
+    {
+      "name": "external_independent_per_group_IsolationForest.joblib",
+      "checked_cycles": 560,
+      "maximum_abs_score_error": 0.0
+    },
+    {
+      "name": "external_independent_per_group_PCA.joblib",
+      "checked_cycles": 560,
+      "maximum_abs_score_error": 0.0
+    },
+    {
+      "name": "external_independent_per_group_Statistical.joblib",
+      "checked_cycles": 560,
+      "maximum_abs_score_error": 0.0
+    },
+    {
+      "name": "external_pooled_without_group_IsolationForest.joblib",
+      "checked_cycles": 560,
+      "maximum_abs_score_error": 0.0
+    },
+    {
+      "name": "external_pooled_without_group_PCA.joblib",
+      "checked_cycles": 560,
+      "maximum_abs_score_error": 0.0
+    },
+    {
+      "name": "external_pooled_without_group_Statistical.joblib",
+      "checked_cycles": 560,
+      "maximum_abs_score_error": 0.0
+    },
+    {
+      "name": "multisensor_conditional_train_only_group_standardization_IsolationForest.joblib",
+      "checked_cycles": 560,
+      "maximum_abs_score_error": 0.0
+    },
+    {
+      "name": "multisensor_conditional_train_only_group_standardization_PCA.joblib",
+      "checked_cycles": 560,
+      "maximum_abs_score_error": 0.0
+    },
+    {
+      "name": "multisensor_conditional_train_only_group_standardization_Statistical.joblib",
+      "checked_cycles": 560,
+      "maximum_abs_score_error": 0.0
+    },
+    {
+      "name": "multisensor_independent_per_group_IsolationForest.joblib",
+      "checked_cycles": 560,
+      "maximum_abs_score_error": 0.0
+    },
+    {
+      "name": "multisensor_independent_per_group_PCA.joblib",
+      "checked_cycles": 560,
+      "maximum_abs_score_error": 0.0
+    },
+    {
+      "name": "multisensor_independent_per_group_Statistical.joblib",
+      "checked_cycles": 560,
+      "maximum_abs_score_error": 0.0
+    },
+    {
+      "name": "multisensor_pooled_without_group_IsolationForest.joblib",
+      "checked_cycles": 560,
+      "maximum_abs_score_error": 0.0
+    },
+    {
+      "name": "multisensor_pooled_without_group_PCA.joblib",
+      "checked_cycles": 560,
+      "maximum_abs_score_error": 0.0
+    },
+    {
+      "name": "multisensor_pooled_without_group_Statistical.joblib",
+      "checked_cycles": 560,
+      "maximum_abs_score_error": 0.0
+    }
+  ],
+  "autoencoders": [
+    {
+      "name": "No3_external_feature_MLP_AE_seed20261031",
+      "checked_evaluation_cycles": 150,
+      "maximum_abs_score_error": 1.1889648487972693e-08,
+      "onnx_maximum_abs_reconstruction_error": 9.5367431640625e-07
+    },
+    {
+      "name": "No3_external_feature_MLP_AE_seed20261032",
+      "checked_evaluation_cycles": 150,
+      "maximum_abs_score_error": 2.6105689970856716e-09
+    },
+    {
+      "name": "No3_external_feature_MLP_AE_seed20261033",
+      "checked_evaluation_cycles": 150,
+      "maximum_abs_score_error": 4.877471870834427e-09
+    },
+    {
+      "name": "No3_external_sequence_CNN1D_AE_seed20261031",
+      "checked_evaluation_cycles": 150,
+      "maximum_abs_score_error": 1.0768890390533414e-08,
+      "onnx_maximum_abs_reconstruction_error": 1.6689300537109375e-06
+    },
+    {
+      "name": "No3_external_sequence_CNN1D_AE_seed20261032",
+      "checked_evaluation_cycles": 150,
+      "maximum_abs_score_error": 4.956054677762722e-09
+    },
+    {
+      "name": "No3_external_sequence_CNN1D_AE_seed20261033",
+      "checked_evaluation_cycles": 150,
+      "maximum_abs_score_error": 4.8306274536003e-09
+    },
+    {
+      "name": "No3_external_sequence_MLP_AE_seed20261031",
+      "checked_evaluation_cycles": 150,
+      "maximum_abs_score_error": 1.0600280653250138e-08,
+      "onnx_maximum_abs_reconstruction_error": 1.1920928955078125e-06
+    },
+    {
+      "name": "No3_external_sequence_MLP_AE_seed20261032",
+      "checked_evaluation_cycles": 150,
+      "maximum_abs_score_error": 1.285705564235684e-08
+    },
+    {
+      "name": "No3_external_sequence_MLP_AE_seed20261033",
+      "checked_evaluation_cycles": 150,
+      "maximum_abs_score_error": 1.973419183620706e-08
+    },
+    {
+      "name": "No3_multisensor_feature_MLP_AE_seed20261031",
+      "checked_evaluation_cycles": 150,
+      "maximum_abs_score_error": 5.3970336866271396e-08,
+      "onnx_maximum_abs_reconstruction_error": 2.86102294921875e-06
+    },
+    {
+      "name": "No3_multisensor_feature_MLP_AE_seed20261032",
+      "checked_evaluation_cycles": 150,
+      "maximum_abs_score_error": 4.8756408688177544e-08
+    },
+    {
+      "name": "No3_multisensor_feature_MLP_AE_seed20261033",
+      "checked_evaluation_cycles": 150,
+      "maximum_abs_score_error": 5.729675289778413e-08
+    },
+    {
+      "name": "No3_multisensor_sequence_CNN1D_AE_seed20261031",
+      "checked_evaluation_cycles": 150,
+      "maximum_abs_score_error": 4.940872183611944e-09,
+      "onnx_maximum_abs_reconstruction_error": 2.7418136596679688e-06
+    },
+    {
+      "name": "No3_multisensor_sequence_CNN1D_AE_seed20261032",
+      "checked_evaluation_cycles": 150,
+      "maximum_abs_score_error": 6.951332093274587e-09
+    },
+    {
+      "name": "No3_multisensor_sequence_CNN1D_AE_seed20261033",
+      "checked_evaluation_cycles": 150,
+      "maximum_abs_score_error": 7.367706278404995e-09
+    },
+    {
+      "name": "No3_multisensor_sequence_MLP_AE_seed20261031",
+      "checked_evaluation_cycles": 150,
+      "maximum_abs_score_error": 2.0653533883141506e-08,
+      "onnx_maximum_abs_reconstruction_error": 9.5367431640625e-07
+    },
+    {
+      "name": "No3_multisensor_sequence_MLP_AE_seed20261032",
+      "checked_evaluation_cycles": 150,
+      "maximum_abs_score_error": 1.9738769507782195e-08
+    },
+    {
+      "name": "No3_multisensor_sequence_MLP_AE_seed20261033",
+      "checked_evaluation_cycles": 150,
+      "maximum_abs_score_error": 1.4096450784428782e-08
+    },
+    {
+      "name": "pooled_3_4_5_external_feature_MLP_AE_seed20261031",
+      "checked_evaluation_cycles": 170,
+      "maximum_abs_score_error": 6.0897827058870035e-09,
+      "onnx_maximum_abs_reconstruction_error": 9.5367431640625e-07
+    },
+    {
+      "name": "pooled_3_4_5_external_feature_MLP_AE_seed20261032",
+      "checked_evaluation_cycles": 170,
+      "maximum_abs_score_error": 1.3005828858325685e-08
+    },
+    {
+      "name": "pooled_3_4_5_external_feature_MLP_AE_seed20261033",
+      "checked_evaluation_cycles": 170,
+      "maximum_abs_score_error": 6.85348511275663e-09
+    },
+    {
+      "name": "pooled_3_4_5_external_sequence_CNN1D_AE_seed20261031",
+      "checked_evaluation_cycles": 170,
+      "maximum_abs_score_error": 6.240463257256579e-09,
+      "onnx_maximum_abs_reconstruction_error": 1.430511474609375e-06
+    },
+    {
+      "name": "pooled_3_4_5_external_sequence_CNN1D_AE_seed20261032",
+      "checked_evaluation_cycles": 170,
+      "maximum_abs_score_error": 6.68792723979017e-09
+    },
+    {
+      "name": "pooled_3_4_5_external_sequence_CNN1D_AE_seed20261033",
+      "checked_evaluation_cycles": 170,
+      "maximum_abs_score_error": 3.957290661826818e-09
+    },
+    {
+      "name": "pooled_3_4_5_external_sequence_MLP_AE_seed20261031",
+      "checked_evaluation_cycles": 170,
+      "maximum_abs_score_error": 3.6984252993477185e-08,
+      "onnx_maximum_abs_reconstruction_error": 1.430511474609375e-06
+    },
+    {
+      "name": "pooled_3_4_5_external_sequence_MLP_AE_seed20261032",
+      "checked_evaluation_cycles": 170,
+      "maximum_abs_score_error": 2.657394404526059e-08
+    },
+    {
+      "name": "pooled_3_4_5_external_sequence_MLP_AE_seed20261033",
+      "checked_evaluation_cycles": 170,
+      "maximum_abs_score_error": 3.8470459040595983e-08
+    },
+    {
+      "name": "pooled_3_4_5_multisensor_feature_MLP_AE_seed20261031",
+      "checked_evaluation_cycles": 170,
+      "maximum_abs_score_error": 9.780883747367852e-08,
+      "onnx_maximum_abs_reconstruction_error": 1.3113021850585938e-06
+    },
+    {
+      "name": "pooled_3_4_5_multisensor_feature_MLP_AE_seed20261032",
+      "checked_evaluation_cycles": 170,
+      "maximum_abs_score_error": 5.8654785028977585e-08
+    },
+    {
+      "name": "pooled_3_4_5_multisensor_feature_MLP_AE_seed20261033",
+      "checked_evaluation_cycles": 170,
+      "maximum_abs_score_error": 2.344665528397627e-07
+    },
+    {
+      "name": "pooled_3_4_5_multisensor_sequence_CNN1D_AE_seed20261031",
+      "checked_evaluation_cycles": 170,
+      "maximum_abs_score_error": 9.191894523308264e-09,
+      "onnx_maximum_abs_reconstruction_error": 2.2649765014648438e-06
+    },
+    {
+      "name": "pooled_3_4_5_multisensor_sequence_CNN1D_AE_seed20261032",
+      "checked_evaluation_cycles": 170,
+      "maximum_abs_score_error": 1.2055587750303687e-08
+    },
+    {
+      "name": "pooled_3_4_5_multisensor_sequence_CNN1D_AE_seed20261033",
+      "checked_evaluation_cycles": 170,
+      "maximum_abs_score_error": 1.2881469724224104e-08
+    },
+    {
+      "name": "pooled_3_4_5_multisensor_sequence_MLP_AE_seed20261031",
+      "checked_evaluation_cycles": 170,
+      "maximum_abs_score_error": 2.879714966486091e-08,
+      "onnx_maximum_abs_reconstruction_error": 7.152557373046875e-07
+    },
+    {
+      "name": "pooled_3_4_5_multisensor_sequence_MLP_AE_seed20261032",
+      "checked_evaluation_cycles": 170,
+      "maximum_abs_score_error": 2.9739379847626424e-08
+    },
+    {
+      "name": "pooled_3_4_5_multisensor_sequence_MLP_AE_seed20261033",
+      "checked_evaluation_cycles": 170,
+      "maximum_abs_score_error": 1.3208007798581889e-08
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "architecture": "sequence_MLP_AE",
+  "shape": [
+    2,
+    64
+  ],
+  "seed": 20261032,
+  "threshold": 0.23057132959365845,
+  "cfg": {
+    "seed_replicates": [
+      20261031,
+      20261032,
+      20261033
+    ],
+    "scopes": [
+      "No3",
+      "pooled_3_4_5"
+    ],
+    "sensor_sets": [
+      "external",
+      "multisensor"
+    ],
+    "architectures": [
+      "feature_MLP_AE",
+      "sequence_MLP_AE",
+      "sequence_CNN1D_AE"
+    ],
+    "max_epochs": 200,
+    "patience": 20,
+    "min_delta": 1e-05,
+    "batch_size": 32,
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "early_stop_fraction_of_train": 0.2,
+    "refit_all_training_for_selected_epoch_count": true,
+    "outer_validation_use": "threshold only; higher95%; score>threshold",
+    "target_normal_FPR": 0.05,
+    "feature_MLP_hidden": 16,
+    "feature_MLP_latent": 4,
+    "sequence_MLP_hidden": 8,
+    "sequence_MLP_latent": 4,
+    "cnn_channels": [
+      8,
+      16,
+      4
+    ],
+    "sequence_bins": 64,
+    "position_max_hold_s": 0.75,
+    "ina_max_hold_s": 0.35,
+    "min_accel_samples_per_bin": 3,
+    "sequence_external_channels": [
+      "current_mean_A",
+      "voltage_mean_V"
+    ],
+    "sequence_multisensor_channels": [
+      "current_mean_A",
+      "voltage_mean_V",
+      "accel_x_std_g",
+      "accel_y_std_g",
+      "accel_z_std_g",
+      "position_ID1_raw",
+      "position_ID2_raw",
+      "position_ID3_raw",
+      "position_ID4_raw",
+      "position_ID5_raw",
+      "position_ID6_raw"
+    ],
+    "sequence_definition": "64 cycle-phase bins; INA mean, vibration std envelope, past-only held actual joint responses; missing mask; post-cycle only",
+    "preprocessing": "train-only mean imputation/scale for sequences; train-only median/scale for cycle feature vectors",
+    "early_stop_policy": "chronological final20% cycles of each training group; no outer validation/evaluation fitting",
+    "comparison_scope": "same previously exposed sessions, exploratory follow-up; no independent-validation claim",
+    "fair_architecture_control": "sequence MLP and CNN share identical tensors/masks/splits; feature MLP vs CNN also changes representation",
+    "cpu_threads": 1,
+    "device": "cpu",
+    "quantization": "not fitted or selected on evaluation",
+    "extra_hardware_actions": false
+  },
+  "scope": "pooled_3_4_5",
+  "sensors": "external",
+  "score": "mean masked standardized squared reconstruction error",
+  "normal_scope": "unloaded known trajectories only",
+  "post_cycle_only": true
+}

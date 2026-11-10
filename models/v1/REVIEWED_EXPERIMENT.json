@@ -1,0 +1,15 @@
+{
+  "status": "authoritative condition-reviewed results; original evaluation150 metrics superseded",
+  "frozen_models_manifest": "FROZEN_MODELS.json",
+  "frozen_models_manifest_sha256": "9645ec1fc172fe2a975231b390e061ff2e48a884b659ce223427e1cd9a80f3a6",
+  "condition_review_sha256": "1a389af3a9d33a699163cb3d2819843107234706aa45f3d57f50f36479c75cc3",
+  "metrics": "reviewed_same_date_evaluation.csv",
+  "model_hashes_unchanged": true,
+  "primary_reference": "multisensor_IsolationForest",
+  "train": 250,
+  "validation": 100,
+  "evaluation_same_date": 100,
+  "condition_uncertain": 50,
+  "original150_metrics_are_normal_FPR": false,
+  "anomaly_performance_validated": false
+}
