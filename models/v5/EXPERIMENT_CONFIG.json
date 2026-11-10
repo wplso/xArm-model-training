@@ -1,0 +1,38 @@
+{
+  "seed": 20261031,
+  "representation_count": 15,
+  "policy_count": 45,
+  "PCA_n_components": 0.95,
+  "svd_solver": "full",
+  "whiten": false,
+  "imputation": "train median, keep_empty_features=True",
+  "scaling": "Train StandardScaler",
+  "calibration": "validation in the original V4 split",
+  "primary_evaluation": "historical Test99 + 120 unique subsequent bolt normal cycles, ABC each 30",
+  "nov10": "previously V4 new-date frozen evaluation, now V5 feature-design development evaluation",
+  "def": "new bolt-mounted D/E/F unverified; no cross-mount data in study",
+  "python": "3.13.15 (tags/v3.13.15:4061bc4, Aug  5 2026, 13:05:39) [MSC v.1944 64 bit (AMD64)]",
+  "numpy": "2.5.4",
+  "pandas": "3.0.6",
+  "sklearn": "1.9.1",
+  "scipy": "1.18.1",
+  "joblib": "1.6.0",
+  "input_sha256": {
+    "project-source/hardware/xarm_model_versions/v5_position_score_study/metrics/CYCLE_FEATURES.csv": "9a0a28af3abe70c7b059ce4c661276c496ef4091684eab4d95df0df2b7e60f5e",
+    "project-source/hardware/xarm_model_versions/v4_bolt_fixed/FROZEN_V4_CANDIDATES.json": "1d566ff2744db9aec975d3ff87b4bb10438ac6026b0b4f495fe6a794920f0bcd",
+    "project-source/hardware/xarm_model_versions/v5_position_score_study/metrics/BASELINE_CYCLE_SCORES.csv": "43cc3673096df7cdf2161b12150c8fc3a25a5a4ac95ab72d0149e549bf963c2e",
+    "project-source/hardware/xarm_model_versions/v5_position_score_study/DATA_USAGE_MANIFEST.csv": "59eb791b9b1ff923987f5535a0fad1ca14518b4e57f2a0d4abdb9b9802a33e25",
+    "project-source/hardware/xarm_model_versions/v5_position_score_study/SPLIT_MANIFEST.csv": "9014fe09d32d3fc4b6b8463603b2e39459e3b3487900909bbd3ea6a8cbe8c8b0",
+    "project-source/hardware/xarm_model_versions/v5_position_score_study/verification/baseline.json": "a2805c2afff567b9d6d7e5627bad5cfca86a8cfabf13cc189ce606745e15c978",
+    "project-source/hardware/xarm_model_versions/v4_bolt_fixed/TRAINING_CONFIG.json": "de5b165f616d49ce9a215ec1a0cd4313b57ffba985466277d5bbda91339fea40",
+    "project-source/hardware/xarm_model_versions/v5_position_score_study/analysis_code/run_study.py": "2428f8c3d7d3f5ba7d901f01decd5be8626315eff5e6b2e3b8b17488be1cec9e",
+    "project-source/hardware/xarm_model_versions/v5_position_score_study/analysis_code/summarize_study.py": "107fc822a4d2012601450645100587e60ab1b6d33b313310f34ae4a802cd63af",
+    "project-source/hardware/No3_41g_main_20261101/analysis_code/baselines_v1/normal_models.py": "c9e66cef195fca1234279610df484a92e6696205b62224a704d48edaf496c284"
+  },
+  "v4_model_sha256": {
+    "models/v4/models/V4_PCA.joblib": "86d85e072d656fe8dd4df47b096c5d80565bf44ccd48dbc94175d75c359f7f3e",
+    "models/v4/models/V4_1_PCA.joblib": "e85b1cfae531222a6dde4b175cb2e36833008ba628686e182406edb8f851e707",
+    "models/v4/models/V4_2A_PCA.joblib": "14267bcbaed43961637414dde95ad5b08a98cf2923a84da5a01bfc26e1c930e4",
+    "models/v4/models/V4_2B_PCA.joblib": "ea533dcc02643a2175a392e4efe44225162239a01641ee187dfe1f141d164d11"
+  }
+}

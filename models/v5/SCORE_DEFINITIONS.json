@@ -1,0 +1,10 @@
+{
+  "Q": "mean((z - inverse_transform(transform(z)))**2), in standardized feature space",
+  "T2": "sum(transform(z)[j]**2 / explained_variance_[j]), whiten=False",
+  "JOINT": "max(Q / a_Q, T2 / a_T), where both a values are Train q95(higher)",
+  "threshold": "separate Calibration100 q95(higher) for each available policy",
+  "flag": "strict score > threshold",
+  "t2_rule": "invalid if any retained eigenvalue is nonfinite or <= 1e-12 times the largest; no clipping",
+  "joint_rule": "invalid if either Train scale is nonfinite or <= 1e-12; no fallback",
+  "full_dimension_q": "reported explicitly, scores at numerical precision are not useful"
+}
