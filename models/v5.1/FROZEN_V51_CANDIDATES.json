@@ -1,0 +1,9 @@
+{
+  "study": "V5.1 multisession normal development",
+  "status": "no V5.1 candidate frozen",
+  "operating_baseline": "existing V4",
+  "operating_model_changed": false,
+  "reason": "Main campaign-held-out load detection losses and material train/calibration group sensitivity.",
+  "candidates": [],
+  "evaluation_scope": "previously inspected, development-only group held-out"
+}

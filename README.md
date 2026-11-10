@@ -1,6 +1,6 @@
 # xArm 정상 기반 이상 탐지 · 실측 데이터와 모델
 
-이 `v5` 브랜치에는 Hiwonder xArm의 원시 데이터, V3·V3.1 학습 코드, 그리고 V1부터 V5까지 보존한 학습 모델이 있습니다. 기본 작업은 No.3의 41g 블록 운반과 B→A 자동 원복입니다. 모델의 점수는 주로 No.3 운반 구간이 끝난 뒤 계산합니다.
+이 `v5.1` 브랜치에는 Hiwonder xArm의 원시 데이터, V3·V3.1 학습 코드, 그리고 V1부터 V5.1까지 보존한 학습 모델이 있습니다. 기본 작업은 No.3의 41g 블록 운반과 B→A 자동 원복입니다. 모델의 점수는 주로 No.3 운반 구간이 끝난 뒤 계산합니다.
 
 - [추가 원시 데이터와 회차 목록](원본%20수집%20데이터/V4_V51_보완원시/)에서 기존 공유 이후 추가된 동작 1,019회(정상 809회, 이상 조건 210회)와 센서 전용 휴지 기록을 확인할 수 있습니다.
 - [학습 모델과 버전별 자료](models/README_KO.md)에는 저장된 모델, 입력 특징, 임계값 및 검증에 필요한 파일을 모았습니다. V3·V3.1 재학습은 아래 독립 실행기를 사용합니다.
@@ -62,7 +62,7 @@ V5의 219회는 기존 Test99와 이후 정상 120회를 합친 개발 평가입
 
 ```powershell
 git lfs install
-git clone --branch v5 https://github.com/wplso/xArm-model-training.git
+git clone --branch v5.1 https://github.com/wplso/xArm-model-training.git
 cd xArm-model-training
 git lfs pull
 ```
