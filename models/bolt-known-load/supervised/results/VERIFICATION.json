@@ -1,0 +1,24 @@
+{
+  "verified": true,
+  "no_cycle_session_or_campaign_crosses_roles_within_split": true,
+  "whole_eligible_captures": true,
+  "v4_eval_disjoint_from_v4_fit_and_cal_campaign": true,
+  "frozen_v4_replay_max_abs_error": 0.0,
+  "frozen_v4_alarm_replay_identical": true,
+  "input_hashes_unchanged": true,
+  "probabilities_reload_exact": true,
+  "evaluation_scores": 1020,
+  "capture_roles": 780,
+  "missing_values_train_only_imputation": {
+    "OLD_TO_BOLT": [
+      0,
+      0,
+      0
+    ],
+    "OLD_CAMPAIGN_HOLDOUT": [
+      0,
+      0,
+      0
+    ]
+  }
+}

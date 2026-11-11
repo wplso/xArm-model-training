@@ -1,0 +1,19 @@
+{
+  "record_date_kst": "2026-11-12",
+  "status": "candidate_for_independent_evaluation",
+  "model_id": "LOGISTIC_BOLT_NORMAL_EXPANDED",
+  "artifact_relative_to_campaign": "analysis/retrained_bolt_normal/models/LOGISTIC_BOLT_NORMAL_EXPANDED.joblib",
+  "artifact_sha256": "d13f356a01973a4fbb188396301b9c98f9062a36d24d35b7421031907bde548d",
+  "stored_model_threshold": 0.8214447226813868,
+  "prospective_evaluation_threshold": 0.40,
+  "alarm_rule": "1 - P(normal) > prospective_evaluation_threshold",
+  "positive_conditions": ["B82", "C182"],
+  "normal_condition": "41 g transport with no frame load, bolt-mounted accelerometer",
+  "apply_to": "new independent evaluation cycles only",
+  "development_counts": {
+    "N04_normal_false_positives": {"n": 60, "alarms": 5},
+    "B82_detections": {"n": 30, "alarms": 25},
+    "C182_detections": {"n": 30, "alarms": 22}
+  },
+  "deployment_status": "evaluation_candidate_only"
+}

@@ -1,0 +1,15 @@
+{
+  "reference_study": "supervised_load_session_holdout_20261111",
+  "splits": ["OLD_TO_BOLT", "OLD_CAMPAIGN_HOLDOUT"],
+  "references": ["V4_PCA_Q", "LOGISTIC_4CLASS"],
+  "binary_primary": "BINARY_BALANCED",
+  "binary_sensitivity": "BINARY_KEEP_4CLASS_WEIGHTS",
+  "binary_target": "label != normal, pooling exact A121, B82 and C182",
+  "fixed_settings": "Existing fitted imputer and scaler; clone stored logistic estimator C, solver, tolerance and max_iter",
+  "weight_policy": {
+    "BINARY_BALANCED": "Standard balanced sample weights on collapsed binary labels",
+    "BINARY_KEEP_4CLASS_WEIGHTS": "Original per-row weights from balanced four-class labels, no additional class weighting"
+  },
+  "calibration": "For binary candidates, original separate normal calibration IDs, quantile 0.95 method=higher, alarm score > threshold; both references retain original stored scores and thresholds",
+  "scope": "Development comparison. Preserve whole capture and continuous campaign groups. No new data or threshold/feature search."
+}

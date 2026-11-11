@@ -1,0 +1,62 @@
+{
+  "protocol": {
+    "reference_study": "supervised_load_session_holdout_20261111",
+    "splits": [
+      "OLD_TO_BOLT",
+      "OLD_CAMPAIGN_HOLDOUT"
+    ],
+    "references": [
+      "V4_PCA_Q",
+      "LOGISTIC_4CLASS"
+    ],
+    "binary_primary": "BINARY_BALANCED",
+    "binary_sensitivity": "BINARY_KEEP_4CLASS_WEIGHTS",
+    "binary_target": "label != normal, pooling exact A121, B82 and C182",
+    "fixed_settings": "Existing fitted imputer and scaler; clone stored logistic estimator C, solver, tolerance and max_iter",
+    "weight_policy": {
+      "BINARY_BALANCED": "Standard balanced sample weights on collapsed binary labels",
+      "BINARY_KEEP_4CLASS_WEIGHTS": "Original per-row weights from balanced four-class labels, no additional class weighting"
+    },
+    "calibration": "For binary candidates, original separate normal calibration IDs, quantile 0.95 method=higher, alarm score > threshold; both references retain original stored scores and thresholds",
+    "scope": "Development comparison. Preserve whole capture and continuous campaign groups. No new data or threshold/feature search."
+  },
+  "features": [
+    "current_A_mean",
+    "current_A_rms",
+    "current_A_std",
+    "current_A_abs_p95_nearest_rank",
+    "voltage_V_mean",
+    "voltage_V_std",
+    "x_g_std",
+    "y_g_std",
+    "z_g_std",
+    "mean_removed_vector_g_rms",
+    "mean_removed_vector_g_abs_peak",
+    "position_ID1_raw_range",
+    "position_ID1_raw_std",
+    "position_ID2_raw_range",
+    "position_ID2_raw_std",
+    "position_ID3_raw_range",
+    "position_ID3_raw_std",
+    "position_ID4_raw_range",
+    "position_ID4_raw_std",
+    "position_ID5_raw_range",
+    "position_ID5_raw_std",
+    "position_ID6_raw_range",
+    "position_ID6_raw_std",
+    "ID1_3_5s_IQR"
+  ],
+  "libraries": "1.9.1",
+  "protocol_sha256": "ff61a9e59cee8d7a4d3df3efea79da6afeb6363ee3fc4025102b0fa57fefd8e8",
+  "code_sha256": "68e8f8239e16d627108c44326fe3a7204c2c14f5ea4064bc4c770cf9fe4c87f2",
+  "protected_source_hashes": {
+    "hardware\\xarm_model_versions\\supervised_load_session_holdout_20261111\\run_supervised.py": "1f36017fcfa1b9c6e1622d5b063b274f36a064842d3f6a20b933836681e955bf",
+    "hardware\\xarm_model_versions\\supervised_load_session_holdout_20261111\\PROTOCOL.json": "7f4113de6c04f57be111e1f06044f0484ca723dd406693435f04aa7bf2db22fd",
+    "hardware\\xarm_model_versions\\supervised_load_session_holdout_20261111\\results\\RUN_CONFIG.json": "f2e0f2b1545172dd0ebbb1a58f5baecdaac2b72fb48956868c18592d7509ea85",
+    "hardware\\xarm_model_versions\\supervised_load_session_holdout_20261111\\results\\SPLIT_MANIFEST.csv": "1877c3796345ead672abbcad6d1e87281e2d530951726708aa8be8c4a1e9bcd3",
+    "hardware\\xarm_model_versions\\supervised_load_session_holdout_20261111\\results\\CYCLE_SCORES.csv": "7c642db357c27c3a135d4b923b3425430b50753dbb3f71268fdee68a355b7a3d",
+    "hardware\\xarm_model_versions\\supervised_load_session_holdout_20261111\\results\\MODEL_INDEX.csv": "9e738cfcfe25770663fe71f84c43cab4984a601a1122db7a13f0f1a2c4f11f1c",
+    "hardware\\xarm_model_versions\\supervised_load_session_holdout_20261111\\results\\models\\OLD_TO_BOLT_LOGISTIC.joblib": "2adbae376159ed9f59faa822d44066e2fe6fa01aec4fcea6003d165b89367ddc",
+    "hardware\\xarm_model_versions\\supervised_load_session_holdout_20261111\\results\\models\\OLD_CAMPAIGN_HOLDOUT_LOGISTIC.joblib": "0f66a5feb5c4d7d5f1910f4c8f7519818f83fd7e712222455e8259d313d46598"
+  }
+}

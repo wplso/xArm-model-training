@@ -1,0 +1,165 @@
+{
+  "environment": {
+    "python": "3.13.15",
+    "numpy": "2.5.4",
+    "pandas": "3.0.6",
+    "scikit-learn": "1.9.1",
+    "joblib": "1.6.0"
+  },
+  "model_files": 15,
+  "score_smoke_test_rows": 3410,
+  "recorded_scores_compared": 3410,
+  "models": [
+    {
+      "path": "models/bolt-known-load/supervised/results/models/OLD_CAMPAIGN_HOLDOUT_LOGISTIC.joblib",
+      "sha256": "0f66a5feb5c4d7d5f1910f4c8f7519818f83fd7e712222455e8259d313d46598",
+      "model_id": "LOGISTIC",
+      "threshold": 0.41412704405595324,
+      "feature_count": 24,
+      "score_smoke_test_rows": 120,
+      "recorded_scores_compared": 120,
+      "maximum_score_abs_error": 0.0
+    },
+    {
+      "path": "models/bolt-known-load/supervised/results/models/OLD_CAMPAIGN_HOLDOUT_RANDOM_FOREST.joblib",
+      "sha256": "d5422de5619c75a90c36729d2f90abf9ea140a08e9e6756d7cbb56b676d64f72",
+      "model_id": "RANDOM_FOREST",
+      "threshold": 0.7808992792338381,
+      "feature_count": 24,
+      "score_smoke_test_rows": 120,
+      "recorded_scores_compared": 120,
+      "maximum_score_abs_error": 0.0
+    },
+    {
+      "path": "models/bolt-known-load/supervised/results/models/OLD_TO_BOLT_LOGISTIC.joblib",
+      "sha256": "2adbae376159ed9f59faa822d44066e2fe6fa01aec4fcea6003d165b89367ddc",
+      "model_id": "LOGISTIC",
+      "threshold": 0.4915769243270105,
+      "feature_count": 24,
+      "score_smoke_test_rows": 350,
+      "recorded_scores_compared": 350,
+      "maximum_score_abs_error": 0.0
+    },
+    {
+      "path": "models/bolt-known-load/supervised/results/models/OLD_TO_BOLT_RANDOM_FOREST.joblib",
+      "sha256": "38698d63300f3c47d28a639ff279a933b9992188e39cc46fb054e15e6b9b00a1",
+      "model_id": "RANDOM_FOREST",
+      "threshold": 0.5588431729146384,
+      "feature_count": 24,
+      "score_smoke_test_rows": 350,
+      "recorded_scores_compared": 350,
+      "maximum_score_abs_error": 0.0
+    },
+    {
+      "path": "models/bolt-known-load/binary/results/models/OLD_CAMPAIGN_HOLDOUT_BINARY_BALANCED.joblib",
+      "sha256": "4056b11020ac14f093553319dac4b8b6dbec7f165ba5745b2f16f446653fc3b0",
+      "model_id": "BINARY_BALANCED",
+      "threshold": 0.19337458608350858,
+      "feature_count": 24,
+      "score_smoke_test_rows": 120,
+      "recorded_scores_compared": 120,
+      "maximum_score_abs_error": 2.42861286636753e-17
+    },
+    {
+      "path": "models/bolt-known-load/binary/results/models/OLD_CAMPAIGN_HOLDOUT_BINARY_KEEP_4CLASS_WEIGHTS.joblib",
+      "sha256": "adbec06d56b9fe7a35dfbae61334a436895ee278a2a7ef304880a4976ff82032",
+      "model_id": "BINARY_KEEP_4CLASS_WEIGHTS",
+      "threshold": 0.3337763925951656,
+      "feature_count": 24,
+      "score_smoke_test_rows": 120,
+      "recorded_scores_compared": 120,
+      "maximum_score_abs_error": 6.938893903907228e-17
+    },
+    {
+      "path": "models/bolt-known-load/binary/results/models/OLD_TO_BOLT_BINARY_BALANCED.joblib",
+      "sha256": "125809bf148324f22d25f22b72156703c36b5ea9176b54598d8d556c4fe68bef",
+      "model_id": "BINARY_BALANCED",
+      "threshold": 0.7135105148515605,
+      "feature_count": 24,
+      "score_smoke_test_rows": 350,
+      "recorded_scores_compared": 350,
+      "maximum_score_abs_error": 0.0
+    },
+    {
+      "path": "models/bolt-known-load/binary/results/models/OLD_TO_BOLT_BINARY_KEEP_4CLASS_WEIGHTS.joblib",
+      "sha256": "4e6ed5e6c5aa33609f42e52242ab14244e8657b1bd4532ab0d8fa93265231ce2",
+      "model_id": "BINARY_KEEP_4CLASS_WEIGHTS",
+      "threshold": 0.7623876554530978,
+      "feature_count": 24,
+      "score_smoke_test_rows": 350,
+      "recorded_scores_compared": 350,
+      "maximum_score_abs_error": 0.0
+    },
+    {
+      "path": "models/bolt-known-load/retrain/retrained_bolt_normal/models/LOGISTIC_BOLT_NORMAL_EXPANDED.joblib",
+      "sha256": "d13f356a01973a4fbb188396301b9c98f9062a36d24d35b7421031907bde548d",
+      "model_id": "LOGISTIC_BOLT_NORMAL_EXPANDED",
+      "threshold": 0.8214447226813868,
+      "feature_count": 24,
+      "score_smoke_test_rows": 90,
+      "recorded_scores_compared": 90,
+      "maximum_score_abs_error": 0.0,
+      "candidate_threshold_alarms_compared": 90
+    },
+    {
+      "path": "models/bolt-known-load/retrain/a121_single_feature_ablation_20261112/models/DROP_ID1_IQR.joblib",
+      "sha256": "d27ec11e04a7093b463f8ac48d6ca47c60214a4c670da6f6d80dad538bff370d",
+      "model_id": "DROP_ID1_IQR",
+      "threshold": 0.6913573854100362,
+      "feature_count": 23,
+      "score_smoke_test_rows": 300,
+      "recorded_scores_compared": 300,
+      "maximum_score_abs_error": 0.0
+    },
+    {
+      "path": "models/bolt-known-load/retrain/a121_single_feature_ablation_20261112/models/DROP_ID6_STD.joblib",
+      "sha256": "90a8514e32714c03abcb52e665426d2dffa7f427fb389903ea093558676c580f",
+      "model_id": "DROP_ID6_STD",
+      "threshold": 0.8444620093935343,
+      "feature_count": 23,
+      "score_smoke_test_rows": 300,
+      "recorded_scores_compared": 300,
+      "maximum_score_abs_error": 0.0
+    },
+    {
+      "path": "models/bolt-known-load/retrain/a121_single_feature_ablation_20261112/models/DROP_Z_G_STD.joblib",
+      "sha256": "b3dd67f9865ed9ed783c2b7d3dfc0a9d4532aa9321bcde7544b6686b77933df1",
+      "model_id": "DROP_Z_G_STD",
+      "threshold": 0.7403745219698399,
+      "feature_count": 23,
+      "score_smoke_test_rows": 300,
+      "recorded_scores_compared": 300,
+      "maximum_score_abs_error": 0.0
+    },
+    {
+      "path": "models/bolt-known-load/prospective/models/LOGISTIC_BOLT.joblib",
+      "sha256": "dbc38065c2b9bbf554ba1fd4f2a7649189f58c27857a5dcc4e31cc156a62a0ba",
+      "model_id": "LOGISTIC_BOLT",
+      "threshold": 0.8643103045703382,
+      "feature_count": 24,
+      "score_smoke_test_rows": 180,
+      "recorded_scores_compared": 180,
+      "maximum_score_abs_error": 0.0
+    },
+    {
+      "path": "models/bolt-known-load/prospective/models/LOGISTIC_MONSTER_GEL.joblib",
+      "sha256": "2adbae376159ed9f59faa822d44066e2fe6fa01aec4fcea6003d165b89367ddc",
+      "model_id": "LOGISTIC",
+      "threshold": 0.4915769243270105,
+      "feature_count": 24,
+      "score_smoke_test_rows": 180,
+      "recorded_scores_compared": 180,
+      "maximum_score_abs_error": 0.0
+    },
+    {
+      "path": "models/bolt-known-load/prospective/models/V4_PCA_Q.joblib",
+      "sha256": "86d85e072d656fe8dd4df47b096c5d80565bf44ccd48dbc94175d75c359f7f3e",
+      "model_id": "V4_PCA",
+      "threshold": 0.07929062136548198,
+      "feature_count": 24,
+      "score_smoke_test_rows": 180,
+      "recorded_scores_compared": 180,
+      "maximum_score_abs_error": 0.0
+    }
+  ]
+}

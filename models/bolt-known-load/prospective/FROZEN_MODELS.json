@@ -1,0 +1,77 @@
+{
+  "frozen_utc": "2026-11-10T20:07:36.682164+00:00",
+  "status": "frozen_for_future_evaluation",
+  "features": [
+    "current_A_mean",
+    "current_A_rms",
+    "current_A_std",
+    "current_A_abs_p95_nearest_rank",
+    "voltage_V_mean",
+    "voltage_V_std",
+    "x_g_std",
+    "y_g_std",
+    "z_g_std",
+    "mean_removed_vector_g_rms",
+    "mean_removed_vector_g_abs_peak",
+    "position_ID1_raw_range",
+    "position_ID1_raw_std",
+    "position_ID2_raw_range",
+    "position_ID2_raw_std",
+    "position_ID3_raw_range",
+    "position_ID3_raw_std",
+    "position_ID4_raw_range",
+    "position_ID4_raw_std",
+    "position_ID5_raw_range",
+    "position_ID5_raw_std",
+    "position_ID6_raw_range",
+    "position_ID6_raw_std",
+    "ID1_3_5s_IQR"
+  ],
+  "models": [
+    {
+      "model_id": "V4_PCA_Q",
+      "kind": "pca_q",
+      "artifact": "models/V4_PCA_Q.joblib",
+      "sha256": "86d85e072d656fe8dd4df47b096c5d80565bf44ccd48dbc94175d75c359f7f3e",
+      "threshold": 0.07929062136548198,
+      "original_artifact": "hardware\\xarm_model_versions\\v4_bolt_fixed\\models\\V4_PCA.joblib",
+      "train_n": 200,
+      "calibration_n": 100,
+      "calibration_alarm_n": 4
+    },
+    {
+      "model_id": "LOGISTIC_MONSTER_GEL",
+      "kind": "logistic_4class",
+      "artifact": "models/LOGISTIC_MONSTER_GEL.joblib",
+      "sha256": "2adbae376159ed9f59faa822d44066e2fe6fa01aec4fcea6003d165b89367ddc",
+      "threshold": 0.4915769243270105,
+      "original_artifact": "hardware\\xarm_model_versions\\supervised_load_session_holdout_20261111\\results\\models\\OLD_TO_BOLT_LOGISTIC.joblib",
+      "train_n": 200,
+      "calibration_n": 100,
+      "calibration_alarm_n": 4
+    },
+    {
+      "model_id": "LOGISTIC_BOLT",
+      "kind": "logistic_4class",
+      "artifact": "models/LOGISTIC_BOLT.joblib",
+      "sha256": "dbc38065c2b9bbf554ba1fd4f2a7649189f58c27857a5dcc4e31cc156a62a0ba",
+      "threshold": 0.8643103045703382,
+      "original_artifact": null,
+      "train_n": 140,
+      "calibration_n": 100,
+      "calibration_alarm_n": 4
+    }
+  ],
+  "protocol_sha256": "c0e36ea4fdf6ef1fce8654245d73b323ed14f0f84a9d45a4bbad7d7b6bf98ac6",
+  "fit_cal_manifest_sha256": "d80da72ef90ba0a24d568a8bacd6841f2fdd871b61d982de6fd88b5cc259eb0a",
+  "historical_capture_ids_sha256": "75bb15ceef4e6bcb02a6006b630d1565cb291a8c1da77104bc6aa4bb0e4a17e3",
+  "v4_model_code_sha256": "c9e66cef195fca1234279610df484a92e6696205b62224a704d48edaf496c284",
+  "v4_feature_extractor_sha256": "6708b2cf527eb0d600c487c27e872fdb225ea7fc95901ba03ce95e13a423fa05",
+  "library_versions": {
+    "python": "3.13.15",
+    "sklearn": "1.9.1",
+    "numpy": "2.5.4",
+    "pandas": "3.0.6",
+    "joblib": "1.6.0"
+  }
+}

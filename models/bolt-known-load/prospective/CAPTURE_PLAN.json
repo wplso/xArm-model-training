@@ -1,0 +1,40 @@
+{
+  "status": "planned_only_no_motion_authorization",
+  "purpose": "prospective held-out evaluation of three frozen models",
+  "model_manifest": "FROZEN_MODELS.json",
+  "archive_dataset_role": "evaluation_only",
+  "reviewed_csv_role": "evaluation",
+  "planned_normal_n": 90,
+  "planned_load_n": 90,
+  "count_policy": "30 per stage planned. Report actual attempted and eligible counts with reasons. Keep failed and stopped runs. Never rerun or replace from model results.",
+  "capture_policy": {
+    "campaign": "New campaign ID; separate new capture UUID and raw output directory for each stage",
+    "motion": "Existing verified No.3 forward trajectory and unmodified B-to-A automatic return",
+    "return_sha256": "f9d0b3030687472ccc2555d061ad5beb62c24303b21a4c599fbaf44fc4ac81c1",
+    "start_pose_target": "verified A_release",
+    "servo_query": "Existing 2 Hz sequential per-joint polling, 0.5 s response timeout, pause during return",
+    "pre_return_quiet_s": 0.3,
+    "scope_of_features": "No3_A_to_B only",
+    "base_mount": "same rigid fixed base",
+    "accelerometer_mount": "same bolt-and-nut ADXL #1 location and orientation",
+    "stage_hard_limit_s": 1200,
+    "requires_new_authorization": true,
+    "unattended_allowed": false,
+    "automatic_retry": false,
+    "automatic_condition_switch": false
+  },
+  "stages": [
+    {"stage_id": "N_A", "label": "normal", "pair_condition": "A121", "count": 30, "payload_mass_g": 41, "frame_site": "none", "frame_added_mass_g": 0},
+    {"stage_id": "A", "label": "A121", "pair_condition": "A121", "count": 30, "payload_mass_g": 121, "frame_site": "none", "frame_added_mass_g": 0},
+    {"stage_id": "N_B", "label": "normal", "pair_condition": "B82", "count": 30, "payload_mass_g": 41, "frame_site": "none", "frame_added_mass_g": 0},
+    {"stage_id": "B", "label": "B82", "pair_condition": "B82", "count": 30, "payload_mass_g": 41, "frame_site": "upper", "frame_added_mass_g": 82},
+    {"stage_id": "N_C", "label": "normal", "pair_condition": "C182", "count": 30, "payload_mass_g": 41, "frame_site": "none", "frame_added_mass_g": 0},
+    {"stage_id": "C", "label": "C182", "pair_condition": "C182", "count": 30, "payload_mass_g": 41, "frame_site": "lower", "frame_added_mass_g": 182}
+  ],
+  "comparison": {
+    "primary": "LOGISTIC_BOLT vs LOGISTIC_MONSTER_GEL on identical accepted cycles; V4_PCA_Q is a fixed reference",
+    "better_rule": "Observed overall normal FP no higher and every load TP no lower, with at least one strict improvement. Always show pair-specific FP and report any worsening pair separately. This is descriptive, not a significance or deployment criterion.",
+    "secondary": "Paired AUROC/AP and type confusion for logistic models. Data and thresholds stay frozen.",
+    "scope": "One new campaign; capture blocks are not independent dates. Training sets differ in mount, campaign and sample counts."
+  }
+}

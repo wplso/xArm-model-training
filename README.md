@@ -1,11 +1,14 @@
-# xArm V5.2 · 준비구간과 정상 전용 알고리즘 비교
+# xArm 볼트 고정 하중 모델 · 독립 평가와 원시 데이터
 
-V5.2는 정상·이상 회차에서 사전 정의한 준비구간을 제외하는 정책을 연구했습니다. 동일한 잔여 219회에서 V4 24특징 PCA-Q의 정상 오탐은 기존 33회, 재학습 35회였습니다. A/B/C 탐지는 기존 7·7·14회, 재학습 4·5·16회(각 20회)였습니다. V4 PCA-Q를 정상 기반 비교 기준으로 유지합니다.
+[모델·코드·평가 목록](models/bolt-known-load/README_KO.md) · [추가 원시 데이터](원본%20수집%20데이터/볼트_하중_보완원시/) · [전체 버전 성능](https://github.com/wplso/xArm-model-training/blob/main/README.md)
 
-- [V5.2 보고서와 모델](models/v5.2/README_KO.md)
-- [V4 PCA Q·IF·PCA+IF 비교](models/v4-pca-if/REPORT_KO.md)
-- [LOF·RBF One-Class SVM·kNN 비교](models/normal-only-benchmark/ALGORITHM_COMPARISON_REPORT_KO.md)
-- [전체 버전과 후속 실험](https://github.com/wplso/xArm-model-training/blob/main/README.md)
-- [이전 V5.1 코드·데이터 안내](https://github.com/wplso/xArm-model-training/blob/v5.1/README.md)
+No.3의 41g 운반·자동 원복과 A121·B82·C182 조건에서 학습하거나 평가한 4클래스 로지스틱, 이진 로지스틱, Random Forest 연구와 별도 캠페인 결과입니다. 세 신규 캠페인에서 24개 세션, 510회의 검증된 원시 시계열을 추가했습니다.
 
-이 브랜치는 V5.1의 코드·모델과 [원시 데이터](원본%20수집%20데이터/)를 이어받습니다. 공개된 특징 CSV와 모델은 `git lfs pull`로 내려받습니다. 저장 모델의 점수는 배포본의 도구로 확인할 수 있습니다. 원시 자료부터 전체 실험을 재실행하는 원본 코드는 수집 당시의 프로젝트 파일 배치를 사용합니다.
+| 독립 평가 | 핵심 결과 |
+|---|---|
+| [11월 11일 A/B/C 교차 블록](models/bolt-known-load/abc-interleaved/frozen_evaluation/REPORT_KO.md) | V4 PCA-Q·몬스터겔 로지스틱·볼트 로지스틱의 정상 오탐은 19·2·14/90회, 하중 탐지는 44·50·59/90회였습니다. |
+| [11월 12일 B/C 고정 임계값](models/bolt-known-load/bc-independent/REPORT_KO.md) | 동일 모델에서 0.821445→0.40으로 정상 오탐 3→6/30회, B82 탐지 23→26/30회, C182 탐지 23→28/30회였습니다. |
+
+0.40은 후보 임계값이며 모델의 저장 임계값은 0.8214447226813868입니다. 새 B/C 캠페인 90회는 평가 전용입니다. 정상·학습·교정·평가 회차는 각 캠페인의 역할 목록을 따릅니다. CSV와 모델은 `git lfs pull`로 내려받습니다.
+
+이 브랜치는 [V5.2](https://github.com/wplso/xArm-model-training/tree/v5.2)의 코드와 데이터를 이어받습니다.

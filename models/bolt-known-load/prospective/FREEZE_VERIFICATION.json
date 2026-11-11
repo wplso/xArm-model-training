@@ -1,0 +1,29 @@
+{
+  "references_byte_identical": true,
+  "reference_calibration_reproduced": true,
+  "bolt_reload_exact": true,
+  "role_disjoint_by_cycle_capture_and_campaign": true,
+  "frozen_models": 3,
+  "train_n": 140,
+  "calibration_n": 100,
+  "historical_capture_n": 60,
+  "historical_eval_scored_n": 0,
+  "prospective_captures_n": 0,
+  "frozen_manifest_sha256": "fa22f2bdcc6df511b153ea878be8d0944c4540b04020aea3da5d55df7c3e575e",
+  "protected_source_sha256": {
+    "hardware\\xarm_model_versions\\v5_1_multisession_normal_study\\metrics\\CYCLE_FEATURES.csv": "0d62e0d7ba6432da30763b0257eab70f8bcb89a639e2f103a9d243da803d3e9a",
+    "hardware\\xarm_model_versions\\v5_1_multisession_normal_study\\verification\\DATA_VERIFICATION.json": "f3538b526f09365b1df267facf79ae832d56b479271cf51c0a45373a03b6ae36",
+    "hardware\\xarm_model_versions\\v4_2_feature_ablation_prebolt\\metrics\\CYCLE_FEATURES.csv": "eb1338130b67bd3ba8c8478d625d42844e0a6aa9be6e570c1769c8aca5a77f7f",
+    "hardware\\xarm_model_versions\\v4_bolt_fixed\\cross_mount_previous_20261106\\VERIFICATION.json": "d889543c5c74cc92b402788ea46152fd21f2111bedc447337cc1eac1c8401c3e",
+    "hardware\\xarm_model_versions\\v4_bolt_fixed\\FROZEN_V4_CANDIDATES.json": "1d566ff2744db9aec975d3ff87b4bb10438ac6026b0b4f495fe6a794920f0bcd",
+    "hardware\\xarm_model_versions\\v4_bolt_fixed\\models\\V4_PCA.joblib": "86d85e072d656fe8dd4df47b096c5d80565bf44ccd48dbc94175d75c359f7f3e",
+    "hardware\\xarm_model_versions\\v4_bolt_fixed\\analysis_code\\normal_models.py": "c9e66cef195fca1234279610df484a92e6696205b62224a704d48edaf496c284",
+    "hardware\\xarm_model_versions\\v4_bolt_fixed\\SPLIT_MANIFEST.csv": "bdf4c57fcdba827df0d62e85a0635537001086662a43ba6bbca9462d951f0997",
+    "hardware\\xarm_model_versions\\v4_bolt_fixed\\cross_mount_previous_20261106\\metrics\\CYCLE_SCORES.csv": "1fac3ebc92667c6b0bb3d6d49f305fc91bb03143f7ab4e6e257d26b70422e569",
+    "hardware\\xarm_model_versions\\normal_only_algorithm_benchmark\\metrics\\CYCLE_SCORES.csv": "984711c23d08194283613ab078abe457b75515894ad9d79c8867ee269681cfaf",
+    "hardware\\xarm_model_versions\\normal_only_algorithm_benchmark\\metrics\\VERIFICATION.json": "29a465538ec3d1c5594566b08aa25776cf5ffdf5e5b5f975e784bf97eecb783d",
+    "hardware\\xarm_model_versions\\supervised_load_session_holdout_20261111\\results\\models\\OLD_TO_BOLT_LOGISTIC.joblib": "2adbae376159ed9f59faa822d44066e2fe6fa01aec4fcea6003d165b89367ddc",
+    "hardware\\xarm_model_versions\\supervised_load_session_holdout_20261111\\results\\CYCLE_SCORES.csv": "7c642db357c27c3a135d4b923b3425430b50753dbb3f71268fdee68a355b7a3d",
+    "hardware\\xarm_model_versions\\v4_bolt_fixed\\analysis_code\\v4_common.py": "6708b2cf527eb0d600c487c27e872fdb225ea7fc95901ba03ce95e13a423fa05"
+  }
+}

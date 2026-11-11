@@ -1,0 +1,98 @@
+{
+  "protocol": {
+    "models": {
+      "LOGISTIC": {
+        "C": 1.0,
+        "solver": "lbfgs",
+        "max_iter": 2000,
+        "class_weight": "balanced"
+      },
+      "RANDOM_FOREST": {
+        "n_estimators": 200,
+        "max_depth": 5,
+        "min_samples_leaf": 5,
+        "class_weight": "balanced",
+        "random_state": 20261031,
+        "n_jobs": 1
+      }
+    },
+    "classes": [
+      "normal",
+      "A121",
+      "B82",
+      "C182"
+    ],
+    "preprocessing": "Median imputation and StandardScaler fit on supervised train only",
+    "alarm": "1 - normal predict_proba score > normal calibration q95, method=higher",
+    "type": "For alarms, choose highest score among A121, B82, C182; archived V4 only predicts an alarm",
+    "primary": {
+      "id": "OLD_TO_BOLT",
+      "train": [
+        "old_nov04_to_nov05_dawn_continuous",
+        "old_nov05_evening_pairs"
+      ],
+      "calibration": "G0_main399 original V4 calibration block, 100 normal cycles",
+      "evaluation": [
+        "G1_nov06_related",
+        "G2_nov10_first40",
+        "G3_nov10_restart40"
+      ]
+    },
+    "secondary": {
+      "id": "OLD_CAMPAIGN_HOLDOUT",
+      "train": [
+        "old_nov04_to_nov05_dawn_continuous"
+      ],
+      "calibration": "old_nov05_late_normal30 after evening evaluation, MCU reset, retrospective only",
+      "evaluation": [
+        "old_nov05_evening_pairs"
+      ]
+    },
+    "inclusion": "Prior audited original-cycle records only; exact doses and paired 41 g normals with automatic return. G0 excluded from evaluation. No evaluation label, session/date, mount, dose or command metadata in features.",
+    "scope": "Retrospective and exploratory. Only one known same-mount bolt anomaly campaign. Old diagnostic campaigns share a calendar date; old normal calibration was collected after diagnostic evaluation."
+  },
+  "protocol_sha256": "7f4113de6c04f57be111e1f06044f0484ca723dd406693435f04aa7bf2db22fd",
+  "code_sha256": "1f36017fcfa1b9c6e1622d5b063b274f36a064842d3f6a20b933836681e955bf",
+  "features": [
+    "current_A_mean",
+    "current_A_rms",
+    "current_A_std",
+    "current_A_abs_p95_nearest_rank",
+    "voltage_V_mean",
+    "voltage_V_std",
+    "x_g_std",
+    "y_g_std",
+    "z_g_std",
+    "mean_removed_vector_g_rms",
+    "mean_removed_vector_g_abs_peak",
+    "position_ID1_raw_range",
+    "position_ID1_raw_std",
+    "position_ID2_raw_range",
+    "position_ID2_raw_std",
+    "position_ID3_raw_range",
+    "position_ID3_raw_std",
+    "position_ID4_raw_range",
+    "position_ID4_raw_std",
+    "position_ID5_raw_range",
+    "position_ID5_raw_std",
+    "position_ID6_raw_range",
+    "position_ID6_raw_std",
+    "ID1_3_5s_IQR"
+  ],
+  "source_sha256": {
+    "hardware\\xarm_model_versions\\v5_1_multisession_normal_study\\metrics\\CYCLE_FEATURES.csv": "0d62e0d7ba6432da30763b0257eab70f8bcb89a639e2f103a9d243da803d3e9a",
+    "hardware\\xarm_model_versions\\v5_1_multisession_normal_study\\verification\\DATA_VERIFICATION.json": "f3538b526f09365b1df267facf79ae832d56b479271cf51c0a45373a03b6ae36",
+    "hardware\\xarm_model_versions\\v4_2_feature_ablation_prebolt\\metrics\\CYCLE_FEATURES.csv": "eb1338130b67bd3ba8c8478d625d42844e0a6aa9be6e570c1769c8aca5a77f7f",
+    "hardware\\xarm_model_versions\\v4_bolt_fixed\\cross_mount_previous_20261106\\VERIFICATION.json": "d889543c5c74cc92b402788ea46152fd21f2111bedc447337cc1eac1c8401c3e",
+    "hardware\\xarm_model_versions\\v4_bolt_fixed\\FROZEN_V4_CANDIDATES.json": "1d566ff2744db9aec975d3ff87b4bb10438ac6026b0b4f495fe6a794920f0bcd",
+    "hardware\\xarm_model_versions\\v4_bolt_fixed\\models\\V4_PCA.joblib": "86d85e072d656fe8dd4df47b096c5d80565bf44ccd48dbc94175d75c359f7f3e",
+    "hardware\\xarm_model_versions\\v4_bolt_fixed\\analysis_code\\normal_models.py": "c9e66cef195fca1234279610df484a92e6696205b62224a704d48edaf496c284",
+    "hardware\\xarm_model_versions\\v4_bolt_fixed\\SPLIT_MANIFEST.csv": "bdf4c57fcdba827df0d62e85a0635537001086662a43ba6bbca9462d951f0997",
+    "hardware\\xarm_model_versions\\v4_bolt_fixed\\cross_mount_previous_20261106\\metrics\\CYCLE_SCORES.csv": "1fac3ebc92667c6b0bb3d6d49f305fc91bb03143f7ab4e6e257d26b70422e569",
+    "hardware\\xarm_model_versions\\normal_only_algorithm_benchmark\\metrics\\CYCLE_SCORES.csv": "984711c23d08194283613ab078abe457b75515894ad9d79c8867ee269681cfaf",
+    "hardware\\xarm_model_versions\\normal_only_algorithm_benchmark\\metrics\\VERIFICATION.json": "29a465538ec3d1c5594566b08aa25776cf5ffdf5e5b5f975e784bf97eecb783d"
+  },
+  "sklearn": "1.9.1",
+  "numpy": "2.5.4",
+  "pandas": "3.0.6"
+}

@@ -1,0 +1,23 @@
+{
+  "campaign_id": "No3_bolt_BC_independent_20261112",
+  "sequence": [
+    {"id":"N0","label":"normal","count":10},
+    {"id":"B1","label":"B82","count":15},
+    {"id":"C1","label":"C182","count":15},
+    {"id":"N1","label":"normal","count":10},
+    {"id":"C2","label":"C182","count":15},
+    {"id":"B2","label":"B82","count":15},
+    {"id":"N2","label":"normal","count":10}
+  ],
+  "conditions": {
+    "normal":{"payload_mass_g":41,"frame_site":"none","frame_added_mass_g":0},
+    "B82":{"payload_mass_g":41,"frame_site":"upper","frame_added_mass_g":82},
+    "C182":{"payload_mass_g":41,"frame_site":"lower","frame_added_mass_g":182}
+  },
+  "model_id": "LOGISTIC_BOLT_NORMAL_EXPANDED",
+  "model_sha256": "d13f356a01973a4fbb188396301b9c98f9062a36d24d35b7421031907bde548d",
+  "stored_threshold": 0.8214447226813868,
+  "candidate_threshold": 0.40,
+  "alarm_rule": "1 - P(normal) > threshold",
+  "evaluation_role": "evaluation_only"
+}

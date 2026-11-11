@@ -1,0 +1,24 @@
+{
+  "models": {
+    "LOGISTIC": {"C": 1.0, "solver": "lbfgs", "max_iter": 2000, "class_weight": "balanced"},
+    "RANDOM_FOREST": {"n_estimators": 200, "max_depth": 5, "min_samples_leaf": 5, "class_weight": "balanced", "random_state": 20261031, "n_jobs": 1}
+  },
+  "classes": ["normal", "A121", "B82", "C182"],
+  "preprocessing": "Median imputation and StandardScaler fit on supervised train only",
+  "alarm": "1 - normal predict_proba score > normal calibration q95, method=higher",
+  "type": "For alarms, choose highest score among A121, B82, C182; archived V4 only predicts an alarm",
+  "primary": {
+    "id": "OLD_TO_BOLT",
+    "train": ["old_nov04_to_nov05_dawn_continuous", "old_nov05_evening_pairs"],
+    "calibration": "G0_main399 original V4 calibration block, 100 normal cycles",
+    "evaluation": ["G1_nov06_related", "G2_nov10_first40", "G3_nov10_restart40"]
+  },
+  "secondary": {
+    "id": "OLD_CAMPAIGN_HOLDOUT",
+    "train": ["old_nov04_to_nov05_dawn_continuous"],
+    "calibration": "old_nov05_late_normal30 after evening evaluation, MCU reset, retrospective only",
+    "evaluation": ["old_nov05_evening_pairs"]
+  },
+  "inclusion": "Prior audited original-cycle records only; exact doses and paired 41 g normals with automatic return. G0 excluded from evaluation. No evaluation label, session/date, mount, dose or command metadata in features.",
+  "scope": "Retrospective and exploratory. Only one known same-mount bolt anomaly campaign. Old diagnostic campaigns share a calendar date; old normal calibration was collected after diagnostic evaluation."
+}

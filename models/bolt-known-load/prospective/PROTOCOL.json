@@ -1,0 +1,27 @@
+{
+  "status": "preregistered_before_future_capture",
+  "primary_question": "On a new bolt-mounted campaign, how does a four-class logistic model fitted with previous bolt normal/load labels compare with the frozen model fitted with Monster Gel normal/load labels?",
+  "reference_models": ["V4_PCA_Q", "LOGISTIC_MONSTER_GEL"],
+  "new_model": "LOGISTIC_BOLT",
+  "bolt_fit": {
+    "campaign": "G1_nov06_related",
+    "cohorts": {"preA": 30, "preB": 10, "preC": 10, "A": 30, "B": 30, "C": 30},
+    "normal_n": 50,
+    "A121_n": 30,
+    "B82_n": 30,
+    "C182_n": 30,
+    "excluded_same_campaign_normal_n": 30,
+    "selection": "All previously audited exact-dose positive captures and their paired normal controls only. The 17+13 unpaired normal cycles stay unused, never a holdout."
+  },
+  "calibration": {
+    "campaign": "G0_main399",
+    "normal_n": 100,
+    "selection": "Original frozen V4 validation IDs, identical to original OLD_TO_BOLT logistic calibration",
+    "rule": "q95 using higher, strict score > threshold"
+  },
+  "learner": {"C": 1.0, "solver": "lbfgs", "max_iter": 2000, "class_weight": "balanced"},
+  "preprocessing": "V4 exact ordered 24 features, median imputer and StandardScaler refit on bolt fit rows only",
+  "scoring": "Frozen V4 PCA-Q or 1-P(normal); logistic type is highest abnormal class score after an alarm",
+  "future_missing_feature_policy": "Only missing ID1_3_5s_IQR in a quality-reviewed valid cycle may use each frozen imputer. Any Inf or other missing required feature requires review before scoring.",
+  "evaluation_policy": "Collect a new complete campaign after this freeze. Use identical admitted cycles for all models. New captures are evaluation only, no data-driven threshold/model changes. Count normal FPR overall and by capture/pair, TPR by load, per-load paired AUROC/AP, type confusion for both logistic candidates. Report paired gains and losses and do not promote on tradeoffs alone."
+}

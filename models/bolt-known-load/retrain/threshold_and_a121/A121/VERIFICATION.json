@@ -1,0 +1,40 @@
+{
+  "input_sha256": {
+    "hardware/xarm_model_versions/bolt_known_load_prospective_20261111/FROZEN_MODELS.json": "fa22f2bdcc6df511b153ea878be8d0944c4540b04020aea3da5d55df7c3e575e",
+    "hardware/No3_bolt_normal_retrain_20261111/analysis/retrained_bolt_normal/VERIFICATION.json": "e581f2482933bafb34c198f3f892b71c5deff1befd61e768bfd71111f097f5de",
+    "hardware/No3_bolt_normal_retrain_20261111/analysis/retrained_bolt_normal/FIT_CAL_HOLDOUT_MANIFEST.csv": "cff159b420d7b7c9219eee36fc233265b206dae50e5f49534c38d1fa5987c542",
+    "hardware/xarm_model_versions/binary_logistic_load_alert_20261111/analyze_multiclass.py": "2221be3caaf67232028d51d468d97a72b75af38e7f3ee6db59e10550863d7f23",
+    "hardware/No3_bolt_ABC_interleaved_20261111/analysis/frozen_evaluation/CYCLE_FEATURES.csv": "078fcce838c951064d0773c7e48cde3aee20da8f86b3280b3288c1a47c01028d",
+    "hardware/No3_bolt_normal_retrain_20261111/analysis/retrained_bolt_normal/CYCLE_SCORES.csv": "ba2563e5e5555bfd9a06266472c8e231a19570e6e09a6997ee10c1fd343c12f4",
+    "hardware/No3_bolt_normal_retrain_20261111/analysis/retrained_bolt_normal/NEW_NORMAL_FEATURES.csv": "abc7142101ee09ed74e14dc9ef67f246a66de57e1b09725cb8425cbdda616744",
+    "hardware/xarm_model_versions/v5_1_multisession_normal_study/metrics/CYCLE_FEATURES.csv": "0d62e0d7ba6432da30763b0257eab70f8bcb89a639e2f103a9d243da803d3e9a",
+    "hardware/No3_bolt_ABC_interleaved_20261111/analysis/frozen_evaluation/CYCLE_STAGE_MAP.csv": "7910bbc2592a16013311300d46f14081236ec6f1c6fb765ba284def95aa637ef",
+    "hardware/No3_bolt_ABC_interleaved_20261111/analysis/frozen_evaluation/CYCLE_SCORES.csv": "237aecc182c668e4cc451878063b9880969750979c819e6696850b3b129a3d72",
+    "hardware/xarm_model_versions/bolt_known_load_prospective_20261111/models/LOGISTIC_BOLT.joblib": "dbc38065c2b9bbf554ba1fd4f2a7649189f58c27857a5dcc4e31cc156a62a0ba",
+    "hardware/No3_bolt_normal_retrain_20261111/analysis/retrained_bolt_normal/models/LOGISTIC_BOLT_NORMAL_EXPANDED.joblib": "d13f356a01973a4fbb188396301b9c98f9062a36d24d35b7421031907bde548d"
+  },
+  "score_probability_threshold_and_predictions_reproduced": true,
+  "models_and_thresholds_modified": false,
+  "evaluation_cohort": "previously_seen_development_regression",
+  "old_training_A121_n": 30,
+  "old_training_normal_n": 50,
+  "added_training_normal_n": 120,
+  "max_alarm_decomposition_error": 5.999645225074346e-12,
+  "max_A121_normal_decomposition_error": 5.329070518200751e-15,
+  "n_pairs_by_group": {
+    "all": 1200,
+    "lost_order": 249,
+    "gained_order": 62
+  },
+  "pair_order_counts": {
+    "-1->-1": 255,
+    "-1->0": 0,
+    "-1->1": 62,
+    "0->-1": 0,
+    "0->0": 0,
+    "0->1": 0,
+    "1->-1": 249,
+    "1->0": 0,
+    "1->1": 634
+  }
+}

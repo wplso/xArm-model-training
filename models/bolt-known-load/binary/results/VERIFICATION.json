@@ -1,0 +1,12 @@
+{
+  "old_model_and_data_hashes_preserved": true,
+  "reused_exact_split_and_preprocessing": true,
+  "archived_reference_scores_and_alarms_verified": true,
+  "binary_model_reload_exact": true,
+  "reverse_order_alarm_invariant": true,
+  "row_count": 1750,
+  "evaluated_cycle_counts": {
+    "OLD_TO_BOLT": 250,
+    "OLD_CAMPAIGN_HOLDOUT": 90
+  }
+}
