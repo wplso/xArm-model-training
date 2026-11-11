@@ -1,0 +1,145 @@
+{
+  "passed": true,
+  "primary_alarms": {
+    "B0/E0": {
+      "normal": 45,
+      "A": 10,
+      "B": 12,
+      "C": 21
+    },
+    "B0/E1": {
+      "normal": 33,
+      "A": 7,
+      "B": 7,
+      "C": 14
+    },
+    "B0/E2": {
+      "normal": 35,
+      "A": 4,
+      "B": 5,
+      "C": 16
+    },
+    "B1/E0": {
+      "normal": 22,
+      "A": 5,
+      "B": 4,
+      "C": 14
+    },
+    "B1/E1": {
+      "normal": 16,
+      "A": 5,
+      "B": 0,
+      "C": 10
+    },
+    "B1/E2": {
+      "normal": 16,
+      "A": 6,
+      "B": 1,
+      "C": 6
+    },
+    "B2/E0": {
+      "normal": 27,
+      "A": 4,
+      "B": 6,
+      "C": 16
+    },
+    "B2/E1": {
+      "normal": 16,
+      "A": 4,
+      "B": 3,
+      "C": 10
+    },
+    "B2/E2": {
+      "normal": 24,
+      "A": 3,
+      "B": 3,
+      "C": 10
+    }
+  },
+  "same_cycle_transitions": {
+    "B0/normal": {
+      "n": 219,
+      "additional": 7,
+      "resolved_or_lost": 5,
+      "common_alarm": 28,
+      "common_no_alarm": 179
+    },
+    "B0/A": {
+      "n": 20,
+      "additional": 0,
+      "resolved_or_lost": 3,
+      "common_alarm": 4,
+      "common_no_alarm": 13
+    },
+    "B0/B": {
+      "n": 20,
+      "additional": 0,
+      "resolved_or_lost": 2,
+      "common_alarm": 5,
+      "common_no_alarm": 13
+    },
+    "B0/C": {
+      "n": 20,
+      "additional": 2,
+      "resolved_or_lost": 0,
+      "common_alarm": 14,
+      "common_no_alarm": 4
+    },
+    "B1/normal": {
+      "n": 219,
+      "additional": 4,
+      "resolved_or_lost": 4,
+      "common_alarm": 12,
+      "common_no_alarm": 199
+    },
+    "B1/A": {
+      "n": 20,
+      "additional": 2,
+      "resolved_or_lost": 1,
+      "common_alarm": 4,
+      "common_no_alarm": 13
+    },
+    "B1/B": {
+      "n": 20,
+      "additional": 1,
+      "resolved_or_lost": 0,
+      "common_alarm": 0,
+      "common_no_alarm": 19
+    },
+    "B1/C": {
+      "n": 20,
+      "additional": 0,
+      "resolved_or_lost": 4,
+      "common_alarm": 6,
+      "common_no_alarm": 10
+    },
+    "B2/normal": {
+      "n": 219,
+      "additional": 10,
+      "resolved_or_lost": 2,
+      "common_alarm": 14,
+      "common_no_alarm": 193
+    },
+    "B2/A": {
+      "n": 20,
+      "additional": 1,
+      "resolved_or_lost": 2,
+      "common_alarm": 2,
+      "common_no_alarm": 15
+    },
+    "B2/B": {
+      "n": 20,
+      "additional": 0,
+      "resolved_or_lost": 0,
+      "common_alarm": 3,
+      "common_no_alarm": 17
+    },
+    "B2/C": {
+      "n": 20,
+      "additional": 0,
+      "resolved_or_lost": 0,
+      "common_alarm": 10,
+      "common_no_alarm": 10
+    }
+  }
+}

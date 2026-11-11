@@ -1,0 +1,253 @@
+{
+  "version": "V4_PCA B0",
+  "ordered_features": [
+    "current_A_mean",
+    "current_A_rms",
+    "current_A_std",
+    "current_A_abs_p95_nearest_rank",
+    "voltage_V_mean",
+    "voltage_V_std",
+    "x_g_std",
+    "y_g_std",
+    "z_g_std",
+    "mean_removed_vector_g_rms",
+    "mean_removed_vector_g_abs_peak",
+    "position_ID1_raw_range",
+    "position_ID1_raw_std",
+    "position_ID2_raw_range",
+    "position_ID2_raw_std",
+    "position_ID3_raw_range",
+    "position_ID3_raw_std",
+    "position_ID4_raw_range",
+    "position_ID4_raw_std",
+    "position_ID5_raw_range",
+    "position_ID5_raw_std",
+    "position_ID6_raw_range",
+    "position_ID6_raw_std",
+    "ID1_3_5s_IQR"
+  ],
+  "input_size": 24,
+  "feature_definitions": [
+    {
+      "name": "current_A_mean",
+      "unit": "A",
+      "sensor": "INA226",
+      "window": "inclusive No.3 proxy window",
+      "formula": "population std; max-min range; mean; sqrt(mean(x^2)); abs nearest-rank P95 as named; vector uses axis mean centering",
+      "implementation": "train_xarm_v3.full_features / pilot_analysis.describe; replayed against raw",
+      "missing_policy": "legacy validity requirements and training-median imputer"
+    },
+    {
+      "name": "current_A_rms",
+      "unit": "A",
+      "sensor": "INA226",
+      "window": "inclusive No.3 proxy window",
+      "formula": "population std; max-min range; mean; sqrt(mean(x^2)); abs nearest-rank P95 as named; vector uses axis mean centering",
+      "implementation": "train_xarm_v3.full_features / pilot_analysis.describe; replayed against raw",
+      "missing_policy": "legacy validity requirements and training-median imputer"
+    },
+    {
+      "name": "current_A_std",
+      "unit": "A",
+      "sensor": "INA226",
+      "window": "inclusive No.3 proxy window",
+      "formula": "population std; max-min range; mean; sqrt(mean(x^2)); abs nearest-rank P95 as named; vector uses axis mean centering",
+      "implementation": "train_xarm_v3.full_features / pilot_analysis.describe; replayed against raw",
+      "missing_policy": "legacy validity requirements and training-median imputer"
+    },
+    {
+      "name": "current_A_abs_p95_nearest_rank",
+      "unit": "A",
+      "sensor": "INA226",
+      "window": "inclusive No.3 proxy window",
+      "formula": "population std; max-min range; mean; sqrt(mean(x^2)); abs nearest-rank P95 as named; vector uses axis mean centering",
+      "implementation": "train_xarm_v3.full_features / pilot_analysis.describe; replayed against raw",
+      "missing_policy": "legacy validity requirements and training-median imputer"
+    },
+    {
+      "name": "voltage_V_mean",
+      "unit": "V",
+      "sensor": "INA226",
+      "window": "inclusive No.3 proxy window",
+      "formula": "population std; max-min range; mean; sqrt(mean(x^2)); abs nearest-rank P95 as named; vector uses axis mean centering",
+      "implementation": "train_xarm_v3.full_features / pilot_analysis.describe; replayed against raw",
+      "missing_policy": "legacy validity requirements and training-median imputer"
+    },
+    {
+      "name": "voltage_V_std",
+      "unit": "V",
+      "sensor": "INA226",
+      "window": "inclusive No.3 proxy window",
+      "formula": "population std; max-min range; mean; sqrt(mean(x^2)); abs nearest-rank P95 as named; vector uses axis mean centering",
+      "implementation": "train_xarm_v3.full_features / pilot_analysis.describe; replayed against raw",
+      "missing_policy": "legacy validity requirements and training-median imputer"
+    },
+    {
+      "name": "x_g_std",
+      "unit": "g",
+      "sensor": "ADXL345 #1",
+      "window": "inclusive No.3 proxy window",
+      "formula": "population std; max-min range; mean; sqrt(mean(x^2)); abs nearest-rank P95 as named; vector uses axis mean centering",
+      "implementation": "train_xarm_v3.full_features / pilot_analysis.describe; replayed against raw",
+      "missing_policy": "legacy validity requirements and training-median imputer"
+    },
+    {
+      "name": "y_g_std",
+      "unit": "g",
+      "sensor": "ADXL345 #1",
+      "window": "inclusive No.3 proxy window",
+      "formula": "population std; max-min range; mean; sqrt(mean(x^2)); abs nearest-rank P95 as named; vector uses axis mean centering",
+      "implementation": "train_xarm_v3.full_features / pilot_analysis.describe; replayed against raw",
+      "missing_policy": "legacy validity requirements and training-median imputer"
+    },
+    {
+      "name": "z_g_std",
+      "unit": "g",
+      "sensor": "ADXL345 #1",
+      "window": "inclusive No.3 proxy window",
+      "formula": "population std; max-min range; mean; sqrt(mean(x^2)); abs nearest-rank P95 as named; vector uses axis mean centering",
+      "implementation": "train_xarm_v3.full_features / pilot_analysis.describe; replayed against raw",
+      "missing_policy": "legacy validity requirements and training-median imputer"
+    },
+    {
+      "name": "mean_removed_vector_g_rms",
+      "unit": "g",
+      "sensor": "ADXL345 #1",
+      "window": "inclusive No.3 proxy window",
+      "formula": "population std; max-min range; mean; sqrt(mean(x^2)); abs nearest-rank P95 as named; vector uses axis mean centering",
+      "implementation": "train_xarm_v3.full_features / pilot_analysis.describe; replayed against raw",
+      "missing_policy": "legacy validity requirements and training-median imputer"
+    },
+    {
+      "name": "mean_removed_vector_g_abs_peak",
+      "unit": "g",
+      "sensor": "ADXL345 #1",
+      "window": "inclusive No.3 proxy window",
+      "formula": "population std; max-min range; mean; sqrt(mean(x^2)); abs nearest-rank P95 as named; vector uses axis mean centering",
+      "implementation": "train_xarm_v3.full_features / pilot_analysis.describe; replayed against raw",
+      "missing_policy": "legacy validity requirements and training-median imputer"
+    },
+    {
+      "name": "position_ID1_raw_range",
+      "unit": "raw",
+      "sensor": "servo position response",
+      "window": "inclusive No.3 proxy window",
+      "formula": "population std; max-min range; mean; sqrt(mean(x^2)); abs nearest-rank P95 as named; vector uses axis mean centering",
+      "implementation": "train_xarm_v3.full_features / pilot_analysis.describe; replayed against raw",
+      "missing_policy": "legacy validity requirements and training-median imputer"
+    },
+    {
+      "name": "position_ID1_raw_std",
+      "unit": "raw",
+      "sensor": "servo position response",
+      "window": "inclusive No.3 proxy window",
+      "formula": "population std; max-min range; mean; sqrt(mean(x^2)); abs nearest-rank P95 as named; vector uses axis mean centering",
+      "implementation": "train_xarm_v3.full_features / pilot_analysis.describe; replayed against raw",
+      "missing_policy": "legacy validity requirements and training-median imputer"
+    },
+    {
+      "name": "position_ID2_raw_range",
+      "unit": "raw",
+      "sensor": "servo position response",
+      "window": "inclusive No.3 proxy window",
+      "formula": "population std; max-min range; mean; sqrt(mean(x^2)); abs nearest-rank P95 as named; vector uses axis mean centering",
+      "implementation": "train_xarm_v3.full_features / pilot_analysis.describe; replayed against raw",
+      "missing_policy": "legacy validity requirements and training-median imputer"
+    },
+    {
+      "name": "position_ID2_raw_std",
+      "unit": "raw",
+      "sensor": "servo position response",
+      "window": "inclusive No.3 proxy window",
+      "formula": "population std; max-min range; mean; sqrt(mean(x^2)); abs nearest-rank P95 as named; vector uses axis mean centering",
+      "implementation": "train_xarm_v3.full_features / pilot_analysis.describe; replayed against raw",
+      "missing_policy": "legacy validity requirements and training-median imputer"
+    },
+    {
+      "name": "position_ID3_raw_range",
+      "unit": "raw",
+      "sensor": "servo position response",
+      "window": "inclusive No.3 proxy window",
+      "formula": "population std; max-min range; mean; sqrt(mean(x^2)); abs nearest-rank P95 as named; vector uses axis mean centering",
+      "implementation": "train_xarm_v3.full_features / pilot_analysis.describe; replayed against raw",
+      "missing_policy": "legacy validity requirements and training-median imputer"
+    },
+    {
+      "name": "position_ID3_raw_std",
+      "unit": "raw",
+      "sensor": "servo position response",
+      "window": "inclusive No.3 proxy window",
+      "formula": "population std; max-min range; mean; sqrt(mean(x^2)); abs nearest-rank P95 as named; vector uses axis mean centering",
+      "implementation": "train_xarm_v3.full_features / pilot_analysis.describe; replayed against raw",
+      "missing_policy": "legacy validity requirements and training-median imputer"
+    },
+    {
+      "name": "position_ID4_raw_range",
+      "unit": "raw",
+      "sensor": "servo position response",
+      "window": "inclusive No.3 proxy window",
+      "formula": "population std; max-min range; mean; sqrt(mean(x^2)); abs nearest-rank P95 as named; vector uses axis mean centering",
+      "implementation": "train_xarm_v3.full_features / pilot_analysis.describe; replayed against raw",
+      "missing_policy": "legacy validity requirements and training-median imputer"
+    },
+    {
+      "name": "position_ID4_raw_std",
+      "unit": "raw",
+      "sensor": "servo position response",
+      "window": "inclusive No.3 proxy window",
+      "formula": "population std; max-min range; mean; sqrt(mean(x^2)); abs nearest-rank P95 as named; vector uses axis mean centering",
+      "implementation": "train_xarm_v3.full_features / pilot_analysis.describe; replayed against raw",
+      "missing_policy": "legacy validity requirements and training-median imputer"
+    },
+    {
+      "name": "position_ID5_raw_range",
+      "unit": "raw",
+      "sensor": "servo position response",
+      "window": "inclusive No.3 proxy window",
+      "formula": "population std; max-min range; mean; sqrt(mean(x^2)); abs nearest-rank P95 as named; vector uses axis mean centering",
+      "implementation": "train_xarm_v3.full_features / pilot_analysis.describe; replayed against raw",
+      "missing_policy": "legacy validity requirements and training-median imputer"
+    },
+    {
+      "name": "position_ID5_raw_std",
+      "unit": "raw",
+      "sensor": "servo position response",
+      "window": "inclusive No.3 proxy window",
+      "formula": "population std; max-min range; mean; sqrt(mean(x^2)); abs nearest-rank P95 as named; vector uses axis mean centering",
+      "implementation": "train_xarm_v3.full_features / pilot_analysis.describe; replayed against raw",
+      "missing_policy": "legacy validity requirements and training-median imputer"
+    },
+    {
+      "name": "position_ID6_raw_range",
+      "unit": "raw",
+      "sensor": "servo position response",
+      "window": "inclusive No.3 proxy window",
+      "formula": "population std; max-min range; mean; sqrt(mean(x^2)); abs nearest-rank P95 as named; vector uses axis mean centering",
+      "implementation": "train_xarm_v3.full_features / pilot_analysis.describe; replayed against raw",
+      "missing_policy": "legacy validity requirements and training-median imputer"
+    },
+    {
+      "name": "position_ID6_raw_std",
+      "unit": "raw",
+      "sensor": "servo position response",
+      "window": "inclusive No.3 proxy window",
+      "formula": "population std; max-min range; mean; sqrt(mean(x^2)); abs nearest-rank P95 as named; vector uses axis mean centering",
+      "implementation": "train_xarm_v3.full_features / pilot_analysis.describe; replayed against raw",
+      "missing_policy": "legacy validity requirements and training-median imputer"
+    },
+    {
+      "name": "ID1_3_5s_IQR",
+      "unit": "raw",
+      "sensor": "servo position response",
+      "window": "[3,5) s; exactly 4 observed ID1 values",
+      "formula": "Q75-Q25 linear",
+      "implementation": "train_xarm_v3.full_features / pilot_analysis.describe; replayed against raw",
+      "missing_policy": "legacy validity requirements and training-median imputer"
+    }
+  ],
+  "input_order": "exact; reject reordered or extra columns",
+  "nonfinite_policy": "raise on unexpected NaN or Inf",
+  "source_sha256": "8771d0ed2313307a5f704a856af7ebda70403cb5903fbb7da499e5622f5f9383",
+  "physical_axis_orientation": "not independently confirmed",
+  "physical_calibration": "not performed; saved g/raw factor unchanged"
+}

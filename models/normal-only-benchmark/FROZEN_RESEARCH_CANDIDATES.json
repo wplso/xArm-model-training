@@ -1,0 +1,23 @@
+{
+  "decision_date_kst": "2026-11-11",
+  "study": "normal_only_algorithm_benchmark",
+  "status": "no_new_candidate",
+  "candidate_model_ids": [],
+  "reference_only": {
+    "model_id": "V4_PCA_Q",
+    "path_from_project": "hardware/xarm_model_versions/v4_bolt_fixed/models/V4_PCA.joblib",
+    "sha256": "86d85e072d656fe8dd4df47b096c5d80565bf44ccd48dbc94175d75c359f7f3e",
+    "threshold": 0.07929062136548198,
+    "alarm_rule": "score > threshold"
+  },
+  "observed_joint_criteria": {
+    "normal_max_fp": 45,
+    "normal_n": 259,
+    "restart_fp_less_than": 23,
+    "restart_n": 40,
+    "min_tp": {"A121": 10, "B82": 12, "C182": 21},
+    "anomaly_n_per_condition": 30,
+    "session_deterioration_review": "see NORMAL_SESSION_METRICS.csv"
+  },
+  "development_evaluation_only": true
+}

@@ -1,0 +1,30 @@
+{
+  "verified": true,
+  "policy_id": "PREP50_SHORT10_KEEP_PRENORMAL10_V1",
+  "frozen_mask_hash_checked": "ddfc6353505b30b2be5c39b9a73ccd2a4e8da753090d051db015582fdfbbfff9",
+  "scored_quality_cycles": 649,
+  "mask_rows": 650,
+  "excluded_quality_cycles": 1,
+  "score_rows": 5850,
+  "original_and_fit_train_n": [
+    200,
+    150
+  ],
+  "unchanged_calibration_n": 100,
+  "unchanged_test_n": 99,
+  "matched_post_preparation_cycles_per_family": 279,
+  "same_original_role": true,
+  "no_evaluation_data_fitted": true,
+  "all_three_replays_match_saved_scores_and_flags": true,
+  "original_calibration_q95_exact": true,
+  "unchanged_baselines_e0_e1": true,
+  "matched_e1_e2_cycle_ids": true,
+  "e0_paired_abc_matches_original_counts_and_ranks": true,
+  "no_preparation_policy_tuning": true,
+  "original_inputs_hashes_unchanged": true,
+  "refit_models_reloaded_scores_and_flags_exact": true,
+  "score_input_audit": "V5.1 frozen features, prior raw verification, and baseline replay",
+  "all_fit_cutoffs_from_original_calibration": true,
+  "no_device_access": true,
+  "max_v4_replay_abs_error": 0.0
+}

@@ -1,0 +1,214 @@
+{
+  "environment": {
+    "python": "3.13.15",
+    "numpy": "2.5.4",
+    "pandas": "3.0.6",
+    "scikit-learn": "1.9.1",
+    "joblib": "1.6.0"
+  },
+  "model_files": 20,
+  "score_smoke_test_rows": 9988,
+  "recorded_scores_compared": 9988,
+  "models": [
+    {
+      "path": "models/v5.2/models/V52_B0_E2_Q.joblib",
+      "sha256": "b88d1bdb036968ee90b785b10af7d43a88c960ab749c53c8ef85d6b9597cf74a",
+      "model_id": "V52_B0_E2_Q",
+      "threshold": 0.08492594787705494,
+      "feature_count": 24,
+      "score_smoke_test_rows": 649,
+      "recorded_scores_compared": 649,
+      "maximum_score_abs_error": 0.0
+    },
+    {
+      "path": "models/v5.2/models/V52_B1_E2_Q.joblib",
+      "sha256": "3aa52a2c7b451c29839c0a797e87d33ea4f4e5ae2665120ff4fbd725b1dc88e1",
+      "model_id": "V52_B1_E2_Q",
+      "threshold": 0.11086972021780808,
+      "feature_count": 25,
+      "score_smoke_test_rows": 649,
+      "recorded_scores_compared": 649,
+      "maximum_score_abs_error": 0.0
+    },
+    {
+      "path": "models/v5.2/models/V52_B2_E2_Q.joblib",
+      "sha256": "540e7d98fe40d2b9ed6c5c8b3ef21ad7fc92c54f25968d98f31967bf350c7372",
+      "model_id": "V52_B2_E2_Q",
+      "threshold": 0.11079873800976929,
+      "feature_count": 24,
+      "score_smoke_test_rows": 649,
+      "recorded_scores_compared": 649,
+      "maximum_score_abs_error": 0.0
+    },
+    {
+      "path": "models/v4-pca-if/results/models/IF_24.joblib",
+      "sha256": "fd047740d76c1ae502c94a0c3d3758d8a9dee03236c9284a1852e485cb6cb56d",
+      "model_id": "IF_24",
+      "threshold": 0.5553287966865448,
+      "feature_count": 24,
+      "score_smoke_test_rows": 649,
+      "recorded_scores_compared": 649,
+      "maximum_score_abs_error": 0.0
+    },
+    {
+      "path": "models/v4-pca-if/results/models/IF_PC13_Q.joblib",
+      "sha256": "fa3c39462e6a8b9360d66edfe7041f8888551549d76d865956c2f3ec31182f4d",
+      "model_id": "IF_PC13_Q",
+      "threshold": 0.5224556796193979,
+      "feature_count": 24,
+      "score_smoke_test_rows": 649,
+      "recorded_scores_compared": 649,
+      "maximum_score_abs_error": 0.0
+    },
+    {
+      "path": "models/normal-only-benchmark/models/A_MAIN_KNN_K20_MEAN.joblib",
+      "sha256": "6bddb8cf4474fb30c105f01dd7eae01ef729970e03f5b0bf0efd911fded3e336",
+      "model_id": "KNN_K20_MEAN",
+      "threshold": 7.192121913338989,
+      "feature_count": 24,
+      "score_smoke_test_rows": 180,
+      "recorded_scores_compared": 180,
+      "maximum_score_abs_error": 0.0
+    },
+    {
+      "path": "models/normal-only-benchmark/models/A_MAIN_LOF_K20.joblib",
+      "sha256": "3eecbc03b8d2933175e637fc225167124b7247f51b996b88a599e9ac5970b9b8",
+      "model_id": "LOF_K20",
+      "threshold": 1.5676876768267287,
+      "feature_count": 24,
+      "score_smoke_test_rows": 180,
+      "recorded_scores_compared": 180,
+      "maximum_score_abs_error": 0.0
+    },
+    {
+      "path": "models/normal-only-benchmark/models/A_MAIN_OCSVM_G1.joblib",
+      "sha256": "2ed51072def1ee701cf8a7a970b7a26873c5068dc1469b562235a082c342feba",
+      "model_id": "OCSVM_G1",
+      "threshold": -0.3399297417349807,
+      "feature_count": 24,
+      "score_smoke_test_rows": 460,
+      "recorded_scores_compared": 460,
+      "maximum_score_abs_error": 0.0
+    },
+    {
+      "path": "models/normal-only-benchmark/models/A_MAIN_PCA_Q.joblib",
+      "sha256": "9024b9948224780b8ac4d047ebd7fb17ad7dbbe71c0cd2dbe12b450141602c38",
+      "model_id": "PCA_Q",
+      "threshold": 0.07721567218614646,
+      "feature_count": 24,
+      "score_smoke_test_rows": 460,
+      "recorded_scores_compared": 460,
+      "maximum_score_abs_error": 0.0
+    },
+    {
+      "path": "models/normal-only-benchmark/models/B_MAIN_KNN_K20_MEAN.joblib",
+      "sha256": "69fe7849338eb229641c308401e2dc985ca472ac695921a2b97b4cd7dbe7f7ac",
+      "model_id": "KNN_K20_MEAN",
+      "threshold": 7.0954053297963116,
+      "feature_count": 24,
+      "score_smoke_test_rows": 310,
+      "recorded_scores_compared": 310,
+      "maximum_score_abs_error": 0.0
+    },
+    {
+      "path": "models/normal-only-benchmark/models/B_MAIN_LOF_K20.joblib",
+      "sha256": "132ae1890be0af00998eae0360a988a021152b3ce265225e1adf73f249d40009",
+      "model_id": "LOF_K20",
+      "threshold": 1.523125804071381,
+      "feature_count": 24,
+      "score_smoke_test_rows": 310,
+      "recorded_scores_compared": 310,
+      "maximum_score_abs_error": 0.0
+    },
+    {
+      "path": "models/normal-only-benchmark/models/B_MAIN_OCSVM_G1.joblib",
+      "sha256": "798860274bfff0f7360f84edfe51dbdfa4918b9aa3e3349a28187c8594dccfc8",
+      "model_id": "OCSVM_G1",
+      "threshold": -0.36505994608125913,
+      "feature_count": 24,
+      "score_smoke_test_rows": 550,
+      "recorded_scores_compared": 550,
+      "maximum_score_abs_error": 0.0
+    },
+    {
+      "path": "models/normal-only-benchmark/models/B_MAIN_PCA_Q.joblib",
+      "sha256": "cce198b090faf9c6326cccaa2a86fce3996e1ca63f0f4077815162adb39990e0",
+      "model_id": "PCA_Q",
+      "threshold": 0.2803128361307421,
+      "feature_count": 24,
+      "score_smoke_test_rows": 550,
+      "recorded_scores_compared": 550,
+      "maximum_score_abs_error": 0.0
+    },
+    {
+      "path": "models/normal-only-benchmark/models/PRIMARY_KNN_K20_MEAN.joblib",
+      "sha256": "fc30d453c327191bf54e787c954a8d37885f575e1e02e60e97b8532dd78ff7b5",
+      "model_id": "KNN_K20_MEAN",
+      "threshold": 5.89379027129813,
+      "feature_count": 24,
+      "score_smoke_test_rows": 449,
+      "recorded_scores_compared": 449,
+      "maximum_score_abs_error": 0.0
+    },
+    {
+      "path": "models/normal-only-benchmark/models/PRIMARY_LOF_K10.joblib",
+      "sha256": "e106a4ae0e0a4766d96c38e2bb3c4fb611d558aa65ecbdefd230fe3dd183d590",
+      "model_id": "LOF_K10",
+      "threshold": 1.3540814230463827,
+      "feature_count": 24,
+      "score_smoke_test_rows": 449,
+      "recorded_scores_compared": 449,
+      "maximum_score_abs_error": 0.0
+    },
+    {
+      "path": "models/normal-only-benchmark/models/PRIMARY_LOF_K20.joblib",
+      "sha256": "5c1f6a02efc521eafcd804e3c87513d7f2dc21312ba1ca66228be23249e42082",
+      "model_id": "LOF_K20",
+      "threshold": 1.2816035818735991,
+      "feature_count": 24,
+      "score_smoke_test_rows": 449,
+      "recorded_scores_compared": 449,
+      "maximum_score_abs_error": 0.0
+    },
+    {
+      "path": "models/normal-only-benchmark/models/PRIMARY_LOF_K40.joblib",
+      "sha256": "91944c7f072d890eaf37b5151d48d88a416b782644c1668496b8bdb45acd97d9",
+      "model_id": "LOF_K40",
+      "threshold": 1.227454580253592,
+      "feature_count": 24,
+      "score_smoke_test_rows": 449,
+      "recorded_scores_compared": 449,
+      "maximum_score_abs_error": 0.0
+    },
+    {
+      "path": "models/normal-only-benchmark/models/PRIMARY_OCSVM_G025.joblib",
+      "sha256": "43351368a5ff06a7bdfc35a1996fd320187cad5fa2abf449562c8b3947bf1ab8",
+      "model_id": "OCSVM_G025",
+      "threshold": -3.355803507908184,
+      "feature_count": 24,
+      "score_smoke_test_rows": 649,
+      "recorded_scores_compared": 649,
+      "maximum_score_abs_error": 0.0
+    },
+    {
+      "path": "models/normal-only-benchmark/models/PRIMARY_OCSVM_G1.joblib",
+      "sha256": "32e0e09f6466e5c640b5b7126e4e5ef4168a0a2ae2b3b3aed8bb0e9e178fca6f",
+      "model_id": "OCSVM_G1",
+      "threshold": -0.4639142706175594,
+      "feature_count": 24,
+      "score_smoke_test_rows": 649,
+      "recorded_scores_compared": 649,
+      "maximum_score_abs_error": 0.0
+    },
+    {
+      "path": "models/normal-only-benchmark/models/PRIMARY_OCSVM_G4.joblib",
+      "sha256": "299f4ec9c514989cc310953bab4380dba47e83c039b0e2f712c41e9098122f7b",
+      "model_id": "OCSVM_G4",
+      "threshold": -0.005932133668264075,
+      "feature_count": 24,
+      "score_smoke_test_rows": 649,
+      "recorded_scores_compared": 649,
+      "maximum_score_abs_error": 0.0
+    }
+  ]
+}

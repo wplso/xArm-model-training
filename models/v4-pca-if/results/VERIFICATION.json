@@ -1,0 +1,14 @@
+{
+  "verified": true,
+  "original_files_unchanged": true,
+  "frozen_v4_score_max_error": 0.0,
+  "frozen_v4_flags_identical": true,
+  "reloaded_if_scores_exact": true,
+  "split_counts": {
+    "evaluation_only": 250,
+    "train": 200,
+    "validation": 100,
+    "test": 99
+  },
+  "score_rows": 1947
+}

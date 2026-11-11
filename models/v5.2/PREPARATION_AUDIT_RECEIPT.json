@@ -1,0 +1,17 @@
+{
+  "policy_id": "PREP50_SHORT10_KEEP_PRENORMAL10_V1",
+  "source_manifest_sha256": "d46199987aefe33423830e9d736055b1788f8935d303d22ed2ca43214bc2d697",
+  "preparation_mask_sha256": "ddfc6353505b30b2be5c39b9a73ccd2a4e8da753090d051db015582fdfbbfff9",
+  "mask_rows": 650,
+  "eligible_rows": 649,
+  "launched_quality_exclusions": 1,
+  "no_motion_stops": 2,
+  "verified_raw_capture_count": 19,
+  "checks": [
+    "cycle_id_and_chronological_order_unique",
+    "raw_command_and_boundaries_replayed",
+    "existing_quality_eligible_ids_identical",
+    "original_roles_retained",
+    "e1_e2_masks_identical"
+  ]
+}

@@ -1,0 +1,175 @@
+{
+  "study": "V5.2 preparation exclusion",
+  "policy_id": "PREP50_SHORT10_KEEP_PRENORMAL10_V1",
+  "preparation_mask_sha256": "ddfc6353505b30b2be5c39b9a73ccd2a4e8da753090d051db015582fdfbbfff9",
+  "source_feature_table": "hardware/xarm_model_versions/v5_1_multisession_normal_study/metrics/CYCLE_FEATURES.csv",
+  "source_feature_definitions": "hardware/xarm_model_versions/v4_bolt_fixed/FEATURE_DEFINITIONS.json",
+  "split_manifest_sha256": "dbf3012aa3eeb8f127d34188583fc6d712d184b4a88c881d3434b7bdd72444cf",
+  "libraries": {
+    "python": "3.13.15",
+    "numpy": "2.5.4",
+    "pandas": "3.0.6",
+    "scikit_learn": "1.9.1",
+    "scipy": "1.18.1",
+    "joblib": "1.6.0"
+  },
+  "roles": {
+    "old": {
+      "train": 200,
+      "calibration": 100,
+      "test": 99
+    },
+    "E2": {
+      "train": 150,
+      "calibration": 100,
+      "test": 99
+    }
+  },
+  "masks": {
+    "long": "one logical unit, original orders 1-50",
+    "short": "orders 1-10 per predeclared logical unit",
+    "exceptions": [
+      "nov06_preB",
+      "nov06_preC"
+    ],
+    "short_logical_collections": [
+      "nov06_A",
+      "nov06_B",
+      "nov06_C",
+      "nov06_extra_normal30",
+      "nov06_preA",
+      "nov10_normal40",
+      "nov10_restart40"
+    ],
+    "long_logical_collection": "nov06_main400"
+  },
+  "experiments": {
+    "E0": "saved model and cutoff, full quality-eligible evaluation",
+    "E1": "same E0 model/scores and cutoff, post-preparation evaluation",
+    "E2": "refit on retained original Train; recalibrate on unchanged original Calibration; same evaluation IDs as E1"
+  },
+  "model_families": {
+    "B0": {
+      "baseline_id": "V4_PCA",
+      "feature_count": 24,
+      "features": [
+        "current_A_mean",
+        "current_A_rms",
+        "current_A_std",
+        "current_A_abs_p95_nearest_rank",
+        "voltage_V_mean",
+        "voltage_V_std",
+        "x_g_std",
+        "y_g_std",
+        "z_g_std",
+        "mean_removed_vector_g_rms",
+        "mean_removed_vector_g_abs_peak",
+        "position_ID1_raw_range",
+        "position_ID1_raw_std",
+        "position_ID2_raw_range",
+        "position_ID2_raw_std",
+        "position_ID3_raw_range",
+        "position_ID3_raw_std",
+        "position_ID4_raw_range",
+        "position_ID4_raw_std",
+        "position_ID5_raw_range",
+        "position_ID5_raw_std",
+        "position_ID6_raw_range",
+        "position_ID6_raw_std",
+        "ID1_3_5s_IQR"
+      ]
+    },
+    "B1": {
+      "baseline_id": "V4_1_PCA",
+      "feature_count": 25,
+      "features": [
+        "current_A_mean",
+        "current_A_rms",
+        "current_A_std",
+        "current_A_abs_p95_nearest_rank",
+        "voltage_V_mean",
+        "voltage_V_std",
+        "x_g_std",
+        "y_g_std",
+        "z_g_std",
+        "mean_removed_vector_g_rms",
+        "mean_removed_vector_g_abs_peak",
+        "position_ID1_raw_std",
+        "position_ID2_raw_range",
+        "position_ID2_raw_std",
+        "position_ID3_raw_range",
+        "position_ID3_raw_std",
+        "position_ID4_raw_range",
+        "position_ID4_raw_std",
+        "position_ID5_raw_range",
+        "position_ID5_raw_std",
+        "position_ID6_raw_range",
+        "position_ID6_raw_std",
+        "S3_current_mean",
+        "S4_current_mean",
+        "ID1_3_5s_IQR"
+      ]
+    },
+    "B2": {
+      "baseline_id": "V4_2A_PCA",
+      "feature_count": 24,
+      "features": [
+        "current_A_mean",
+        "current_A_rms",
+        "current_A_std",
+        "current_A_abs_p95_nearest_rank",
+        "voltage_V_mean",
+        "voltage_V_std",
+        "mean_removed_vector_g_rms",
+        "mean_removed_vector_g_abs_peak",
+        "position_ID1_raw_range",
+        "position_ID1_raw_std",
+        "position_ID2_raw_range",
+        "position_ID2_raw_std",
+        "position_ID3_raw_range",
+        "position_ID3_raw_std",
+        "position_ID4_raw_range",
+        "position_ID4_raw_std",
+        "position_ID5_raw_range",
+        "position_ID5_raw_std",
+        "position_ID6_raw_range",
+        "position_ID6_raw_std",
+        "ID1_3_5s_IQR",
+        "rob_x_p95_g",
+        "rob_y_p95_g",
+        "rob_z_p95_g"
+      ]
+    }
+  },
+  "pca": {
+    "n_components": 0.95,
+    "svd_solver": "full",
+    "whiten": false,
+    "seed": 20261031,
+    "preprocessing": "train-only median imputation and StandardScaler",
+    "score": "Q = mean((z - reconstructed_z)^2)",
+    "threshold": "unchanged calibration role q95 higher, strict score > threshold"
+  },
+  "inputs_sha256": {
+    "hardware/xarm_model_versions/v4_bolt_fixed/SPLIT_MANIFEST.csv": "bdf4c57fcdba827df0d62e85a0635537001086662a43ba6bbca9462d951f0997",
+    "hardware/xarm_model_versions/v4_bolt_fixed/FROZEN_V4_CANDIDATES.json": "1d566ff2744db9aec975d3ff87b4bb10438ac6026b0b4f495fe6a794920f0bcd",
+    "hardware/xarm_model_versions/v5_1_multisession_normal_study/metrics/CYCLE_FEATURES.csv": "0d62e0d7ba6432da30763b0257eab70f8bcb89a639e2f103a9d243da803d3e9a",
+    "hardware/xarm_model_versions/v5_1_multisession_normal_study/metrics/BASELINE_CYCLE_SCORES.csv": "82225d5155ff144c9259b58e4bfba657fdfddf87860d39b4dd7632c2830de905",
+    "hardware/xarm_model_versions/v5_1_multisession_normal_study/metrics/BASELINE_REPRODUCTION.csv": "16e72ca85e3b35008feee3ae2092466bd2404e5a2528f87ba808062742857e8c",
+    "hardware/No3_bolt_ABC_validation_20261106/results/MATCHED_CONDITION_METRICS.csv": "f0120595cd9fd4e51b3756f9c5dcc88cdb8a011732e4b8a84306aaabf9e6b4da",
+    "hardware/xarm_model_versions/v5_1_multisession_normal_study/verification/DATA_VERIFICATION.json": "f3538b526f09365b1df267facf79ae832d56b479271cf51c0a45373a03b6ae36",
+    "hardware/xarm_model_versions/v5_1_multisession_normal_study/verification/baseline.json": "7d2a6af780b382ec716accec88f0b0a6276249eb2c9a6a26f829c60c15bf92e4",
+    "PREPARATION_MASK.csv": "ddfc6353505b30b2be5c39b9a73ccd2a4e8da753090d051db015582fdfbbfff9",
+    "PREPARATION_MASK.sha256": "11087c9a5ce7ef1f8e8890f4e30967fd1e8452d0510178da55d67efc153fef9f",
+    "SPLIT_MANIFEST.csv": "dbf3012aa3eeb8f127d34188583fc6d712d184b4a88c881d3434b7bdd72444cf",
+    "hardware/xarm_model_versions/v4_bolt_fixed/analysis_code/normal_models.py": "c9e66cef195fca1234279610df484a92e6696205b62224a704d48edaf496c284",
+    "hardware/xarm_model_versions/v4_bolt_fixed/FEATURE_DEFINITIONS.json": "8771d0ed2313307a5f704a856af7ebda70403cb5903fbb7da499e5622f5f9383",
+    "hardware/xarm_model_versions/v4_bolt_fixed/TRAINING_CONFIG.json": "de5b165f616d49ce9a215ec1a0cd4313b57ffba985466277d5bbda91339fea40",
+    "analysis_code/run_study.py": "0ef077bcac51590598b725b112ac815fcca481addc3858652973c9c39f8625b4",
+    "analysis_code/summarize_study.py": "078269990d2b20726dbb39c1b4a1924f7573cc7749b0cb3c243d2ba6da956708",
+    "hardware/xarm_model_versions/v4_bolt_fixed/models/V4_PCA.joblib": "86d85e072d656fe8dd4df47b096c5d80565bf44ccd48dbc94175d75c359f7f3e",
+    "hardware/xarm_model_versions/v4_bolt_fixed/models/V4_1_PCA.joblib": "e85b1cfae531222a6dde4b175cb2e36833008ba628686e182406edb8f851e707",
+    "hardware/xarm_model_versions/v4_bolt_fixed/models/V4_2A_PCA.joblib": "14267bcbaed43961637414dde95ad5b08a98cf2923a84da5a01bfc26e1c930e4"
+  },
+  "main_research_use": "same existing exposed data, offline development only"
+}
