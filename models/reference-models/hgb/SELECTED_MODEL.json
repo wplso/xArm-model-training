@@ -1,0 +1,22 @@
+{
+  "model_id": "hist_F2_L2_h0p5_O3_a100_s7181",
+  "method": "hist",
+  "group": "F2",
+  "history": "2.0",
+  "horizon": "0.5",
+  "output": "O3",
+  "alpha": "100.0",
+  "seed": "7181",
+  "objects": "14",
+  "fit_seconds": "22.53959340043366",
+  "input_channels": "26",
+  "output_channels": "14",
+  "train_windows": "22156",
+  "dev_windows": "6209",
+  "path": "models/hist_F2_L2_h0p5_O3_a100_s7181.joblib",
+  "sha256": "bfcba3f19215af21b8b093e0849d1dcd65838f74c0c424326dc3e44d787e0b1f",
+  "bytes": "1061574",
+  "columns": "current_A|voltage_V|id1_raw|id1_age_s|id1_valid|id1_new|id2_raw|id2_age_s|id2_valid|id2_new|id3_raw|id3_age_s|id3_valid|id3_new|id4_raw|id4_age_s|id4_valid|id4_new|id5_raw|id5_age_s|id5_valid|id5_new|id6_raw|id6_age_s|id6_valid|id6_new",
+  "targets": "I_A|V_V|ID1_raw|ID2_raw|ID3_raw|ID4_raw|ID5_raw|ID6_raw|ax_g|ay_g|az_g|RMS_g|P95_g|Peak_g",
+  "output_train_valid": "20920|20920|20869|20869|20869|20869|21172|21198|21021|21021|21021|20769|20769|20769"
+}

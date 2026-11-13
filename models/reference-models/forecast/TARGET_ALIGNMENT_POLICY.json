@@ -1,0 +1,37 @@
+{
+  "host_clock": "monotonic ns, relative to No.3 command send completion",
+  "grid_s": 0.1,
+  "issue_stride_s": 0.2,
+  "histories_s": [
+    0.5,
+    1.0,
+    2.0
+  ],
+  "horizons_s": [
+    0.5,
+    1.0,
+    2.0
+  ],
+  "instantaneous": "first actual valid host observation at/after nominal, strictly after issue and inside No.3",
+  "tolerances_s": {
+    "E": 0.15,
+    "P": 0.65,
+    "A_RAW": 0.12
+  },
+  "E": "new sequence and same epoch as input INA",
+  "P": "each ID independently, target_seq=one-based raw file data-row ID (no firmware sequence)",
+  "A_RAW_clock": "host receipt of representative sample; exact physical sample timestamp unavailable",
+  "A_STAT_window": "[t+h,t+h+w) host-receipt membership; closes at host deadline t+h+w",
+  "A_STAT_window_s": 0.2,
+  "A_STAT_min_samples": 10,
+  "A_STAT_nominal_samples_for_shortfall": 20,
+  "A_STAT_validity": "all samples finite, no detected sequence gaps, one epoch, whole window within No.3",
+  "A_STAT_sequence": "last included sequence for matching; first/last and native FIFO read_end_ms stored separately",
+  "P_max_input_age_s": 0.85,
+  "E_max_input_age_s": 0.25,
+  "ADXL_point_persistence_age_s": 0.15,
+  "vibration_persistence_window": "(t-w,t] using same size/statistics and validity rule as target",
+  "unavailable": "NaN target value and -1 clock/id, per-output target mask is isfinite(y)",
+  "duplicate_h": "both paired horizons flagged when same issue and target response/sample ID and time",
+  "duplicate_prior_issue": "subsequent issue at same horizon marked if prior issue matched same sample ID and time"
+}

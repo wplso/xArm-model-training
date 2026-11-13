@@ -1,0 +1,88 @@
+{
+  "targets": [
+    {
+      "name": "I_A",
+      "unit": "A"
+    },
+    {
+      "name": "V_V",
+      "unit": "V"
+    },
+    {
+      "name": "ID1_raw",
+      "unit": "raw"
+    },
+    {
+      "name": "ID2_raw",
+      "unit": "raw"
+    },
+    {
+      "name": "ID3_raw",
+      "unit": "raw"
+    },
+    {
+      "name": "ID4_raw",
+      "unit": "raw"
+    },
+    {
+      "name": "ID5_raw",
+      "unit": "raw"
+    },
+    {
+      "name": "ID6_raw",
+      "unit": "raw"
+    },
+    {
+      "name": "ax_g",
+      "unit": "g"
+    },
+    {
+      "name": "ay_g",
+      "unit": "g"
+    },
+    {
+      "name": "az_g",
+      "unit": "g"
+    },
+    {
+      "name": "RMS_g",
+      "unit": "g"
+    },
+    {
+      "name": "P95_g",
+      "unit": "g"
+    },
+    {
+      "name": "Peak_g",
+      "unit": "g"
+    }
+  ],
+  "groups": {
+    "E": [
+      "I_A",
+      "V_V"
+    ],
+    "P": [
+      "ID1_raw",
+      "ID2_raw",
+      "ID3_raw",
+      "ID4_raw",
+      "ID5_raw",
+      "ID6_raw"
+    ],
+    "A_RAW": [
+      "ax_g",
+      "ay_g",
+      "az_g"
+    ],
+    "A_STAT": [
+      "RMS_g",
+      "P95_g",
+      "Peak_g"
+    ]
+  },
+  "n_outputs": 14,
+  "A_RAW": "first recorded XYZ sample of the first FIFO batch at/after nominal host receipt",
+  "A_STAT": "XYZ mean of the target window removed, then Euclidean norm, RMS/P95(linear)/Peak",
+  "bounds": "recorded values preserved, no clipping or corrected saturation values"
+}

@@ -1,0 +1,253 @@
+{
+  "schema_version": 1,
+  "selected_date_kst": "2026-11-14",
+  "status": "development_baseline_pending_independent_and_device_validation",
+  "deployed": false,
+  "automatic_combined_alert": false,
+  "action_control": false,
+  "profiles": {
+    "raspberry_pi_4b": {
+      "default": [
+        "logistic_s2",
+        "gru_all"
+      ],
+      "optional_display": "v1_hgb_f2"
+    },
+    "pc": {
+      "default": [
+        "tabpfn_s2_p0",
+        "gru_all"
+      ],
+      "optional_display": "xgb_f7"
+    }
+  },
+  "models": {
+    "logistic_s2": {
+      "split": "primary",
+      "seed": 7181,
+      "class_order": [
+        "normal",
+        "A121",
+        "B82",
+        "C182"
+      ],
+      "score": "1-P(normal)",
+      "comparison": ">",
+      "normal_calibration_cycles": 40,
+      "input": {
+        "schema": "S2",
+        "count": 52,
+        "ordered_schema": {
+          "path": "tabpfn/FEATURE_SCHEMAS.json",
+          "sha256": "0e4b2df7e68627ed57d160222c4bc63c86c1c742252c18d3173bd436899d9770"
+        },
+        "feature_definitions": {
+          "path": "cycle-statistics/FEATURE_DEFINITIONS.json",
+          "sha256": "b4b117737b9877ff6bdf262f564de14c6b2e2aed9805690b8271d45db3c201d0",
+          "source_sha256": "8af4234e83ccc7886e2bfb25a4d213e63408930fddf86596a41f2e443698a150"
+        },
+        "feature_extractor": {
+          "path": "cycle-statistics/data/prepare_features.py",
+          "sha256": "8d06812b7e3dd8ae0d7e0449dcdee72dc9c3af7e47ac2ab2b9a3f6c0acd5fa3d"
+        }
+      },
+      "split_manifest": {
+        "path": "tabpfn/SPLIT_MANIFEST.csv",
+        "sha256": "01049d3a17408625e75f9b6b854b3938e98678c8bada6b9c7de08da5c587fb86",
+        "source_sha256": "247110fbbf375b099c93f37dbd431c56765e78d9e3212b27c9ef676b04b4d1f5"
+      },
+      "id": "primary_S2_B_LR_7181",
+      "role": "cycle_end_known_load",
+      "bundle": {
+        "path": "tabpfn/baseline/models/primary_S2_B_LR_7181.joblib",
+        "sha256": "726da0a90f16147ee774a31d4d71bfb5471c8dd87237526385429a5d3795f7bf"
+      },
+      "threshold": 0.2907932588975627,
+      "preprocessing": "train-median imputer and StandardScaler stored in bundle"
+    },
+    "tabpfn_s2_p0": {
+      "split": "primary",
+      "seed": 7181,
+      "class_order": [
+        "normal",
+        "A121",
+        "B82",
+        "C182"
+      ],
+      "score": "1-P(normal)",
+      "comparison": ">",
+      "normal_calibration_cycles": 40,
+      "input": {
+        "schema": "S2",
+        "count": 52,
+        "ordered_schema": {
+          "path": "tabpfn/FEATURE_SCHEMAS.json",
+          "sha256": "0e4b2df7e68627ed57d160222c4bc63c86c1c742252c18d3173bd436899d9770"
+        },
+        "feature_definitions": {
+          "path": "cycle-statistics/FEATURE_DEFINITIONS.json",
+          "sha256": "b4b117737b9877ff6bdf262f564de14c6b2e2aed9805690b8271d45db3c201d0",
+          "source_sha256": "8af4234e83ccc7886e2bfb25a4d213e63408930fddf86596a41f2e443698a150"
+        },
+        "feature_extractor": {
+          "path": "cycle-statistics/data/prepare_features.py",
+          "sha256": "8d06812b7e3dd8ae0d7e0449dcdee72dc9c3af7e47ac2ab2b9a3f6c0acd5fa3d"
+        }
+      },
+      "split_manifest": {
+        "path": "tabpfn/SPLIT_MANIFEST.csv",
+        "sha256": "01049d3a17408625e75f9b6b854b3938e98678c8bada6b9c7de08da5c587fb86",
+        "source_sha256": "247110fbbf375b099c93f37dbd431c56765e78d9e3212b27c9ef676b04b4d1f5"
+      },
+      "id": "primary/S2/P0/7181",
+      "role": "cycle_end_known_load",
+      "checkpoint": {
+        "download_url": "https://huggingface.co/Prior-Labs/TabPFN-v2-clf/resolve/a7e9a4696dd0efbd0e64a705645e0d137ca2de72/tabpfn-v2-classifier-v2_default.ckpt",
+        "relative_destination": "tabpfn/checkpoint/tabpfn-v2-classifier-v2_default.ckpt",
+        "sha256": "cf8c519c01eaf1613ee91239006d57b1c806ff5f23ac1aeb1315ba1015210e49"
+      },
+      "context": {
+        "path": "tabpfn/contexts/primary/S2.csv",
+        "sha256": "c3db9d3314d0bbe06aa63ea1ba8ab0ca6a3dfd17044ecd379f406cd539905d0c"
+      },
+      "context_cycles": 809,
+      "threshold": 0.19058864334053838,
+      "run_record": {
+        "path": "tabpfn/runs/primary/S2/7181/P0_details.json",
+        "sha256": "d5883aadcd24f0733e8afad2860ae587b68237d15a90da2db31d87e495d1bfc8"
+      },
+      "settings": {
+        "path": "tabpfn/EXPERIMENT_CONFIG.json",
+        "sha256": "50f299abc794052bf53e95088d93593267f59eeba74c1be0d8e5003135405dbd"
+      },
+      "classifier_factory": {
+        "path": "tabpfn/run_tabpfn.py",
+        "sha256": "3481cbaee5eb2a77816b158e15b42b80a19723773a77d12e6a001f1a63c18d92"
+      },
+      "package": "tabpfn==10.0.0",
+      "ensemble": 4,
+      "fit_mode": "fit_preprocessors",
+      "balance_probabilities": false,
+      "evaluated_query_batch_size": 64
+    },
+    "gru_all": {
+      "id": "gru_base_F2_L2_O3_s7181",
+      "model": {
+        "path": "forecast/runs/gru_base_F2_L2_O3_s7181/model.pt",
+        "sha256": "74e238dbcb1f37d8b6ccae8e32d22077599adbf08b01572d32cb78b7a58666bf"
+      },
+      "run_record": {
+        "path": "forecast/runs/gru_base_F2_L2_O3_s7181/RESULT.json",
+        "sha256": "85310f1bd5467d6fba89385f40985f026b374961fe92fef542a71145e46d3b02"
+      },
+      "input_groups": {
+        "path": "forecast/INPUT_GROUPS.json",
+        "sha256": "a302470ba0c298ae4150e9c5e30a0cb65aca01f37bc676e4e286ca798432fab8"
+      },
+      "targets": {
+        "path": "forecast/TARGET_DEFINITIONS.json",
+        "sha256": "0a8aeb054add2f6c074fc2de6eae778ec2c24b1e2fa628ea3160d4154d96c9b9"
+      },
+      "alignment": {
+        "path": "forecast/TARGET_ALIGNMENT_POLICY.json",
+        "sha256": "06e1baca4997feca504417969cbad6863a2f91d9bd7b8eb9953e7054d9012144"
+      },
+      "role": "in_motion_residual_alert",
+      "policy": "ALL",
+      "threshold": 7.288925055167675,
+      "comparison": ">",
+      "normal_calibration_cycles": 40,
+      "residual_rules": {
+        "path": "forecast/metrics/FROZEN_MONITOR_RULES.json",
+        "sha256": "0b187333041674f880a852a9af2acb95899ea4a24a0b9598d741207b6f83eae3"
+      },
+      "model_implementation": {
+        "path": "forecast/models.py",
+        "sha256": "a0ddf58ec2113958805877435bbae4380fb099d147fed7ca0fc59b49ddc84650"
+      },
+      "monitor_implementation": {
+        "path": "forecast/monitor.py",
+        "sha256": "201dfa858903b6f7887170936e7344cc3ba96ec3261845d2683745c42e262502"
+      },
+      "split_manifest": {
+        "path": "forecast/SPLIT_MANIFEST.csv",
+        "sha256": "ebb05d852f4f0890763f8f5570259bb58a6bbb060851905949697dcdd1817ff3",
+        "source_sha256": "466edc89e33ef6e0f23239b3a7ba8a9e281eef90f3a30fbabb3326825e256e68"
+      },
+      "history_s": 2,
+      "horizon_s": 0.5,
+      "vibration_width_s": 0.2,
+      "issue_stride_s": 0.2
+    },
+    "v1_hgb_f2": {
+      "id": "v1_mt_f2_tree",
+      "source_model_id": "hist_F2_L2_h0p5_O3_a100_s7181",
+      "role": "forecast_display_only",
+      "model": {
+        "path": "hgb/models/hist_F2_L2_h0p5_O3_a100_s7181.joblib",
+        "sha256": "bfcba3f19215af21b8b093e0849d1dcd65838f74c0c424326dc3e44d787e0b1f"
+      },
+      "run_index": {
+        "path": "hgb/SELECTED_MODEL.json",
+        "sha256": "7e06a1ed4ce50fa81a8bf9e969dbc7239b0e18f7fe739f15964485f465ae1776",
+        "source_sha256": "3430358cf13945ce90b73b9ffd56d7ac6f602ce362e8130dd2ad59916516c618"
+      },
+      "input_groups": {
+        "path": "hgb/INPUT_GROUP_DEFINITIONS.json",
+        "sha256": "a302470ba0c298ae4150e9c5e30a0cb65aca01f37bc676e4e286ca798432fab8"
+      },
+      "targets": {
+        "path": "hgb/TARGET_DEFINITIONS.json",
+        "sha256": "0a8aeb054add2f6c074fc2de6eae778ec2c24b1e2fa628ea3160d4154d96c9b9"
+      },
+      "alignment": {
+        "path": "hgb/TARGET_ALIGNMENT_POLICY.json",
+        "sha256": "06e1baca4997feca504417969cbad6863a2f91d9bd7b8eb9953e7054d9012144"
+      }
+    },
+    "xgb_f7": {
+      "id": "xgb_base_F7_L2_O3_s7181",
+      "model": {
+        "path": "forecast/runs/xgb_base_F7_L2_O3_s7181/model.joblib",
+        "sha256": "05e465a1c147eb1c801a5f05a3f31ca8d633ea04b6a115ffd4ebd88103284647"
+      },
+      "run_record": {
+        "path": "forecast/runs/xgb_base_F7_L2_O3_s7181/RESULT.json",
+        "sha256": "0934771e2369147eb94d93f0184cc06bf2759a3a40f602715be56d508c0b2873"
+      },
+      "input_groups": {
+        "path": "forecast/INPUT_GROUPS.json",
+        "sha256": "a302470ba0c298ae4150e9c5e30a0cb65aca01f37bc676e4e286ca798432fab8"
+      },
+      "targets": {
+        "path": "forecast/TARGET_DEFINITIONS.json",
+        "sha256": "0a8aeb054add2f6c074fc2de6eae778ec2c24b1e2fa628ea3160d4154d96c9b9"
+      },
+      "alignment": {
+        "path": "forecast/TARGET_ALIGNMENT_POLICY.json",
+        "sha256": "06e1baca4997feca504417969cbad6863a2f91d9bd7b8eb9953e7054d9012144"
+      },
+      "role": "forecast_display_only"
+    }
+  },
+  "validation": {
+    "joint_retrospective_eval_eligible_cycles": 370,
+    "counts_by_label": {
+      "A121": 0,
+      "B82": 30,
+      "C182": 30,
+      "D": 30,
+      "E": 30,
+      "F": 30,
+      "foam_contact": 30,
+      "normal": 160,
+      "station_disturbance": 30
+    },
+    "combined_performance_measured": true,
+    "joint_replay_scope": "retrospective_common_evaluation",
+    "joint_replay_report": "joint-replay/REPORT_KO.md",
+    "joint_replay_verification_sha256": "1caf27f3323ab346160995394630ad0a6446ad02e095491332c345d14eea2c01",
+    "raspberry_pi_timing_measured": false,
+    "independent_new_campaign_evaluated": false
+  }
+}

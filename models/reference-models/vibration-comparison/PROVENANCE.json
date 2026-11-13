@@ -1,0 +1,17 @@
+{
+  "source_sha256": {
+    "hardware/xarm_anomaly_evaluation_20261113/window_vibration/WINDOW_FEATURES.csv": "d695f6165efec86ee5d91e7bafc93502213f81b457840530b27eb37fecc561e4",
+    "hardware/xarm_anomaly_evaluation_20261113/window_vibration/NORMAL_CALIBRATION_MAX.csv": "ed12b2c7bce3eb07936fd7dca1535f6c663073db1abd4866a85bccdaf4c72f0e",
+    "hardware/xarm_anomaly_evaluation_20261113/models/CYCLE_SCORES.csv": "de5172fb2a12e014d86cf824dff70fc369688367782256795c1f16dc600b1a04",
+    "hardware/No3_bolt_normal_retrain_20261111/analysis/retrained_bolt_normal/models/LOGISTIC_BOLT_NORMAL_EXPANDED.joblib": "d13f356a01973a4fbb188396301b9c98f9062a36d24d35b7421031907bde548d",
+    "hardware/No3_bolt_normal_retrain_20261111/analysis/retrained_bolt_normal/VERIFICATION.json": "e581f2482933bafb34c198f3f892b71c5deff1befd61e768bfd71111f097f5de",
+    "hardware/xarm_anomaly_evaluation_20261113/vibration_amplitude/AMPLITUDE_BY_CYCLE.csv": "2e663e96d71e36e3e47c6acffc1da8fbc8c77d588d25ba1801b8b2b8e3ed15e0"
+  },
+  "frozen_threshold": 0.8214447226813868,
+  "crest_midpoint_reused_sample": 16.418785088916632,
+  "crest_type_validation": "leave one gated foam/station cycle out within the same sessions",
+  "normal_gate_calibration": "November 11 N03, 60 normal cycles",
+  "gate_units": "mg",
+  "gate_comparison": "strict greater-than",
+  "new_rules": "offline only"
+}

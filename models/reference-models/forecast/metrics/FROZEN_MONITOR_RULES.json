@@ -1,0 +1,2096 @@
+{
+  "selection_models": [
+    "xgb_base_F7_L2_O3_s7181",
+    "gru_base_F2_L2_O3_s7181",
+    "tcn_large_F4_L2_O3_s7181"
+  ],
+  "horizon_s": 0.5,
+  "evaluation_supplied": false,
+  "scale": "absolute normal Development residual q90(higher) and positive floors",
+  "threshold": "normal Calibration cycle maximum q95(higher), strict >",
+  "common_clock": "overlapping .2-second arrival slots, anchored to command send-completion per cycle. Threshold refit per pair on the same rule in Calibration.",
+  "rules": {
+    "gru_base_F2_L2_O3_s7181": {
+      "scales": [
+        0.15078112483024597,
+        0.021504878997802734,
+        11.16961669921875,
+        0.865692138671875,
+        2.334808349609375,
+        5.33123779296875,
+        13.574310302734375,
+        13.3756103515625,
+        0.012921050190925598,
+        0.018530920147895813,
+        0.010469913482666016,
+        0.004624482244253159,
+        0.008566677570343018,
+        0.011596020311117172
+      ],
+      "policies": {
+        "E": {
+          "columns": [
+            0,
+            1
+          ],
+          "threshold": 4.1156566664449326,
+          "calibration_cycles_valid": 40,
+          "calibration_cycles_total": 40,
+          "calibration_fp": 1
+        },
+        "P": {
+          "columns": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "threshold": 3.526970604072171,
+          "calibration_cycles_valid": 40,
+          "calibration_cycles_total": 40,
+          "calibration_fp": 1
+        },
+        "A_RAW": {
+          "columns": [
+            8,
+            9,
+            10
+          ],
+          "threshold": 4.566880721410029,
+          "calibration_cycles_valid": 40,
+          "calibration_cycles_total": 40,
+          "calibration_fp": 1
+        },
+        "A_STAT": {
+          "columns": [
+            11,
+            12,
+            13
+          ],
+          "threshold": 7.288925055167675,
+          "calibration_cycles_valid": 40,
+          "calibration_cycles_total": 40,
+          "calibration_fp": 1
+        },
+        "ALL": {
+          "columns": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13
+          ],
+          "threshold": 7.288925055167675,
+          "calibration_cycles_valid": 40,
+          "calibration_cycles_total": 40,
+          "calibration_fp": 1
+        }
+      }
+    },
+    "tcn_large_F4_L2_O3_s7181": {
+      "scales": [
+        0.14864861965179443,
+        0.021766185760498047,
+        11.552383422851562,
+        0.90179443359375,
+        2.98846435546875,
+        4.72705078125,
+        13.818328857421875,
+        14.990730285644531,
+        0.012935400009155273,
+        0.0181102454662323,
+        0.010315418243408203,
+        0.004647763445973396,
+        0.008738473057746887,
+        0.011954795569181442
+      ],
+      "policies": {
+        "E": {
+          "columns": [
+            0,
+            1
+          ],
+          "threshold": 3.6843604179902294,
+          "calibration_cycles_valid": 40,
+          "calibration_cycles_total": 40,
+          "calibration_fp": 1
+        },
+        "P": {
+          "columns": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "threshold": 3.126252453258961,
+          "calibration_cycles_valid": 40,
+          "calibration_cycles_total": 40,
+          "calibration_fp": 1
+        },
+        "A_RAW": {
+          "columns": [
+            8,
+            9,
+            10
+          ],
+          "threshold": 4.582605278971941,
+          "calibration_cycles_valid": 40,
+          "calibration_cycles_total": 40,
+          "calibration_fp": 1
+        },
+        "A_STAT": {
+          "columns": [
+            11,
+            12,
+            13
+          ],
+          "threshold": 7.259287950821742,
+          "calibration_cycles_valid": 40,
+          "calibration_cycles_total": 40,
+          "calibration_fp": 1
+        },
+        "ALL": {
+          "columns": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13
+          ],
+          "threshold": 7.259287950821742,
+          "calibration_cycles_valid": 40,
+          "calibration_cycles_total": 40,
+          "calibration_fp": 1
+        }
+      }
+    },
+    "xgb_base_F7_L2_O3_s7181": {
+      "scales": [
+        0.15542864799499512,
+        0.022810935974121094,
+        6.126556396484375,
+        0.883209228515625,
+        1.372833251953125,
+        0.7603759765625,
+        1.77838134765625,
+        1.7014007568359375,
+        0.013217046856880188,
+        0.018118292093276978,
+        0.009367406368255615,
+        0.004632354713976383,
+        0.008385661989450455,
+        0.011210277676582336
+      ],
+      "policies": {
+        "E": {
+          "columns": [
+            0,
+            1
+          ],
+          "threshold": 4.175529913457921,
+          "calibration_cycles_valid": 40,
+          "calibration_cycles_total": 40,
+          "calibration_fp": 1
+        },
+        "P": {
+          "columns": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "threshold": 97.49933074784639,
+          "calibration_cycles_valid": 40,
+          "calibration_cycles_total": 40,
+          "calibration_fp": 1
+        },
+        "A_RAW": {
+          "columns": [
+            8,
+            9,
+            10
+          ],
+          "threshold": 4.622420605883214,
+          "calibration_cycles_valid": 40,
+          "calibration_cycles_total": 40,
+          "calibration_fp": 1
+        },
+        "A_STAT": {
+          "columns": [
+            11,
+            12,
+            13
+          ],
+          "threshold": 7.369112655467392,
+          "calibration_cycles_valid": 40,
+          "calibration_cycles_total": 40,
+          "calibration_fp": 1
+        },
+        "ALL": {
+          "columns": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13
+          ],
+          "threshold": 97.49933074784639,
+          "calibration_cycles_valid": 40,
+          "calibration_cycles_total": 40,
+          "calibration_fp": 1
+        }
+      }
+    },
+    "v1_e_f4_tree": {
+      "scales": [
+        0.14684737312425566,
+        0.021638294113657253,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "policies": {
+        "E": {
+          "columns": [
+            0,
+            1
+          ],
+          "threshold": 4.511058514781172,
+          "calibration_cycles_valid": 40,
+          "calibration_cycles_total": 40,
+          "calibration_fp": 1
+        },
+        "ALL": {
+          "columns": [
+            0,
+            1
+          ],
+          "threshold": 4.511058514781172,
+          "calibration_cycles_valid": 40,
+          "calibration_cycles_total": 40,
+          "calibration_fp": 1
+        }
+      }
+    },
+    "v1_mt_f2_tree": {
+      "scales": [
+        0.1468373565883796,
+        0.021797035231518436,
+        6.92704617928365,
+        0.8588385637195302,
+        1.6066686668270336,
+        0.753500953512912,
+        1.46703639134995,
+        3.055991466845967,
+        0.013047283061885934,
+        0.018522296860344706,
+        0.010485170220641216,
+        0.004611352296179693,
+        0.008556735885693896,
+        0.011477091412566618
+      ],
+      "policies": {
+        "E": {
+          "columns": [
+            0,
+            1
+          ],
+          "threshold": 4.451579872634677,
+          "calibration_cycles_valid": 40,
+          "calibration_cycles_total": 40,
+          "calibration_fp": 1
+        },
+        "P": {
+          "columns": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "threshold": 72.91948742312191,
+          "calibration_cycles_valid": 40,
+          "calibration_cycles_total": 40,
+          "calibration_fp": 1
+        },
+        "A_RAW": {
+          "columns": [
+            8,
+            9,
+            10
+          ],
+          "threshold": 4.508828377759588,
+          "calibration_cycles_valid": 40,
+          "calibration_cycles_total": 40,
+          "calibration_fp": 1
+        },
+        "A_STAT": {
+          "columns": [
+            11,
+            12,
+            13
+          ],
+          "threshold": 7.336144392690658,
+          "calibration_cycles_valid": 40,
+          "calibration_cycles_total": 40,
+          "calibration_fp": 1
+        },
+        "ALL": {
+          "columns": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13
+          ],
+          "threshold": 72.91948742312191,
+          "calibration_cycles_valid": 40,
+          "calibration_cycles_total": 40,
+          "calibration_fp": 1
+        }
+      }
+    },
+    "persistence_L2_h0.5_w0.2": {
+      "scales": [
+        0.5148799419403076,
+        0.06874990463256836,
+        272.0,
+        1.0,
+        53.0,
+        117.0,
+        335.0,
+        382.0,
+        0.0195000022649765,
+        0.023400001227855682,
+        0.011699974536895752,
+        0.01322090718895197,
+        0.02302816417068243,
+        0.0291898213326931
+      ],
+      "policies": {
+        "E": {
+          "columns": [
+            0,
+            1
+          ],
+          "threshold": 2.6727262638803153,
+          "calibration_cycles_valid": 40,
+          "calibration_cycles_total": 40,
+          "calibration_fp": 1
+        },
+        "P": {
+          "columns": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "threshold": 2.0,
+          "calibration_cycles_valid": 40,
+          "calibration_cycles_total": 40,
+          "calibration_fp": 0
+        },
+        "A_RAW": {
+          "columns": [
+            8,
+            9,
+            10
+          ],
+          "threshold": 3.499999840799568,
+          "calibration_cycles_valid": 40,
+          "calibration_cycles_total": 40,
+          "calibration_fp": 1
+        },
+        "A_STAT": {
+          "columns": [
+            11,
+            12,
+            13
+          ],
+          "threshold": 2.998509555702492,
+          "calibration_cycles_valid": 40,
+          "calibration_cycles_total": 40,
+          "calibration_fp": 1
+        },
+        "ALL": {
+          "columns": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13
+          ],
+          "threshold": 3.499999840799568,
+          "calibration_cycles_valid": 40,
+          "calibration_cycles_total": 40,
+          "calibration_fp": 1
+        }
+      }
+    },
+    "template_L2_h0.5_w0.2": {
+      "scales": [
+        0.2013999968767166,
+        0.02812504768371582,
+        48.25000000000074,
+        1.0,
+        7.125,
+        23.625,
+        65.24999999999989,
+        48.00000000000023,
+        0.012675005942583084,
+        0.0195000022649765,
+        0.011699974536895752,
+        0.0049163659568876045,
+        0.00889633875340224,
+        0.011561542283743634
+      ],
+      "policies": {
+        "E": {
+          "columns": [
+            0,
+            1
+          ],
+          "threshold": 3.6666638409697794,
+          "calibration_cycles_valid": 40,
+          "calibration_cycles_total": 40,
+          "calibration_fp": 1
+        },
+        "P": {
+          "columns": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "threshold": 3.3684210526315788,
+          "calibration_cycles_valid": 40,
+          "calibration_cycles_total": 40,
+          "calibration_fp": 0
+        },
+        "A_RAW": {
+          "columns": [
+            8,
+            9,
+            10
+          ],
+          "threshold": 4.615381811950961,
+          "calibration_cycles_valid": 40,
+          "calibration_cycles_total": 40,
+          "calibration_fp": 1
+        },
+        "A_STAT": {
+          "columns": [
+            11,
+            12,
+            13
+          ],
+          "threshold": 7.213522911060528,
+          "calibration_cycles_valid": 40,
+          "calibration_cycles_total": 40,
+          "calibration_fp": 1
+        },
+        "ALL": {
+          "columns": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13
+          ],
+          "threshold": 7.213522911060528,
+          "calibration_cycles_valid": 40,
+          "calibration_cycles_total": 40,
+          "calibration_fp": 1
+        }
+      }
+    },
+    "direct_recent_rms_peak": {
+      "scales": [
+        0.02380080334842205,
+        0.04746517166495323
+      ],
+      "policies": {
+        "RMS_PEAK": {
+          "columns": [
+            0,
+            1
+          ],
+          "threshold": 2.2736801127982273,
+          "calibration_cycles_valid": 40,
+          "calibration_cycles_total": 40,
+          "calibration_fp": 1
+        }
+      }
+    }
+  },
+  "paired_rules": [
+    {
+      "model_id": "gru_base_F2_L2_O3_s7181",
+      "policy": "E",
+      "reference": "v1_e_f4_tree",
+      "reference_policy": "E",
+      "left": {
+        "threshold": 4.1156566664449326,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      },
+      "right": {
+        "threshold": 4.511058514781172,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      }
+    },
+    {
+      "model_id": "gru_base_F2_L2_O3_s7181",
+      "policy": "E",
+      "reference": "v1_mt_f2_tree",
+      "reference_policy": "E",
+      "left": {
+        "threshold": 4.1156566664449326,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      },
+      "right": {
+        "threshold": 4.451579872634677,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      }
+    },
+    {
+      "model_id": "gru_base_F2_L2_O3_s7181",
+      "policy": "E",
+      "reference": "persistence_L2_h0.5_w0.2",
+      "reference_policy": "E",
+      "left": {
+        "threshold": 4.1156566664449326,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      },
+      "right": {
+        "threshold": 2.6727262638803153,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      }
+    },
+    {
+      "model_id": "gru_base_F2_L2_O3_s7181",
+      "policy": "E",
+      "reference": "template_L2_h0.5_w0.2",
+      "reference_policy": "E",
+      "left": {
+        "threshold": 4.1156566664449326,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      },
+      "right": {
+        "threshold": 3.6666638409697794,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      }
+    },
+    {
+      "model_id": "gru_base_F2_L2_O3_s7181",
+      "policy": "E",
+      "reference": "direct_recent_rms_peak",
+      "reference_policy": "RMS_PEAK",
+      "left": {
+        "threshold": 4.1156566664449326,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      },
+      "right": {
+        "threshold": 2.2736801127982273,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      }
+    },
+    {
+      "model_id": "gru_base_F2_L2_O3_s7181",
+      "policy": "P",
+      "reference": "v1_mt_f2_tree",
+      "reference_policy": "P",
+      "left": {
+        "threshold": 3.526970604072171,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      },
+      "right": {
+        "threshold": 72.91948742312191,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      }
+    },
+    {
+      "model_id": "gru_base_F2_L2_O3_s7181",
+      "policy": "P",
+      "reference": "persistence_L2_h0.5_w0.2",
+      "reference_policy": "P",
+      "left": {
+        "threshold": 3.526970604072171,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      },
+      "right": {
+        "threshold": 2.0,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 0
+      }
+    },
+    {
+      "model_id": "gru_base_F2_L2_O3_s7181",
+      "policy": "P",
+      "reference": "template_L2_h0.5_w0.2",
+      "reference_policy": "P",
+      "left": {
+        "threshold": 3.526970604072171,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      },
+      "right": {
+        "threshold": 3.3684210526315788,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 0
+      }
+    },
+    {
+      "model_id": "gru_base_F2_L2_O3_s7181",
+      "policy": "P",
+      "reference": "direct_recent_rms_peak",
+      "reference_policy": "RMS_PEAK",
+      "left": {
+        "threshold": 3.526970604072171,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      },
+      "right": {
+        "threshold": 2.2736801127982273,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      }
+    },
+    {
+      "model_id": "gru_base_F2_L2_O3_s7181",
+      "policy": "A_RAW",
+      "reference": "v1_mt_f2_tree",
+      "reference_policy": "A_RAW",
+      "left": {
+        "threshold": 4.566880721410029,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      },
+      "right": {
+        "threshold": 4.508828377759588,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      }
+    },
+    {
+      "model_id": "gru_base_F2_L2_O3_s7181",
+      "policy": "A_RAW",
+      "reference": "persistence_L2_h0.5_w0.2",
+      "reference_policy": "A_RAW",
+      "left": {
+        "threshold": 4.566880721410029,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      },
+      "right": {
+        "threshold": 3.499999840799568,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      }
+    },
+    {
+      "model_id": "gru_base_F2_L2_O3_s7181",
+      "policy": "A_RAW",
+      "reference": "template_L2_h0.5_w0.2",
+      "reference_policy": "A_RAW",
+      "left": {
+        "threshold": 4.566880721410029,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      },
+      "right": {
+        "threshold": 4.615381811950961,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      }
+    },
+    {
+      "model_id": "gru_base_F2_L2_O3_s7181",
+      "policy": "A_RAW",
+      "reference": "direct_recent_rms_peak",
+      "reference_policy": "RMS_PEAK",
+      "left": {
+        "threshold": 4.566880721410029,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      },
+      "right": {
+        "threshold": 2.2736801127982273,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      }
+    },
+    {
+      "model_id": "gru_base_F2_L2_O3_s7181",
+      "policy": "A_STAT",
+      "reference": "v1_mt_f2_tree",
+      "reference_policy": "A_STAT",
+      "left": {
+        "threshold": 7.288925055167675,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      },
+      "right": {
+        "threshold": 7.336144392690658,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      }
+    },
+    {
+      "model_id": "gru_base_F2_L2_O3_s7181",
+      "policy": "A_STAT",
+      "reference": "persistence_L2_h0.5_w0.2",
+      "reference_policy": "A_STAT",
+      "left": {
+        "threshold": 7.288925055167675,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      },
+      "right": {
+        "threshold": 2.998509555702492,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      }
+    },
+    {
+      "model_id": "gru_base_F2_L2_O3_s7181",
+      "policy": "A_STAT",
+      "reference": "template_L2_h0.5_w0.2",
+      "reference_policy": "A_STAT",
+      "left": {
+        "threshold": 7.288925055167675,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      },
+      "right": {
+        "threshold": 7.213522911060528,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      }
+    },
+    {
+      "model_id": "gru_base_F2_L2_O3_s7181",
+      "policy": "A_STAT",
+      "reference": "direct_recent_rms_peak",
+      "reference_policy": "RMS_PEAK",
+      "left": {
+        "threshold": 7.288925055167675,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      },
+      "right": {
+        "threshold": 2.2736801127982273,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      }
+    },
+    {
+      "model_id": "gru_base_F2_L2_O3_s7181",
+      "policy": "ALL",
+      "reference": "v1_e_f4_tree",
+      "reference_policy": "ALL",
+      "left": {
+        "threshold": 7.288925055167675,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      },
+      "right": {
+        "threshold": 4.511058514781172,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      }
+    },
+    {
+      "model_id": "gru_base_F2_L2_O3_s7181",
+      "policy": "ALL",
+      "reference": "v1_mt_f2_tree",
+      "reference_policy": "ALL",
+      "left": {
+        "threshold": 7.288925055167675,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      },
+      "right": {
+        "threshold": 72.91948742312191,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      }
+    },
+    {
+      "model_id": "gru_base_F2_L2_O3_s7181",
+      "policy": "ALL",
+      "reference": "persistence_L2_h0.5_w0.2",
+      "reference_policy": "ALL",
+      "left": {
+        "threshold": 7.288925055167675,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      },
+      "right": {
+        "threshold": 3.499999840799568,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      }
+    },
+    {
+      "model_id": "gru_base_F2_L2_O3_s7181",
+      "policy": "ALL",
+      "reference": "template_L2_h0.5_w0.2",
+      "reference_policy": "ALL",
+      "left": {
+        "threshold": 7.288925055167675,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      },
+      "right": {
+        "threshold": 7.213522911060528,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      }
+    },
+    {
+      "model_id": "gru_base_F2_L2_O3_s7181",
+      "policy": "ALL",
+      "reference": "direct_recent_rms_peak",
+      "reference_policy": "RMS_PEAK",
+      "left": {
+        "threshold": 7.288925055167675,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      },
+      "right": {
+        "threshold": 2.2736801127982273,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      }
+    },
+    {
+      "model_id": "tcn_large_F4_L2_O3_s7181",
+      "policy": "E",
+      "reference": "v1_e_f4_tree",
+      "reference_policy": "E",
+      "left": {
+        "threshold": 3.6843604179902294,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      },
+      "right": {
+        "threshold": 4.511058514781172,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      }
+    },
+    {
+      "model_id": "tcn_large_F4_L2_O3_s7181",
+      "policy": "E",
+      "reference": "v1_mt_f2_tree",
+      "reference_policy": "E",
+      "left": {
+        "threshold": 3.6843604179902294,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      },
+      "right": {
+        "threshold": 4.451579872634677,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      }
+    },
+    {
+      "model_id": "tcn_large_F4_L2_O3_s7181",
+      "policy": "E",
+      "reference": "persistence_L2_h0.5_w0.2",
+      "reference_policy": "E",
+      "left": {
+        "threshold": 3.6843604179902294,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      },
+      "right": {
+        "threshold": 2.6727262638803153,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      }
+    },
+    {
+      "model_id": "tcn_large_F4_L2_O3_s7181",
+      "policy": "E",
+      "reference": "template_L2_h0.5_w0.2",
+      "reference_policy": "E",
+      "left": {
+        "threshold": 3.6843604179902294,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      },
+      "right": {
+        "threshold": 3.6666638409697794,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      }
+    },
+    {
+      "model_id": "tcn_large_F4_L2_O3_s7181",
+      "policy": "E",
+      "reference": "direct_recent_rms_peak",
+      "reference_policy": "RMS_PEAK",
+      "left": {
+        "threshold": 3.6843604179902294,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      },
+      "right": {
+        "threshold": 2.2736801127982273,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      }
+    },
+    {
+      "model_id": "tcn_large_F4_L2_O3_s7181",
+      "policy": "P",
+      "reference": "v1_mt_f2_tree",
+      "reference_policy": "P",
+      "left": {
+        "threshold": 3.126252453258961,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      },
+      "right": {
+        "threshold": 72.91948742312191,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      }
+    },
+    {
+      "model_id": "tcn_large_F4_L2_O3_s7181",
+      "policy": "P",
+      "reference": "persistence_L2_h0.5_w0.2",
+      "reference_policy": "P",
+      "left": {
+        "threshold": 3.126252453258961,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      },
+      "right": {
+        "threshold": 2.0,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 0
+      }
+    },
+    {
+      "model_id": "tcn_large_F4_L2_O3_s7181",
+      "policy": "P",
+      "reference": "template_L2_h0.5_w0.2",
+      "reference_policy": "P",
+      "left": {
+        "threshold": 3.126252453258961,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      },
+      "right": {
+        "threshold": 3.3684210526315788,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 0
+      }
+    },
+    {
+      "model_id": "tcn_large_F4_L2_O3_s7181",
+      "policy": "P",
+      "reference": "direct_recent_rms_peak",
+      "reference_policy": "RMS_PEAK",
+      "left": {
+        "threshold": 3.126252453258961,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      },
+      "right": {
+        "threshold": 2.2736801127982273,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      }
+    },
+    {
+      "model_id": "tcn_large_F4_L2_O3_s7181",
+      "policy": "A_RAW",
+      "reference": "v1_mt_f2_tree",
+      "reference_policy": "A_RAW",
+      "left": {
+        "threshold": 4.582605278971941,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      },
+      "right": {
+        "threshold": 4.508828377759588,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      }
+    },
+    {
+      "model_id": "tcn_large_F4_L2_O3_s7181",
+      "policy": "A_RAW",
+      "reference": "persistence_L2_h0.5_w0.2",
+      "reference_policy": "A_RAW",
+      "left": {
+        "threshold": 4.582605278971941,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      },
+      "right": {
+        "threshold": 3.499999840799568,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      }
+    },
+    {
+      "model_id": "tcn_large_F4_L2_O3_s7181",
+      "policy": "A_RAW",
+      "reference": "template_L2_h0.5_w0.2",
+      "reference_policy": "A_RAW",
+      "left": {
+        "threshold": 4.582605278971941,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      },
+      "right": {
+        "threshold": 4.615381811950961,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      }
+    },
+    {
+      "model_id": "tcn_large_F4_L2_O3_s7181",
+      "policy": "A_RAW",
+      "reference": "direct_recent_rms_peak",
+      "reference_policy": "RMS_PEAK",
+      "left": {
+        "threshold": 4.582605278971941,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      },
+      "right": {
+        "threshold": 2.2736801127982273,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      }
+    },
+    {
+      "model_id": "tcn_large_F4_L2_O3_s7181",
+      "policy": "A_STAT",
+      "reference": "v1_mt_f2_tree",
+      "reference_policy": "A_STAT",
+      "left": {
+        "threshold": 7.259287950821742,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      },
+      "right": {
+        "threshold": 7.336144392690658,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      }
+    },
+    {
+      "model_id": "tcn_large_F4_L2_O3_s7181",
+      "policy": "A_STAT",
+      "reference": "persistence_L2_h0.5_w0.2",
+      "reference_policy": "A_STAT",
+      "left": {
+        "threshold": 7.259287950821742,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      },
+      "right": {
+        "threshold": 2.998509555702492,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      }
+    },
+    {
+      "model_id": "tcn_large_F4_L2_O3_s7181",
+      "policy": "A_STAT",
+      "reference": "template_L2_h0.5_w0.2",
+      "reference_policy": "A_STAT",
+      "left": {
+        "threshold": 7.259287950821742,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      },
+      "right": {
+        "threshold": 7.213522911060528,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      }
+    },
+    {
+      "model_id": "tcn_large_F4_L2_O3_s7181",
+      "policy": "A_STAT",
+      "reference": "direct_recent_rms_peak",
+      "reference_policy": "RMS_PEAK",
+      "left": {
+        "threshold": 7.259287950821742,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      },
+      "right": {
+        "threshold": 2.2736801127982273,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      }
+    },
+    {
+      "model_id": "tcn_large_F4_L2_O3_s7181",
+      "policy": "ALL",
+      "reference": "v1_e_f4_tree",
+      "reference_policy": "ALL",
+      "left": {
+        "threshold": 7.259287950821742,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      },
+      "right": {
+        "threshold": 4.511058514781172,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      }
+    },
+    {
+      "model_id": "tcn_large_F4_L2_O3_s7181",
+      "policy": "ALL",
+      "reference": "v1_mt_f2_tree",
+      "reference_policy": "ALL",
+      "left": {
+        "threshold": 7.259287950821742,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      },
+      "right": {
+        "threshold": 72.91948742312191,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      }
+    },
+    {
+      "model_id": "tcn_large_F4_L2_O3_s7181",
+      "policy": "ALL",
+      "reference": "persistence_L2_h0.5_w0.2",
+      "reference_policy": "ALL",
+      "left": {
+        "threshold": 7.259287950821742,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      },
+      "right": {
+        "threshold": 3.499999840799568,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      }
+    },
+    {
+      "model_id": "tcn_large_F4_L2_O3_s7181",
+      "policy": "ALL",
+      "reference": "template_L2_h0.5_w0.2",
+      "reference_policy": "ALL",
+      "left": {
+        "threshold": 7.259287950821742,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      },
+      "right": {
+        "threshold": 7.213522911060528,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      }
+    },
+    {
+      "model_id": "tcn_large_F4_L2_O3_s7181",
+      "policy": "ALL",
+      "reference": "direct_recent_rms_peak",
+      "reference_policy": "RMS_PEAK",
+      "left": {
+        "threshold": 7.259287950821742,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      },
+      "right": {
+        "threshold": 2.2736801127982273,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      }
+    },
+    {
+      "model_id": "xgb_base_F7_L2_O3_s7181",
+      "policy": "E",
+      "reference": "v1_e_f4_tree",
+      "reference_policy": "E",
+      "left": {
+        "threshold": 4.175529913457921,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      },
+      "right": {
+        "threshold": 4.511058514781172,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      }
+    },
+    {
+      "model_id": "xgb_base_F7_L2_O3_s7181",
+      "policy": "E",
+      "reference": "v1_mt_f2_tree",
+      "reference_policy": "E",
+      "left": {
+        "threshold": 4.175529913457921,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      },
+      "right": {
+        "threshold": 4.451579872634677,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      }
+    },
+    {
+      "model_id": "xgb_base_F7_L2_O3_s7181",
+      "policy": "E",
+      "reference": "persistence_L2_h0.5_w0.2",
+      "reference_policy": "E",
+      "left": {
+        "threshold": 4.175529913457921,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      },
+      "right": {
+        "threshold": 2.6727262638803153,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      }
+    },
+    {
+      "model_id": "xgb_base_F7_L2_O3_s7181",
+      "policy": "E",
+      "reference": "template_L2_h0.5_w0.2",
+      "reference_policy": "E",
+      "left": {
+        "threshold": 4.175529913457921,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      },
+      "right": {
+        "threshold": 3.6666638409697794,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      }
+    },
+    {
+      "model_id": "xgb_base_F7_L2_O3_s7181",
+      "policy": "E",
+      "reference": "direct_recent_rms_peak",
+      "reference_policy": "RMS_PEAK",
+      "left": {
+        "threshold": 4.175529913457921,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      },
+      "right": {
+        "threshold": 2.2736801127982273,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      }
+    },
+    {
+      "model_id": "xgb_base_F7_L2_O3_s7181",
+      "policy": "P",
+      "reference": "v1_mt_f2_tree",
+      "reference_policy": "P",
+      "left": {
+        "threshold": 97.49933074784639,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      },
+      "right": {
+        "threshold": 72.91948742312191,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      }
+    },
+    {
+      "model_id": "xgb_base_F7_L2_O3_s7181",
+      "policy": "P",
+      "reference": "persistence_L2_h0.5_w0.2",
+      "reference_policy": "P",
+      "left": {
+        "threshold": 97.49933074784639,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      },
+      "right": {
+        "threshold": 2.0,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 0
+      }
+    },
+    {
+      "model_id": "xgb_base_F7_L2_O3_s7181",
+      "policy": "P",
+      "reference": "template_L2_h0.5_w0.2",
+      "reference_policy": "P",
+      "left": {
+        "threshold": 97.49933074784639,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      },
+      "right": {
+        "threshold": 3.3684210526315788,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 0
+      }
+    },
+    {
+      "model_id": "xgb_base_F7_L2_O3_s7181",
+      "policy": "P",
+      "reference": "direct_recent_rms_peak",
+      "reference_policy": "RMS_PEAK",
+      "left": {
+        "threshold": 97.49933074784639,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      },
+      "right": {
+        "threshold": 2.2736801127982273,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      }
+    },
+    {
+      "model_id": "xgb_base_F7_L2_O3_s7181",
+      "policy": "A_RAW",
+      "reference": "v1_mt_f2_tree",
+      "reference_policy": "A_RAW",
+      "left": {
+        "threshold": 4.622420605883214,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      },
+      "right": {
+        "threshold": 4.508828377759588,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      }
+    },
+    {
+      "model_id": "xgb_base_F7_L2_O3_s7181",
+      "policy": "A_RAW",
+      "reference": "persistence_L2_h0.5_w0.2",
+      "reference_policy": "A_RAW",
+      "left": {
+        "threshold": 4.622420605883214,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      },
+      "right": {
+        "threshold": 3.499999840799568,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      }
+    },
+    {
+      "model_id": "xgb_base_F7_L2_O3_s7181",
+      "policy": "A_RAW",
+      "reference": "template_L2_h0.5_w0.2",
+      "reference_policy": "A_RAW",
+      "left": {
+        "threshold": 4.622420605883214,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      },
+      "right": {
+        "threshold": 4.615381811950961,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      }
+    },
+    {
+      "model_id": "xgb_base_F7_L2_O3_s7181",
+      "policy": "A_RAW",
+      "reference": "direct_recent_rms_peak",
+      "reference_policy": "RMS_PEAK",
+      "left": {
+        "threshold": 4.622420605883214,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      },
+      "right": {
+        "threshold": 2.2736801127982273,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      }
+    },
+    {
+      "model_id": "xgb_base_F7_L2_O3_s7181",
+      "policy": "A_STAT",
+      "reference": "v1_mt_f2_tree",
+      "reference_policy": "A_STAT",
+      "left": {
+        "threshold": 7.369112655467392,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      },
+      "right": {
+        "threshold": 7.336144392690658,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      }
+    },
+    {
+      "model_id": "xgb_base_F7_L2_O3_s7181",
+      "policy": "A_STAT",
+      "reference": "persistence_L2_h0.5_w0.2",
+      "reference_policy": "A_STAT",
+      "left": {
+        "threshold": 7.369112655467392,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      },
+      "right": {
+        "threshold": 2.998509555702492,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      }
+    },
+    {
+      "model_id": "xgb_base_F7_L2_O3_s7181",
+      "policy": "A_STAT",
+      "reference": "template_L2_h0.5_w0.2",
+      "reference_policy": "A_STAT",
+      "left": {
+        "threshold": 7.369112655467392,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      },
+      "right": {
+        "threshold": 7.213522911060528,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      }
+    },
+    {
+      "model_id": "xgb_base_F7_L2_O3_s7181",
+      "policy": "A_STAT",
+      "reference": "direct_recent_rms_peak",
+      "reference_policy": "RMS_PEAK",
+      "left": {
+        "threshold": 7.369112655467392,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      },
+      "right": {
+        "threshold": 2.2736801127982273,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      }
+    },
+    {
+      "model_id": "xgb_base_F7_L2_O3_s7181",
+      "policy": "ALL",
+      "reference": "v1_e_f4_tree",
+      "reference_policy": "ALL",
+      "left": {
+        "threshold": 97.4183683975701,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      },
+      "right": {
+        "threshold": 4.511058514781172,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      }
+    },
+    {
+      "model_id": "xgb_base_F7_L2_O3_s7181",
+      "policy": "ALL",
+      "reference": "v1_mt_f2_tree",
+      "reference_policy": "ALL",
+      "left": {
+        "threshold": 97.49933074784639,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      },
+      "right": {
+        "threshold": 72.91948742312191,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      }
+    },
+    {
+      "model_id": "xgb_base_F7_L2_O3_s7181",
+      "policy": "ALL",
+      "reference": "persistence_L2_h0.5_w0.2",
+      "reference_policy": "ALL",
+      "left": {
+        "threshold": 97.49933074784639,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      },
+      "right": {
+        "threshold": 3.499999840799568,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      }
+    },
+    {
+      "model_id": "xgb_base_F7_L2_O3_s7181",
+      "policy": "ALL",
+      "reference": "template_L2_h0.5_w0.2",
+      "reference_policy": "ALL",
+      "left": {
+        "threshold": 97.49933074784639,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      },
+      "right": {
+        "threshold": 7.213522911060528,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      }
+    },
+    {
+      "model_id": "xgb_base_F7_L2_O3_s7181",
+      "policy": "ALL",
+      "reference": "direct_recent_rms_peak",
+      "reference_policy": "RMS_PEAK",
+      "left": {
+        "threshold": 97.49933074784639,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      },
+      "right": {
+        "threshold": 2.2736801127982273,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      }
+    },
+    {
+      "model_id": "v1_mt_f2_tree",
+      "policy": "E",
+      "reference": "v1_e_f4_tree",
+      "reference_policy": "E",
+      "left": {
+        "threshold": 4.451579872634677,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      },
+      "right": {
+        "threshold": 4.511058514781172,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      }
+    },
+    {
+      "model_id": "v1_mt_f2_tree",
+      "policy": "E",
+      "reference": "persistence_L2_h0.5_w0.2",
+      "reference_policy": "E",
+      "left": {
+        "threshold": 4.451579872634677,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      },
+      "right": {
+        "threshold": 2.6727262638803153,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      }
+    },
+    {
+      "model_id": "v1_mt_f2_tree",
+      "policy": "E",
+      "reference": "template_L2_h0.5_w0.2",
+      "reference_policy": "E",
+      "left": {
+        "threshold": 4.451579872634677,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      },
+      "right": {
+        "threshold": 3.6666638409697794,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      }
+    },
+    {
+      "model_id": "v1_mt_f2_tree",
+      "policy": "E",
+      "reference": "direct_recent_rms_peak",
+      "reference_policy": "RMS_PEAK",
+      "left": {
+        "threshold": 4.451579872634677,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      },
+      "right": {
+        "threshold": 2.2736801127982273,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      }
+    },
+    {
+      "model_id": "v1_mt_f2_tree",
+      "policy": "P",
+      "reference": "persistence_L2_h0.5_w0.2",
+      "reference_policy": "P",
+      "left": {
+        "threshold": 72.91948742312191,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      },
+      "right": {
+        "threshold": 2.0,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 0
+      }
+    },
+    {
+      "model_id": "v1_mt_f2_tree",
+      "policy": "P",
+      "reference": "template_L2_h0.5_w0.2",
+      "reference_policy": "P",
+      "left": {
+        "threshold": 72.91948742312191,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      },
+      "right": {
+        "threshold": 3.3684210526315788,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 0
+      }
+    },
+    {
+      "model_id": "v1_mt_f2_tree",
+      "policy": "P",
+      "reference": "direct_recent_rms_peak",
+      "reference_policy": "RMS_PEAK",
+      "left": {
+        "threshold": 72.91948742312191,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      },
+      "right": {
+        "threshold": 2.2736801127982273,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      }
+    },
+    {
+      "model_id": "v1_mt_f2_tree",
+      "policy": "A_RAW",
+      "reference": "persistence_L2_h0.5_w0.2",
+      "reference_policy": "A_RAW",
+      "left": {
+        "threshold": 4.508828377759588,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      },
+      "right": {
+        "threshold": 3.499999840799568,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      }
+    },
+    {
+      "model_id": "v1_mt_f2_tree",
+      "policy": "A_RAW",
+      "reference": "template_L2_h0.5_w0.2",
+      "reference_policy": "A_RAW",
+      "left": {
+        "threshold": 4.508828377759588,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      },
+      "right": {
+        "threshold": 4.615381811950961,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      }
+    },
+    {
+      "model_id": "v1_mt_f2_tree",
+      "policy": "A_RAW",
+      "reference": "direct_recent_rms_peak",
+      "reference_policy": "RMS_PEAK",
+      "left": {
+        "threshold": 4.508828377759588,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      },
+      "right": {
+        "threshold": 2.2736801127982273,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      }
+    },
+    {
+      "model_id": "v1_mt_f2_tree",
+      "policy": "A_STAT",
+      "reference": "persistence_L2_h0.5_w0.2",
+      "reference_policy": "A_STAT",
+      "left": {
+        "threshold": 7.336144392690658,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      },
+      "right": {
+        "threshold": 2.998509555702492,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      }
+    },
+    {
+      "model_id": "v1_mt_f2_tree",
+      "policy": "A_STAT",
+      "reference": "template_L2_h0.5_w0.2",
+      "reference_policy": "A_STAT",
+      "left": {
+        "threshold": 7.336144392690658,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      },
+      "right": {
+        "threshold": 7.213522911060528,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      }
+    },
+    {
+      "model_id": "v1_mt_f2_tree",
+      "policy": "A_STAT",
+      "reference": "direct_recent_rms_peak",
+      "reference_policy": "RMS_PEAK",
+      "left": {
+        "threshold": 7.336144392690658,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      },
+      "right": {
+        "threshold": 2.2736801127982273,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      }
+    },
+    {
+      "model_id": "v1_mt_f2_tree",
+      "policy": "ALL",
+      "reference": "v1_e_f4_tree",
+      "reference_policy": "ALL",
+      "left": {
+        "threshold": 72.91948742312191,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      },
+      "right": {
+        "threshold": 4.511058514781172,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      }
+    },
+    {
+      "model_id": "v1_mt_f2_tree",
+      "policy": "ALL",
+      "reference": "persistence_L2_h0.5_w0.2",
+      "reference_policy": "ALL",
+      "left": {
+        "threshold": 72.91948742312191,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      },
+      "right": {
+        "threshold": 3.499999840799568,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      }
+    },
+    {
+      "model_id": "v1_mt_f2_tree",
+      "policy": "ALL",
+      "reference": "template_L2_h0.5_w0.2",
+      "reference_policy": "ALL",
+      "left": {
+        "threshold": 72.91948742312191,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      },
+      "right": {
+        "threshold": 7.213522911060528,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      }
+    },
+    {
+      "model_id": "v1_mt_f2_tree",
+      "policy": "ALL",
+      "reference": "direct_recent_rms_peak",
+      "reference_policy": "RMS_PEAK",
+      "left": {
+        "threshold": 72.91948742312191,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      },
+      "right": {
+        "threshold": 2.2736801127982273,
+        "calibration_cycles_valid": 40,
+        "calibration_cycles_total": 40,
+        "calibration_fp": 1
+      }
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "source_files_unchanged": true,
+  "files_sha256": {
+    "data\\FEATURES.csv": "6047913324952bfdb8e06c9565b058b7f32625c7d965c8be99738ab9b2f88708",
+    "SPLIT_MANIFEST.csv": "247110fbbf375b099c93f37dbd431c56765e78d9e3212b27c9ef676b04b4d1f5",
+    "FEATURE_GROUPS.json": "d44fcbd448c40f6f38f3e8572fb8ae7b55d6ed3680f7f309e67897d102aeba6f",
+    "EXPERIMENT_CONFIG.json": "0ffd44e619957debf57726a5e8dc9d57d944d0967ec6c9eaed784e2caaf16d66",
+    "benchmark.py": "702adbd6aef0b9bc83e6e2c61a11db9e3af899f72bdee01419ef1ea85ede50fb",
+    "MODEL_INDEX.csv": "2eefd3bbd58ae4c7e963134e2cf591bf847789678abaf19377e3b289c5fa6215",
+    "metrics\\CYCLE_SCORES.csv": "3616b4cf59517e27c9e256a2ccf6d0a8740ee7c702a43e61de4517524785ed16",
+    "models\\outer_hold_abc06_logistic_base_G4_default_7181\\model.joblib": "38c0e1daeb93351696d22eaf01ea3c8804676a2867c130312d45c24c00824917",
+    "models\\outer_hold_abc06_logistic_base_G4_default_7181\\manifest.json": "c3ed1ac15722083196f8b84c2767d6c18c3d0e099d47a37b523f8788f1a5a102",
+    "models\\outer_hold_abc06_logistic_base_G4_default_7181\\preprocess.joblib": "d74946bd5db21d444927494bc59870485591e6cb12ea73fdf1bd42d2d7783042",
+    "models\\outer_hold_abc06_catboost_large_G2_regularized_7181\\model.joblib": "e69e11e28170b8c56bdb36a9cccad1ddab9465ffa48f45fdc997dab809d587a9",
+    "models\\outer_hold_abc06_catboost_large_G2_regularized_7181\\manifest.json": "a980d27e5cbc0dde7eddafe9e57069c6003bd2fbafec5077ad6f772de0a724c4",
+    "models\\outer_hold_abc06_catboost_large_G2_regularized_7181\\preprocess.joblib": "964a46d7a2ef319cd60a2b28a65fc87f7d9fb340de4cec532a8f251c19861e04",
+    "models\\outer_hold_abc11_logistic_base_G4_default_7181\\model.joblib": "b555ba9d6570714df92f20daed0b6c1cf5706be79806690c12ce1e584603d04b",
+    "models\\outer_hold_abc11_logistic_base_G4_default_7181\\manifest.json": "68eb63597eac86c4b22d1dfa571ac9f69c694dd98159f6b48762df9e625020a8",
+    "models\\outer_hold_abc11_logistic_base_G4_default_7181\\preprocess.joblib": "6ac0c35315f685ae29ae0249b86994a1c575cc5ca8569c576637331d3c70d15e",
+    "models\\outer_hold_abc11_catboost_large_G2_regularized_7181\\model.joblib": "8c433cd4264d243657b2fabf4de9d4056ab050e0d64a59d34676978cf76d5970",
+    "models\\outer_hold_abc11_catboost_large_G2_regularized_7181\\manifest.json": "5517054f7462fbc640c54074ce0ddd675946246ac8dc65dbd482e86cda41fdb1",
+    "models\\outer_hold_abc11_catboost_large_G2_regularized_7181\\preprocess.joblib": "b21767006fdcc4a52ad0a98c1b7d42b7aaba9f89759b0dc254d6f7ea16be8408"
+  },
+  "split_ids": [
+    "outer_hold_abc06",
+    "outer_hold_abc11"
+  ],
+  "same_reference_train_development_calibration": true,
+  "same_evaluation_cycles": true,
+  "reloaded_g2_scores_identical": true,
+  "calibration_policy": "normal q95 higher strict >"
+}
