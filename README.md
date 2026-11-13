@@ -1,82 +1,28 @@
-# xArm 정상 기반 이상 탐지
+# xArm 이상 탐지
 
-Hiwonder xArm의 No.3 작업에서 41g 블록을 운반하고 자동으로 원복하는 동안 전류·전압, 가속도, 실제 서보 위치를 수집했습니다. 모델은 주로 No.3 운반 구간을 요약해 이상을 판정합니다. `main`에는 **V3 학습 코드**가 있으며, 아래는 후속 버전을 포함한 평가 결과입니다.
+Hiwonder xArm AI의 No.3 작업에서 로봇 전체 전류·전압, ADXL345 가속도, 서보 6개의 실제 위치를 기록합니다. 정상 조건은 41g 블록 운반과 자동 원복입니다.
 
-**현재 정상 기반 비교 기준은 V4 PCA-Q입니다.** V5~V5.2는 연구 비교로 보존했습니다. 볼트 고정 로지스틱은 알려진 하중을 이용한 지도학습 후보이며, 0.40은 B82·C182 독립 평가에 사용한 후보 임계값입니다.
+## 대표 성능
 
-[V3 실행 방법](#환경과-실행) · [V3.1 학습과 데이터](https://github.com/wplso/xArm-model-training/tree/v3.1) · [V1~V5.1 저장 모델](https://github.com/wplso/xArm-model-training/blob/v5.1/models/README_KO.md) · [V5.2와 알고리즘 비교](https://github.com/wplso/xArm-model-training/tree/v5.2) · [볼트 하중 모델과 신규 데이터](https://github.com/wplso/xArm-model-training/tree/bolt-known-load)
+**PC 후보는 TabPFN-v2 S2 P0 OR GRU F2·O3 ALL**, **Raspberry Pi 4B 후보는 로지스틱 S2 OR 같은 GRU**입니다. TabPFN과 로지스틱은 회차 종료 후 알려진 하중 이상을 판정하고, GRU는 동작 중 다중 센서 예측과 실측의 차이로 경보합니다. 같은 회차에서 둘 중 하나라도 경보하면 탐지로 집계했습니다.
 
-## 버전별 대표 성능
-
-수치는 각 모델의 고정 임계값에서 **오탐 또는 탐지한 회차 / 평가 회차**입니다. 평가 세션·하중·센서 장착이 다른 행을 순위처럼 비교하면 안 됩니다.
-
-### 초기 41g 및 테이프 장착 평가
-
-| 대표 모델 | 평가 조건 | 정상 오탐 | 이상 탐지 |
-|---|---|---:|---|
-| V1 통합 PCA / Isolation Forest | 41g 같은 날짜 후반 정상 | PCA 0/100, IF 9/100 | 정상만 평가 |
-| V2 A7 IF B | 공통 홀드아웃, 82g 운반 / 상부 82g / 하부 82g | 27/200 | 5/20 · 15/20 · 2/20 |
-| V2.1 A7 IF B | V2와 동일한 평가 자료 | 26/200 | 6/20 · 19/20 · 1/20 |
-| V1-베이스고정 A7 IF | 연속 수집 후반 및 별도 정상, 82g 운반 / 상부 82g / 하부 82g | 5/100 · 9/20 | 5/30 · 14/30 · 1/30 |
-| V3-A PCA | 11월 5일 A~F 평가 | 16/70 | A/B/C 16/20 · 18/20 · 12/20, D/E/F 각 20/20. Macro-AUROC 0.915 |
-| V31-15 PCA | V3와 동일한 A~F 평가 | 24/70 | A/B/C 16/20 · 15/20 · 5/20, D/E/F 각 20/20. Macro-AUROC 0.818 |
-
-11월 5일과 아래 볼트 장착 평가에서 A는 121g 물체 운반, B는 41g 운반과 상부 82g 부착, C는 41g 운반과 하부 182g 부착입니다. D/E/F는 최초 파지 실패, 들어 올릴 때 이탈, 도달 범위 밖 위치 오류입니다. [세부 평가 및 초기 무부하 실험](https://github.com/wplso/xArm-model-training/blob/v5.1/README.md#모델-버전과-대표-평가-결과)
-
-### ADXL345 볼트 장착 평가
-
-| 대표 모델 | 정상 오탐 | A 탐지 | B 탐지 | C 탐지 |
-|---|---:|---:|---:|---:|
-| [V4 PCA](https://github.com/wplso/xArm-model-training/tree/v4) | 10/99 | 10/30 | 12/30 | 21/30 |
-| [V4.1 PCA](https://github.com/wplso/xArm-model-training/tree/v4.1) | 5/99 | 5/30 | 4/30 | 14/30 |
-| V4.2-A PCA | 5/99 | 4/30 | 6/30 | 16/30 |
-| V4.2-B PCA | 11/99 | 10/30 | 5/30 | 21/30 |
-| [V5 B0 F3 Q](https://github.com/wplso/xArm-model-training/tree/v5) | 11/219 · 재가동 20/40 | 6/30 | 10/30 | 23/30 |
-| V5 B2 F1 Q | 12/219 · 재가동 16/40 | 4/30 | 12/30 | 19/30 |
-| [V5.1 B1 P2](https://github.com/wplso/xArm-model-training/tree/v5.1) | 10/160 · 재가동 5/40 | 5/30 | 0/30 | 8/30 |
-
-- V4 계열의 정상 99회는 같은 연속 운전의 홀드아웃입니다. V5의 219회는 이 99회와 이후 정상 120회를 합친 개발 평가이며, 재가동 40회는 별도입니다. V4를 같은 두 자료에 적용하면 각각 22/219와 23/40입니다. [V5 평가 보고서](https://github.com/wplso/xArm-model-training/blob/v5/models/v5/V5_REPORT_KO.md)
-- V5.1의 B1 P2는 같은 특징으로 분할별 정상 학습을 확장한 구성입니다. 정상 160회는 세 분할의 평가 회차를 한 번씩 집계했습니다. 기존 V4.1을 고정한 B1 P0의 오탐은 17/160, 재가동 10/40입니다. A/B/C는 관련 정상 세션까지 학습·교정에서 제외한 별도 회고 평가이며, 이 조건에서 P0의 탐지는 각각 5/30, 4/30, 14/30입니다. [V5.1 평가 보고서](https://github.com/wplso/xArm-model-training/blob/v5.1/models/v5.1/V51_REPORT_KO.md)
-
-## V5.2 이후 실험
-
-### 정상만으로 학습한 모델
-
-- [V5.2 준비구간 제외](https://github.com/wplso/xArm-model-training/blob/v5.2/models/v5.2/V52_REPORT_KO.md). 준비구간으로 정상 40/259회와 하중 30/90회의 판정을 보류했습니다. 남은 동일 회차에서 V4 24특징 PCA-Q의 정상 오탐은 기존 33/219회에서 재학습 후 35/219회였습니다. A/B/C 탐지는 각각 7→4, 7→5, 14→16회(각 20회)였습니다.
-- [PCA+IF](https://github.com/wplso/xArm-model-training/blob/v5.2/models/v4-pca-if/REPORT_KO.md)와 [LOF·One-Class SVM·kNN](https://github.com/wplso/xArm-model-training/blob/v5.2/models/normal-only-benchmark/ALGORITHM_COMPARISON_REPORT_KO.md). 동일한 V4 24개 특징을 사용했습니다. IF 단독은 재가동 정상 오탐을 V4 PCA-Q의 23/40회에서 11/40회로 낮췄으나 A/B/C 탐지는 10·12·21회에서 1·3·2회(각 30회)로 줄었습니다. 재가동 오탐 감소와 세 하중 탐지 유지가 함께 확인된 후보는 없었습니다.
-
-### 볼트 고정 하중 지도학습
-
-11월 11일 새 볼트 고정 캠페인의 같은 180회에서 동결 모델을 비교했습니다. 정상 90회와 A121·B82·C182 각 30회입니다. 수치는 하중 유형 일치 여부와 관계없이 경보가 난 횟수입니다. [동결 모델 평가](https://github.com/wplso/xArm-model-training/blob/bolt-known-load/models/bolt-known-load/abc-interleaved/frozen_evaluation/REPORT_KO.md)
-
-| 모델 | 정상 오탐 | A121 탐지 | B82 탐지 | C182 탐지 |
-|---|---:|---:|---:|---:|
-| V4 PCA-Q | 19/90 | 14/30 | 9/30 | 21/30 |
-| 몬스터겔 자료 학습 4클래스 로지스틱 | 2/90 | 4/30 | 23/30 | 23/30 |
-| 볼트 고정 자료 학습 4클래스 로지스틱 | 14/90 | 12/30 | 24/30 | 23/30 |
-
-정상 학습 범위를 확장한 볼트 로지스틱은 별도 정상 60회에서 오탐이 기존 볼트 모델 8회에서 1회로 줄었습니다. 이미 분석한 하중 자료에서는 A/B/C 탐지가 12·24·23회에서 2·13·8회(각 30회)로 줄었습니다. [정상 확장 실험](https://github.com/wplso/xArm-model-training/blob/bolt-known-load/models/bolt-known-load/retrain/retrained_bolt_normal/REPORT_KO.md)
-
-11월 12일에는 새 정상·B82·C182 각 30회에 **같은 정상 확장 모델의 점수**를 사용했습니다. 두 임계값은 수집 전에 고정했습니다. [독립 임계값 검증](https://github.com/wplso/xArm-model-training/blob/bolt-known-load/models/bolt-known-load/bc-independent/REPORT_KO.md)
-
-| 지표 | 저장 임계값 0.821445 | 후보 임계값 0.40 |
+| 공통 평가 370회 | PC 후보 | Raspberry Pi 4B 후보 |
 |---|---:|---:|
-| 정상 오탐 | 3/30 (10.0%) | 6/30 (20.0%) |
-| B82 탐지 | 23/30 (76.7%) | 26/30 (86.7%) |
-| C182 탐지 | 23/30 (76.7%) | 28/30 (93.3%) |
+| 정상 오탐 | **3/160 (1.88%)** | **6/160 (3.75%)** |
+| 이상 탐지 | **209/210 (99.52%)** | **208/210 (99.05%)** |
+| 상부 프레임 하중 B82 | 29/30 | 29/30 |
+| 하부 프레임 하중 C182 | 30/30 | 29/30 |
+| 최초 파지 실패 D · 물체 이탈 E · 도달 범위 밖 F · 폼 접촉 · 작업대 흔들림 | 각각 30/30 | 각각 30/30 |
 
-공통 정상 대비 AUROC는 B82 0.931, C182 0.958입니다. 0.40은 이번 캠페인에서 하중을 8회 더 탐지하고 정상 오탐을 3회 늘렸습니다. A121은 이번 90회에 포함되지 않았고, 새 회차는 평가에만 사용했습니다.
+이미 확보한 공통 평가 로그를 동결 모델과 기존 임계값으로 재생한 결과입니다. A121은 이 평가에 포함되지 않았습니다. 새 독립 캠페인과 Raspberry Pi 4B의 실시간 추론 성능은 검증이 남아 있습니다.
 
-### 추가 원시 자료
+[모델별 성능](모델별%20성능.md) · [기준 모델과 고정 설정](https://github.com/wplso/xArm-model-training/tree/reference-models/models/reference-models) · [370회 재생 상세](https://github.com/wplso/xArm-model-training/blob/reference-models/models/reference-models/joint-replay/REPORT_KO.md) · [공유 원시 데이터](https://github.com/wplso/xArm-model-training/tree/reference-models/%EC%9B%90%EB%B3%B8%20%EC%88%98%EC%A7%91%20%EB%8D%B0%EC%9D%B4%ED%84%B0)
 
-[볼트 하중 보완 원시 데이터](https://github.com/wplso/xArm-model-training/tree/bolt-known-load/%EC%9B%90%EB%B3%B8%20%EC%88%98%EC%A7%91%20%EB%8D%B0%EC%9D%B4%ED%84%B0/%EB%B3%BC%ED%8A%B8_%ED%95%98%EC%A4%91_%EB%B3%B4%EC%99%84%EC%9B%90%EC%8B%9C)는 24개 수집 세션의 510회입니다. 교차 A/B/C 평가 180회, 정상 확장 240회, B/C 독립 평가 90회입니다. 세션별 전류·전압, 가속도, 서보 위치 CSV와 No.3·원복 시간 경계, 조건 라벨, 학습·교정·평가 역할, 파일 해시를 함께 제공합니다. CSV는 Git LFS로 내려받습니다.
+Built with PriorLabs-TabPFN.
 
-## 현재 한계
+## V3 학습 코드
 
-- **정상 세션에 따른 오탐 차이**. 같은 날 41g을 운반한 두 세션에서 V4의 오탐은 정상 40회 중 5회, 전원 재가동 후 정상 40회 중 23회였습니다. 센서 장착과 시작 자세·재가동 이력이 정상 점수에 영향을 줄 수 있습니다. 휴지 실험만으로 워밍업·온도와 운전 이력의 영향을 분리하지 못했습니다.
-- **가벼운 하중 탐지**. 정상 범위를 넓히면 일부 하중 이상 탐지도 약해졌습니다. PCA 재구성 잔차(Q)와 주성분 공간 안의 변화(T²)를 비교했으며, 두 점수를 결합할 운영 기준은 아직 확정하지 않았습니다.
-- **알려진 하중의 적용 범위**. B82·C182의 0.40 결과는 새 볼트 캠페인 한 건에서 확인했습니다. 날짜를 더 바꾼 재현성, A121 점수 분리, 자연 고장과 미학습 이상에 대한 성능은 계속 확인이 필요합니다.
-- **계측 및 검증 범위**. 로봇 전체 전류·전압, ADXL345 한 개, 서보 위치를 기록합니다. 관절별 전류·온도·입력 전압은 미확보입니다. 추가 날짜의 동일 장착 재현성과 볼트 장착 D/E/F 평가가 남아 있습니다. 현재 결과는 사이클 종료 후 이상 탐지이며, 실시간 조기 경보·고장 원인 진단·수명 예측은 검증 범위 밖입니다.
+`main`에는 V3 학습 코드가 있습니다. [V3.1 학습 코드와 원시 데이터](https://github.com/wplso/xArm-model-training/tree/v3.1)도 볼 수 있습니다.
 
 ## 먼저 볼 파일
 
@@ -95,7 +41,7 @@ Hiwonder xArm의 No.3 작업에서 41g 블록을 운반하고 자동으로 원�
 
 `original/`은 코드 검토·추적용 원본입니다. 원본 진입점은 기존 전체 프로젝트의 이전 분석 결과·모델·원시 파일 트리가 필요합니다. 이 저장소만으로 실행할 때는 아래의 `train_v3.py`를 사용합니다. 이 진입점은 원본과 같은 `Detector`·특징 순서·정규화·임계값 규칙을 사용합니다. 원본의 이전 버전 모델 비교와 전체 보고서 생성까지 독립 실행기로 옮긴 것은 아닙니다.
 
-V3 재현용 특징 CSV와 원시 자료는 `v3.1` 브랜치의 `원본 수집 데이터/`에서 Git LFS로 받을 수 있습니다. V1~V5.1 저장 모델은 `v5.1`에, V5.2 이후 실험과 새 볼트 데이터는 위 버전별 브랜치에 있습니다. [데이터 받기와 학습 방법](https://github.com/wplso/xArm-model-training/blob/v3.1/README.md#데이터-받기와-바로-학습)
+V3 재현용 특징 CSV와 원시 자료는 `v3.1` 브랜치의 `원본 수집 데이터/`에서 Git LFS로 받을 수 있습니다. V1~V5.1 저장 모델은 `v5.1`에, V5.2 이후 실험과 새 볼트 데이터는 각 버전 브랜치에 있습니다. 위의 모델별 성능 문서에서 확인할 수 있습니다. [데이터 받기와 학습 방법](https://github.com/wplso/xArm-model-training/blob/v3.1/README.md#데이터-받기와-바로-학습)
 
 ## 환경과 실행
 
